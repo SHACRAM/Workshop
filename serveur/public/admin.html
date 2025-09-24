@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin News - Supabase v1</title>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1"></script>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background: #f4f4f4; }
+    h1 { text-align: center; color: #333; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { border: 1px solid #ccc; padding: 10px; text-align: left; }
+    th { background: #0078d7; color: #fff; }
+    button { margin-right: 5px; padding: 5px 10px; border: none; border-radius: 4px; cursor: pointer; }
+    .edit { background: #ffc107; color: #000; }
+    .delete { background: #dc3545; color: #fff; }
+  </style>
+</head>
+<body>
+  <h1>Admin News</h1>
+  <table id="news-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Titre</th>
+        <th>Contenu</th>
+        <th>Créé le</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+<script>
+async function loadNews() {
+  const res = await fetch('/news');
+  console.log(res);
+  const data = await res.json();
+
+  const tbody = document.querySelector("#news-table tbody");
+  tbody.innerHTML = '';
+
+  data.forEach(news => {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td>${news.id}</td>
+      <td contenteditable="true" data-field="title" data-id="${news.id}">${news.title}</td>
+      <td contenteditable="true" data-field="content" data-id="${news.id}">${news.content}</td>
+      <td>${new Date(news.created_at).toLocaleString()}</td>
+      <td>
+        <button class="edit" data-id="${news.id}">Modifier</button>
+        <button class="delete" data-id="${news.id}">Supprimer</button>
+      </td>
+    `;
+    tbody.appendChild(tr);
+  });
+
+  document.querySelectorAll(".edit").forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const id = btn.dataset.id;
+      const title = document.querySelector(`[data-id='${id}'][data-field='title']`).innerText;
+      const content = document.querySelector(`[data-id='${id}'][data-field='content']`).innerText;
+
+      await fetch(`/news/${id}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ title, content })
+      });
+      alert('News modifiée !');
+    });
+  });
+
+  document.querySelectorAll(".delete").forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const id = btn.dataset.id;
+      if (!confirm('Supprimer cette news ?')) return;
+
+      await fetch(`/news/${id}`, { method: 'DELETE' });
+      loadNews();
+    });
+  });
+}
+
+loadNews();
+</script>
+
+</body>
+</html>

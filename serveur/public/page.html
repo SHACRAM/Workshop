@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Messages</title>
+</head>
+<body>
+  <h1>Liste des messages</h1>
+  <ul id="messages-list"></ul>
+
+  <script>
+    // On récupère les données depuis le serveur
+    fetch('/data')
+      .then(res => res.json())
+      .then(messages => {
+        const ul = document.getElementById('messages-list');
+        messages.forEach(msg => {
+          const li = document.createElement('li');
+          li.textContent = `${msg.author} : ${msg.text}`;
+          ul.appendChild(li);
+        });
+      })
+      .catch(err => console.error(err));
+  </script>
+</body>
+</html>

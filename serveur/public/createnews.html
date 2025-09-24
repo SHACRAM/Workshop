@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Créer une News</title>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      text-align: center;
+      margin-top: 40px;
+      color: #333;
+    }
+    form {
+      background: #fff;
+      max-width: 400px;
+      margin: 40px auto;
+      padding: 30px 25px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    label {
+      font-weight: bold;
+      color: #555;
+    }
+    input[type="text"], textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 6px;
+      margin-bottom: 18px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 1em;
+    }
+    button {
+      background: #0078d7;
+      color: #fff;
+      border: none;
+      padding: 10px 22px;
+      border-radius: 4px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    button:hover {
+      background: #005fa3;
+    }
+  </style>
+</head>
+<body>
+  <h1>Créer une News</h1>
+  <form id="news-form">
+    <label for="title">Titre :</label><br>
+    <input type="text" id="title" name="title" required><br><br>
+
+    <label for="content">Contenu :</label><br>
+    <textarea id="content" name="content" rows="6" cols="40" required></textarea><br><br>
+
+    <button type="submit">Envoyer</button>
+  </form>
+
+  <script>
+    const SUPABASE_URL = "http://127.0.0.1:54321";
+    const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6ImFub24iLCJleHAiOjE5ODM4MTI5OTZ9.CRXP1A7WOeoJeXxjNni43kdQwgnWNReilDMblYTn_I0";
+
+    // Création du client Supabase v1
+    const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+    const form = document.getElementById("news-form");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const title = document.getElementById("title").value;
+      const content = document.getElementById("content").value;
+
+      // Insertion dans la table News
+      const { data, error } = await supabaseClient.from("News").insert([{ title: title, content:content }]);
+
+      if (error) {
+        alert("Erreur : " + error.message);
+      } else {
+        alert("News ajoutée !");
+        form.reset();
+      }
+    });
+  </script>
+</body>
+</html>

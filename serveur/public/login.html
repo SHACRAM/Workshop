@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Connexion</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1"></script>
+    <style>
+        body {
+            background: #f4f4f4;
+            font-family: Arial, sans-serif;
+            display: flex;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+        }
+        .login-container {
+            background: #fff;
+            padding: 2em 2.5em;
+            border-radius: 8px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+            width: 320px;
+        }
+        .login-container h2 { text-align: center; margin-bottom: 1.5em; color: #333; }
+        .login-container input { width: 100%; padding: 0.7em; margin-bottom: 1.2em; border: 1px solid #ccc; border-radius: 4px; }
+        .login-container button { width: 100%; padding: 0.8em; background: #0078d7; color: #fff; border: none; border-radius: 4px; cursor: pointer; }
+        .login-container button:hover { background: #005fa3; }
+    </style>
+</head>
+<body>
+    <form class="login-container" id="loginForm">
+        <h2>Connexion</h2>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="password" id="password" placeholder="Mot de passe" required>
+        <button type="submit">Se connecter</button>
+    </form>
+
+<script>
+  const SUPABASE_URL = "http://127.0.0.1:54321";
+  const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6ImFub24iLCJleHAiOjE5ODM4MTI5OTZ9.CRXP1A7WOeoJeXxjNni43kdQwgnWNReilDMblYTn_I0";
+
+  // ⚠️ changer le nom pour ne pas écraser le global "supabase"
+  const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+  document.getElementById("loginForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    const { data, error } = await supabaseClient.auth.signIn({ email, password });
+    if (error) {
+      alert("Erreur login: " + error.message);
+    } else {
+      window.location.href = "createnews.html";
+      console.log(data);
+    }
+  });
+</script>
+</body>
+</html>
