@@ -1,0 +1,2 @@
+source /Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/build/bootloader/gdbinit/symbols
+source /Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/build/bootloader/gdbinit/connect

@@ -1,0 +1,297 @@
+Command: /Users/sebastienlotten/.espressif/python_env/idf5.5_py3.13_env/bin/python /Users/sebastienlotten/esp/esp-idf/tools/idf_monitor.py -p /dev/cu.usbmodem5A840187951 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 /Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/build/mesh_slave.elf /Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/build/bootloader/bootloader.elf -m '/Users/sebastienlotten/.espressif/python_env/idf5.5_py3.13_env/bin/python' '/Users/sebastienlotten/esp/esp-idf/tools/idf.py'
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x158c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f34
+entry 0x403c8924
+[0;32mI (24) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (25) boot: compile time Sep 25 2025 10:13:28[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (28) boot: efuse block revision: v1.3[0m
+[0;32mI (31) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (35) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3c0a0020 size=31d48h (204104) map[0m
+[0;32mI (122) esp_image: segment 1: paddr=00041d70 vaddr=3fc9a800 size=04a24h ( 18980) load[0m
+[0;32mI (126) esp_image: segment 2: paddr=0004679c vaddr=40374000 size=0987ch ( 39036) load[0m
+[0;32mI (135) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=95ae4h (613092) map[0m
+[0;32mI (244) esp_image: segment 4: paddr=000e5b0c vaddr=4037d87c size=0cf44h ( 53060) load[0m
+[0;32mI (255) esp_image: segment 5: paddr=000f2a58 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (265) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (265) boot: Disabling RNG early entropy source...[0m
+[0;32mI (275) cpu_start: Multicore app[0m
+[0;32mI (284) cpu_start: Pro cpu start user code[0m
+[0;32mI (284) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (284) app_init: Application information:[0m
+[0;32mI (284) app_init: Project name:     mesh_slave[0m
+[0;32mI (288) app_init: App version:      1[0m
+[0;32mI (292) app_init: Compile time:     Sep 25 2025 12:08:36[0m
+[0;32mI (297) app_init: ELF file SHA256:  293ef63e1...[0m
+[0;32mI (301) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (305) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (309) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (313) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (317) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (323) heap_init: At 3FCA8158 len 000415B8 (261 KiB): RAM[0m
+[0;32mI (328) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (333) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (338) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (345) spi_flash: detected chip: generic[0m
+[0;32mI (347) spi_flash: flash io: dio[0m
+[0;33mW (350) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (363) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (369) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (376) main_task: Started on CPU0[0m
+[0;32mI (396) main_task: Calling app_main()[0m
+[0;32mI (416) MESH_SLAVE: === DÉMARRAGE ESP32 SLAVE ===[0m
+[0;32mI (416) MESH_SLAVE: Version: ESP-IDF v5.5.1[0m
+[0;32mI (416) pp: pp rom version: e7ae62f[0m
+[0;32mI (416) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (426) wifi:wifi driver task: 3fced458, prio:23, stack:6656, core=0[0m
+[0;32mI (436) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (436) wifi:wifi certification version: v7.0[0m
+[0;32mI (436) wifi:config NVS flash: enabled[0m
+[0;32mI (436) wifi:config nano formatting: disabled[0m
+[0;32mI (436) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (446) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (446) wifi:Init management short buffer num: 32[0m
+[0;32mI (456) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (456) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (456) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (466) wifi:Init static rx buffer num: 10[0m
+[0;32mI (466) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (476) wifi_init: rx ba win: 6[0m
+[0;32mI (476) wifi_init: accept mbox: 6[0m
+[0;32mI (476) wifi_init: tcpip mbox: 32[0m
+[0;32mI (476) wifi_init: udp mbox: 6[0m
+[0;32mI (486) wifi_init: tcp mbox: 6[0m
+[0;32mI (486) wifi_init: tcp tx win: 5760[0m
+[0;32mI (486) wifi_init: tcp rx win: 5760[0m
+[0;32mI (496) wifi_init: tcp mss: 1440[0m
+[0;32mI (496) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (496) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (506) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10[0m
+[0;32mI (546) wifi:mode : softAP (94:a9:90:2e:8c:ed)[0m
+[0;32mI (556) wifi:Total power save buffer number: 16[0m
+[0;32mI (556) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (556) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (556) MESH_SLAVE: Point d'accès WiFi 'City-news' créé sur le canal 6[0m
+[0;32mI (556) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (566) ESPNOW: espnow [version: 2.0] init[0m
+[0;32mI (576) MESH_SLAVE: ESP-NOW initialisé en mode récepteur[0m
+[0;32mI (576) MESH_SLAVE: MAC autorisée pour réception: b4:3a:45:a1:1f:38[0m
+[0;32mI (586) MESH_SLAVE: Serveur HTTP démarré avec succès[0m
+[0;32mI (586) MESH_SLAVE: === SYSTÈME PRÊT ===[0m
+[0;32mI (596) MESH_SLAVE: Point d'accès: City-news[0m
+[0;32mI (596) MESH_SLAVE: Adresse IP: 192.168.4.1[0m
+[0;32mI (606) MESH_SLAVE: Interface web: http://192.168.4.1/[0m
+[0;32mI (606) MESH_SLAVE: API: http://192.168.4.1/api/news[0m
+[0;32mI (616) MESH_SLAVE: Filtrage MAC actif - Seule adresse autorisée: b4:3a:45:a1:1f:38[0m
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x158c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f34
+entry 0x403c8924
+[0;32mI (24) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (25) boot: compile time Sep 25 2025 10:13:28[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (28) boot: efuse block revision: v1.3[0m
+[0;32mI (31) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (35) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3c0a0020 size=31d48h (204104) map[0m
+[0;32mI (122) esp_image: segment 1: paddr=00041d70 vaddr=3fc9a800 size=04a24h ( 18980) load[0m
+[0;32mI (126) esp_image: segment 2: paddr=0004679c vaddr=40374000 size=0987ch ( 39036) load[0m
+[0;32mI (135) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=95ae4h (613092) map[0m
+[0;32mI (244) esp_image: segment 4: paddr=000e5b0c vaddr=4037d87c size=0cf44h ( 53060) load[0m
+[0;32mI (255) esp_image: segment 5: paddr=000f2a58 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (265) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (265) boot: Disabling RNG early entropy source...[0m
+[0;32mI (275) cpu_start: Multicore app[0m
+[0;32mI (284) cpu_start: Pro cpu start user code[0m
+[0;32mI (284) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (284) app_init: Application information:[0m
+[0;32mI (284) app_init: Project name:     mesh_slave[0m
+[0;32mI (288) app_init: App version:      1[0m
+[0;32mI (292) app_init: Compile time:     Sep 25 2025 12:08:36[0m
+[0;32mI (297) app_init: ELF file SHA256:  293ef63e1...[0m
+[0;32mI (301) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (305) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (309) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (313) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (317) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (323) heap_init: At 3FCA8158 len 000415B8 (261 KiB): RAM[0m
+[0;32mI (328) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (333) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (338) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (345) spi_flash: detected chip: generic[0m
+[0;32mI (347) spi_flash: flash io: dio[0m
+[0;33mW (350) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (363) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (369) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (376) main_task: Started on CPU0[0m
+[0;32mI (396) main_task: Calling app_main()[0m
+[0;32mI (416) MESH_SLAVE: === DÉMARRAGE ESP32 SLAVE ===[0m
+[0;32mI (416) MESH_SLAVE: Version: ESP-IDF v5.5.1[0m
+[0;32mI (416) pp: pp rom version: e7ae62f[0m
+[0;32mI (416) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (426) wifi:wifi driver task: 3fced458, prio:23, stack:6656, core=0[0m
+[0;32mI (436) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (436) wifi:wifi certification version: v7.0[0m
+[0;32mI (436) wifi:config NVS flash: enabled[0m
+[0;32mI (436) wifi:config nano formatting: disabled[0m
+[0;32mI (436) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (446) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (446) wifi:Init management short buffer num: 32[0m
+[0;32mI (456) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (456) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (456) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (466) wifi:Init static rx buffer num: 10[0m
+[0;32mI (466) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (476) wifi_init: rx ba win: 6[0m
+[0;32mI (476) wifi_init: accept mbox: 6[0m
+[0;32mI (476) wifi_init: tcpip mbox: 32[0m
+[0;32mI (476) wifi_init: udp mbox: 6[0m
+[0;32mI (486) wifi_init: tcp mbox: 6[0m
+[0;32mI (486) wifi_init: tcp tx win: 5760[0m
+[0;32mI (486) wifi_init: tcp rx win: 5760[0m
+[0;32mI (496) wifi_init: tcp mss: 1440[0m
+[0;32mI (496) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (496) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (506) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10[0m
+[0;32mI (556) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (656) wifi:mode : softAP (94:a9:90:2e:8c:ed)[0m
+[0;32mI (666) wifi:Total power save buffer number: 16[0m
+[0;32mI (666) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (666) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (666) MESH_SLAVE: Point d'accès WiFi 'City-news' créé sur le canal 6[0m
+[0;32mI (666) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (686) ESPNOW: espnow [version: 2.0] init[0m
+[0;32mI (686) MESH_SLAVE: ESP-NOW initialisé en mode récepteur[0m
+[0;32mI (686) MESH_SLAVE: MAC autorisée pour réception: b4:3a:45:a1:1f:38[0m
+[0;32mI (696) MESH_SLAVE: Serveur HTTP démarré avec succès[0m
+[0;32mI (696) MESH_SLAVE: === SYSTÈME PRÊT ===[0m
+[0;32mI (706) MESH_SLAVE: Point d'accès: City-news[0m
+[0;32mI (706) MESH_SLAVE: Adresse IP: 192.168.4.1[0m
+[0;32mI (716) MESH_SLAVE: Interface web: http://192.168.4.1/[0m
+[0;32mI (716) MESH_SLAVE: API: http://192.168.4.1/api/news[0m
+[0;32mI (726) MESH_SLAVE: Filtrage MAC actif - Seule adresse autorisée: b4:3a:45:a1:1f:38[0m
+[0;32mI (145616) wifi:new:<6,0>, old:<6,1>, ap:<6,0>, sta:<255,255>, prof:6, snd_ch_cfg:0x0[0m
+[0;32mI (145616) wifi:station: f6:80:91:56:2b:dc join, AID=1, bgn, 20[0m
+[0;32mI (146146) wifi:<ba-add>idx:2 (ifx:1, f6:80:91:56:2b:dc), tid:6, ssn:0, winSize:64[0m
+[0;32mI (147186) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+[0;32mI (149326) wifi:<ba-add>idx:3 (ifx:1, f6:80:91:56:2b:dc), tid:0, ssn:2, winSize:64[0m
+[0;32mI (169246) MESH_SLAVE: API /api/news appelée[0m
+[0;32mI (169246) MESH_SLAVE: Envoi réponse JSON: [{[0m
+		"id":	0,
+		"title":	"En attente",
+		"content":	"Aucune donnée reçue du master",
+		"timestamp":	"0",
+		"source":	"Système"
+	}]
+[0;32mI (179966) MESH_SLAVE: API /api/news appelée[0m
+[0;32mI (179966) MESH_SLAVE: Envoi réponse JSON: [{[0m
+		"id":	0,
+		"title":	"En attente",
+		"content":	"Aucune donnée reçue du master",
+		"timestamp":	"0",
+		"source":	"Système"
+	}]
+[0;33mW (198316) httpd_txrx: httpd_sock_err: error in recv : 104[0m
+[0;32mI (199236) MESH_SLAVE: API /api/news appelée[0m
+[0;32mI (199236) MESH_SLAVE: Envoi réponse JSON: [{[0m
+		"id":	0,
+		"title":	"En attente",
+		"content":	"Aucune donnée reçue du master",
+		"timestamp":	"0",
+		"source":	"Système"
+	}]
+[0;32mI (210006) MESH_SLAVE: API /api/news appelée[0m
+[0;32mI (210006) MESH_SLAVE: Envoi réponse JSON: [{[0m
+		"id":	0,
+		"title":	"En attente",
+		"content":	"Aucune donnée reçue du master",
+		"timestamp":	"0",
+		"source":	"Système"
+	}]
+[0;33mW (228276) httpd_txrx: httpd_sock_err: error in recv : 104[0m
+[0;32mI (229266) MESH_SLAVE: API /api/news appelée[0m
+[0;32mI (229266) MESH_SLAVE: Envoi réponse JSON: [{[0m
+		"id":	0,
+		"title":	"En attente",
+		"content":	"Aucune donnée reçue du master",
+		"timestamp":	"0",
+		"source":	"Système"
+	}]
+[0;32mI (239996) MESH_SLAVE: API /api/news appelée[0m
+[0;32mI (239996) MESH_SLAVE: Envoi réponse JSON: [{[0m
+		"id":	0,
+		"title":	"En attente",
+		"content":	"Aucune donnée reçue du master",
+		"timestamp":	"0",
+		"source":	"Système"
+	}]
+[0;33mW (258296) httpd_txrx: httpd_sock_err: error in recv : 104[0m
+[0;32mI (259236) MESH_SLAVE: API /api/news appelée[0m
+[0;32mI (259246) MESH_SLAVE: Envoi réponse JSON: [{[0m
+		"id":	0,
+		"title":	"En attente",
+		"content":	"Aucune donnée reçue du master",
+		"timestamp":	"0",
+		"source":	"Système"
+	}]
+[0;32mI (270006) MESH_SLAVE: API /api/news appelée[0m
+[0;32mI (270006) MESH_SLAVE: Envoi réponse JSON: [{[0m
+		"id":	0,
+		"title":	"En attente",
+		"content":	"Aucune donnée reçue du master",
+		"timestamp":	"0",
+		"source":	"Système"
+	}]
+[0;33mW (288286) httpd_txrx: httpd_sock_err: error in recv : 104[0m
+[0;32mI (289246) MESH_SLAVE: API /api/news appelée[0m
+[0;32mI (289246) MESH_SLAVE: Envoi réponse JSON: [{[0m
+		"id":	0,
+		"title":	"En attente",
+		"content":	"Aucune donnée reçue du master",
+		"timestamp":	"0",
+		"source":	"Système"
+	}]
+[0;32mI (300006) MESH_SLAVE: API /api/news appelée[0m
+[0;32mI (300006) MESH_SLAVE: Envoi réponse JSON: [{[0m
+		"id":	0,
+		"title":	"En attente",
+		"content":	"Aucune donnée reçue du master",
+		"timestamp":	"0",
+		"source":	"Système"
+	}]
+[0;32mI (316816) MESH_SLAVE: API /api/news appelée[0m
+[0;32mI (316816) MESH_SLAVE: Envoi réponse JSON: [{[0m
+		"id":	0,
+		"title":	"En attente",
+		"content":	"Aucune donnée reçue du master",
+		"times

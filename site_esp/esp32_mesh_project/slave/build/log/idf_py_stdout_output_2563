@@ -1,0 +1,46 @@
+Command: /Users/sebastienlotten/.espressif/python_env/idf5.5_py3.13_env/bin/python /Users/sebastienlotten/esp/esp-idf/tools/idf_monitor.py -p /dev/cu.usbmodem5A840187951 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 /Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/build/mesh_slave.elf /Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/build/bootloader/bootloader.elf -m '/Users/sebastienlotten/.espressif/python_env/idf5.5_py3.13_env/bin/python' '/Users/sebastienlotten/esp/esp-idf/tools/idf.py'
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x158c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f34
+entry 0x403c8924
+[0;32mI (24) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (25) boot: compile time Sep 25 2025 10:13:28[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (28) boot: efuse block revision: v1.3[0m
+[0;32mI (31) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (35) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3c0a0020 size=31fc0h (204736) map[0m
+[0;32mI (122) esp_image: segment 1: paddr=00041fe8 vaddr=3fc9a800 size=04a24h ( 18980) load[0m
+[0;32mI (127) esp_image: segment 2: paddr=00046a14 vaddr=40374000 size=09604h ( 38404) load[0m
+[0;32mI (135) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=90784h (591748) map[0m
+[0;32mI (240) esp_image: segment 4: paddr=000e07ac vaddr=4037d604 size=0d1bch ( 53692) load[0m
+[0;32mI (252) esp_image: segment 5: paddr=000ed970 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (261) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (261) boot: Disabling RNG early entropy source...[0m
+[0;32mI (271) cpu_start: Multicore app[0m
+[0;32mI (280) cpu_start: Pro cpu start user code[0m
+[0;32mI (280) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (280) app_init: Application information:[0m
+[0;32mI (281) app_init: Project name:     mesh_slave[0m
+[0;32mI (285) app_init: App version:      1[0m
+[0;32mI (288) app_init: Compile time:     Sep 25 2025 12:08:36[0m
+[0;32mI (293) app_init: ELF file SHA256:  ee319894d...[0m
+[0;32mI (297) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (301) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (305) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (309) efuse_init: Chip rev:         v0.2[0m
+

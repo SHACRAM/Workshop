@@ -1,0 +1,53 @@
+Command: /Users/sebastienlotten/.espressif/python_env/idf5.5_py3.13_env/bin/python /Users/sebastienlotten/esp/esp-idf/tools/idf_monitor.py -p /dev/cu.usbmodem5A840187951 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 /Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/build/mesh_slave.elf /Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/build/bootloader/bootloader.elf -m '/Users/sebastienlotten/.espressif/python_env/idf5.5_py3.13_env/bin/python' '/Users/sebastienlotten/esp/esp-idf/tools/idf.py'
+[0;33m--- esp-idf-monitor 1.8.0 on /dev/cu.usbmodem5A840187951 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0m--- 0x403c8700: [0;33m_stext[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x403c8924: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/sebastienlotten/esp/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4207e9af: [0;33m_vfprintf_r[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c[0m[0m:[1;31m846[0m
+[0m--- 0x400556d5: [0;33mstrlen[0m[0m in [0;32mROM[0m
+[0m--- 0x400556e5: [0;33mstrlen[0m[0m in [0;32mROM[0m
+[0m--- 0x4207e9ac: [0;33m_vfprintf_r[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c[0m[0m:[1;31m846[0m
+[0m--- 0x42079c7d: [0;33mvprintf[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c[0m[0m:[1;31m34[0m
+[0m--- 0x4038333b: [0;33mesp_log_va[0m[0m at [0;32m/Users/sebastienlotten/esp/esp-idf/components/log/src/log.c[0m[0m:[1;31m43[0m
+[0m--- (inlined by) [0;33mesp_log[0m[0m at [0;32m/Users/sebastienlotten/esp/esp-idf/components/log/src/log.c[0m[0m:[1;31m88[0m
+[0m--- 0x4200b4d5: [0;33mapi_news_get_handler[0m[0m at [0;32m/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c[0m[0m:[1;31m323[0m
+[0m--- 0x42015fb7: [0;33mhttpd_uri[0m[0m at [0;32m/Users/sebastienlotten/esp/esp-idf/components/esp_http_server/src/httpd_uri.c[0m[0m:[1;31m337[0m
+[0m--- 0x42016889: [0;33mhttpd_parse_req[0m[0m at [0;32m/Users/sebastienlotten/esp/esp-idf/components/esp_http_server/src/httpd_parse.c[0m[0m:[1;31m685[0m
+[0m--- 0x42016932: [0;33mhttpd_req_new[0m[0m at [0;32m/Users/sebastienlotten/esp/esp-idf/components/esp_http_server/src/httpd_parse.c[0m[0m:[1;31m821[0m
+[0m--- 0x42015654: [0;33mhttpd_sess_process[0m[0m at [0;32m/Users/sebastienlotten/esp/esp-idf/components/esp_http_server/src/httpd_sess.c[0m[0m:[1;31m427[0m
+[0m--- 0x42014896: [0;33mhttpd_process_session[0m[0m at [0;32m/Users/sebastienlotten/esp/esp-idf/components/esp_http_server/src/httpd_main.c[0m[0m:[1;31m267[0m
+[0m--- 0x42087f77: [0;33mhttpd_sess_enum[0m[0m at [0;32m/Users/sebastienlotten/esp/esp-idf/components/esp_http_server/src/httpd_sess.c[0m[0m:[1;31m50[0m
+[0m--- 0x42015052: [0;33mhttpd_server[0m[0m at [0;32m/Users/sebastienlotten/esp/esp-idf/components/esp_http_server/src/httpd_main.c[0m[0m:[1;31m317[0m
+[0m--- 0x420150bf: [0;33mhttpd_thread[0m[0m at [0;32m/Users/sebastienlotten/esp/esp-idf/components/esp_http_server/src/httpd_main.c[0m[0m:[1;31m339[0m
+[0m--- 0x4037cb91: [0;33mvPortTaskWrapper[0m[0m at [0;32m/Users/sebastienlotten/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x4037c030: [0;33mesp_restart_noos[0m[0m at [0;32m/Users/sebastienlotten/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c[0m[0m:[1;31m162[0m
+[0m--- 0x403c8700: [0;33m_stext[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x403c8924: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/sebastienlotten/esp/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4207e9af: [0;33m_vfprintf_r[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c[0m[0m:[1;31m846[0m
+[0m--- 0x40056f5c: [0;33mmemcpy[0m[0m in [0;32mROM[0m
+[0m--- 0x40056f72: [0;33mmemcpy[0m[0m in [0;32mROM[0m
+[0m--- 0x4207e9ac: [0;33m_vfprintf_r[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c[0m[0m:[1;31m846[0m
+[0m--- 0x42079c7d: [0;33mvprintf[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c[0m[0m:[1;31m34[0m
+[0m--- 0x4038333b: [0;33mesp_log_va[0m[0m at [0;32m/Users/sebastienlotten/esp/esp-idf/components/log/src/log.c[0m[0m:[1;31m43[0m
+[0m--- (inlined by) [0;33mesp_log[0m[0m at [0;32m/Users/sebastienlotten/esp/esp-idf/components/log/src/log.c[0m[0m:[1;31m88[0m
+[0m--- 0x4200b514: [0;33mapi_news_get_handler[0m[0m at [0;32m/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c[0m[0m:[1;31m328[0m
+[0m--- 0x42015fb7: [0;33mhttpd_uri[0m[0m at [0;32m/Users/sebastienlotten/esp/esp-idf/components/esp_http_server/src/httpd_uri.c[0m[0m:[1;31m337[0m
+[0m--- 0x42016889: [0;33mhttpd_parse_req[0m[0m at [0;32m/Users/sebastienlotten/esp/esp-idf/components/esp_http_server/src/httpd_parse.c[0m[0m:[1;31m685[0m
+[0m--- 0x42016932: [0;33mhttpd_req_new[0m[0m at [0;32m/Users/sebastienlotten/esp/esp-idf/components/esp_http_server/src/httpd_parse.c[0m[0m:[1;31m821[0m
+[0m--- 0x42015654: [0;33mhttpd_sess_process[0m[0m at [0;32m/Users/sebastienlotten/esp/esp-idf/components/esp_http_server/src/httpd_sess.c[0m[0m:[1;31m427[0m
+[0m--- 0x42014896: [0;33mhttpd_process_session[0m[0m at [0;32m/Users/sebastienlotten/esp/esp-idf/components/esp_http_server/src/httpd_main.c[0m[0m:[1;31m267[0m
+[0m--- 0x42087f77: [0;33mhttpd_sess_enum[0m[0m at [0;32m/Users/sebastienlotten/esp/esp-idf/components/esp_http_server/src/httpd_sess.c[0m[0m:[1;31m50[0m
+[0m--- 0x42015052: [0;33mhttpd_server[0m[0m at [0;32m/Users/sebastienlotten/esp/esp-idf/components/esp_http_server/src/httpd_main.c[0m[0m:[1;31m317[0m
+[0m--- 0x420150bf: [0;33mhttpd_thread[0m[0m at [0;32m/Users/sebastienlotten/esp/esp-idf/components/esp_http_server/src/httpd_main.c[0m[0m:[1;31m339[0m
+[0m--- 0x4037cb91: [0;33mvPortTaskWrapper[0m[0m at [0;32m/Users/sebastienlotten/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x4037c030: [0;33mesp_restart_noos[0m[0m at [0;32m/Users/sebastienlotten/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c[0m[0m:[1;31m162[0m
+[0m--- 0x403c8700: [0;33m_stext[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x403c8924: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/sebastienlotten/esp/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4037bee1: [0;33mpanic_abort[0m[0m at [0;32m/Users/sebastienlotten/esp/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m469[0m
+[0m--- 0x4037bea9: [0;33mesp_system_abort[0m[0m at [0;32m/Users/sebastienlotten/esp/esp-idf/components/esp_system/port/esp_system_chip.c[0m[0m:[1;31m87[0m
+[0m--- 0x40384519: [0;33m__assert_func[0m[0m at [0;32m/Users/sebastienlotten/esp/esp-idf/components/newlib/src/assert.c[0m[0m:[1;31m80[0m
+[0m--- 0x4037f257: [0;33mxTaskPriorityDisinherit[0m[0m at [0;32m/Users/sebastienlotten/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c[0m[0m:[1;31m5157[0m
+[0m--- 0x4037c157: [0;33mprvCopyDataToQueue[0m[0m at [0;32m/Users/sebastienlotten/esp/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c[0m[0m:[1;31m2469[0m
+[0m--- 0x4037c584: [0;33mxQueueGenericSend[0m[0m at [0;32m/Users/sebastienlotten/esp/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c[0m[0m:[1;31m964[0m
+[0m--- 0x4037c6d2: [0;33mxQueueGiveMutexRecursive[0m[0m at [0;32m/Users/sebastienlotten/esp/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c[0m[0m:[1;31m789[0m
+[0m--- 0x403768b7: [0;33ml

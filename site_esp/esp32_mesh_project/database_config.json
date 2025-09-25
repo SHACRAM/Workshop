@@ -1,0 +1,45 @@
+{
+  "database_config": {
+    "host": "localhost",
+    "port": 3306,
+    "database": "city_news",
+    "table": "articles"
+  },
+  "articles": [
+    {
+      "id": 1,
+      "titre": "🏢 Nouvelle ouverture de magasin",
+      "description": "Un nouveau magasin d'électronique ouvre ses portes au centre-ville avec des promotions exceptionnelles pour l'inauguration.",
+      "date": "2025-09-24",
+      "category": "commerce"
+    },
+    {
+      "id": 2,
+      "titre": "🚧 Travaux rue principale",
+      "description": "Les travaux de réfection de la rue principale commencent lundi prochain. Circulation déviée pendant 2 semaines.",
+      "date": "2025-09-24",
+      "category": "transport"
+    },
+    {
+      "id": 3,
+      "titre": "🎭 Festival culturel ce weekend",
+      "description": "Le festival annuel de la culture locale aura lieu ce weekend avec concerts, expositions et animations gratuites.",
+      "date": "2025-09-25",
+      "category": "culture"
+    },
+    {
+      "id": 4,
+      "titre": "🏥 Nouvelle clinique médicale",
+      "description": "Ouverture prochaine d'une nouvelle clinique médicale spécialisée avec prise de rendez-vous en ligne.",
+      "date": "2025-09-25",
+      "category": "sante"
+    },
+    {
+      "id": 5,
+      "titre": "🌳 Plantation d'arbres au parc",
+      "description": "Opération de plantation de 100 nouveaux arbres au parc municipal dans le cadre du projet écologique de la ville.",
+      "date": "2025-09-26",
+      "category": "environnement"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+Command: ninja flash
+[1/5] cd /Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/build/esp-idf/esptool_py && /Users/sebastienlotten/.espressif/python_env/idf5.5_py3.13_env/bin/python /Users/sebastienlotten/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/build/partition_table/partition-table.bin /Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/build/mesh_slave.bin
+mesh_slave.bin binary size 0xdcae0 bytes. Smallest app partition is 0x100000 bytes. 0x23520 bytes (14%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cd /Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/build/bootloader/esp-idf/esptool_py && /Users/sebastienlotten/.espressif/python_env/idf5.5_py3.13_env/bin/python /Users/sebastienlotten/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/build/bootloader/bootloader.bin
+Bootloader binary size 0x5240 bytes. 0x2dc0 bytes (36%) free.
+[3/5] No install step for 'bootloader'
+[4/5] Completed 'bootloader'
+[4/5] cd /Users/sebastienlotten/esp/esp-idf/components/esptool_py && /opt/homebrew/bin/cmake -D IDF_PATH=/Users/sebastienlotten/esp/esp-idf -D "SERIAL_TOOL=/Users/sebastienlotten/.espressif/python_env/idf5.5_py3.13_env/bin/python;;/Users/sebastienlotten/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32s3" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/build -P /Users/sebastienlotten/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32s3 -p /dev/cu.usbmodem5A840187951 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x0 bootloader/bootloader.bin 0x10000 mesh_slave.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.10.0
+Serial port /dev/cu.usbmodem5A840187951
+
+A fatal error occurred: Could not open /dev/cu.usbmodem5A840187951, the port is busy or doesn't exist.
+([Errno 35] Could not exclusively lock port /dev/cu.usbmodem5A840187951: [Errno 35] Resource temporarily unavailable)
+
+FAILED: [code=1] CMakeFiles/flash /Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/build/CMakeFiles/flash 
+cd /Users/sebastienlotten/esp/esp-idf/components/esptool_py && /opt/homebrew/bin/cmake -D IDF_PATH=/Users/sebastienlotten/esp/esp-idf -D "SERIAL_TOOL=/Users/sebastienlotten/.espressif/python_env/idf5.5_py3.13_env/bin/python;;/Users/sebastienlotten/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32s3" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/build -P /Users/sebastienlotten/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+ninja: build stopped: subcommand failed.

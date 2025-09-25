@@ -1,0 +1,246 @@
+Command: /Users/sebastienlotten/.espressif/python_env/idf5.5_py3.13_env/bin/python /Users/sebastienlotten/esp/esp-idf/tools/idf_monitor.py -p /dev/cu.usbmodem5A840187951 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 /Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/build/mesh_slave.elf /Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/build/bootloader/bootloader.elf -m '/Users/sebastienlotten/.espressif/python_env/idf5.5_py3.13_env/bin/python' '/Users/sebastienlotten/esp/esp-idf/tools/idf.py'
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x158c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f34
+entry 0x403c8924
+[0;32mI (24) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (25) boot: compile time Sep 25 2025 10:13:28[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (28) boot: efuse block revision: v1.3[0m
+[0;32mI (31) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (35) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3c0a0020 size=31d20h (204064) map[0m
+[0;32mI (122) esp_image: segment 1: paddr=00041d48 vaddr=3fc9a800 size=04a24h ( 18980) load[0m
+[0;32mI (126) esp_image: segment 2: paddr=00046774 vaddr=40374000 size=098a4h ( 39076) load[0m
+[0;32mI (135) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=90630h (591408) map[0m
+[0;32mI (240) esp_image: segment 4: paddr=000e0658 vaddr=4037d8a4 size=0cf1ch ( 53020) load[0m
+[0;32mI (252) esp_image: segment 5: paddr=000ed57c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (261) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (261) boot: Disabling RNG early entropy source...[0m
+[0;32mI (271) cpu_start: Multicore app[0m
+[0;32mI (280) cpu_start: Pro cpu start user code[0m
+[0;32mI (280) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (280) app_init: Application information:[0m
+[0;32mI (280) app_init: Project name:     mesh_slave[0m
+[0;32mI (284) app_init: App version:      1[0m
+[0;32mI (288) app_init: Compile time:     Sep 25 2025 12:08:36[0m
+[0;32mI (293) app_init: ELF file SHA256:  201b88dbd...[0m
+[0;32mI (297) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (301) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (305) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (309) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (313) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (319) heap_init: At 3FCA4B68 len 00044BA8 (274 KiB): RAM[0m
+[0;32mI (324) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (329) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (334) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (341) spi_flash: detected chip: generic[0m
+[0;32mI (343) spi_flash: flash io: dio[0m
+[0;33mW (346) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (359) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (365) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (372) main_task: Started on CPU0[0m
+[0;32mI (392) main_task: Calling app_main()[0m
+[0;32mI (392) MESH_SLAVE: 🚀 DÉMARRAGE SLAVE ESP32 - City News[0m
+[0;32mI (392) MESH_SLAVE: 📡 Mode: Réception ESP-NOW + Serveur Web AP[0m
+[0;32mI (412) pp: pp rom version: e7ae62f[0m
+[0;32mI (412) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (422) wifi:wifi driver task: 3fced458, prio:23, stack:6656, core=0[0m
+[0;32mI (422) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (422) wifi:wifi certification version: v7.0[0m
+[0;32mI (422) wifi:config NVS flash: enabled[0m
+[0;32mI (422) wifi:config nano formatting: disabled[0m
+[0;32mI (432) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (432) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (442) wifi:Init management short buffer num: 32[0m
+[0;32mI (442) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (452) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (452) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (452) wifi:Init static rx buffer num: 10[0m
+[0;32mI (462) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (462) wifi_init: rx ba win: 6[0m
+[0;32mI (462) wifi_init: accept mbox: 6[0m
+[0;32mI (472) wifi_init: tcpip mbox: 32[0m
+[0;32mI (472) wifi_init: udp mbox: 6[0m
+[0;32mI (472) wifi_init: tcp mbox: 6[0m
+[0;32mI (482) wifi_init: tcp tx win: 5760[0m
+[0;32mI (482) wifi_init: tcp rx win: 5760[0m
+[0;32mI (482) wifi_init: tcp mss: 1440[0m
+[0;32mI (492) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (492) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (502) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10[0m
+[0;32mI (542) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (562) wifi:mode : softAP (94:a9:90:2e:8c:ed)[0m
+[0;32mI (562) wifi:Total power save buffer number: 16[0m
+[0;32mI (562) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (562) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (562) MESH_SLAVE: 📶 WiFi AP démarré[0m
+[0;32mI (562) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (582) MESH_SLAVE: 🏷️ SSID: City-News[0m
+[0;32mI (582) MESH_SLAVE: 🔒 Password: 123456789[0m
+[0;32mI (582) MESH_SLAVE: 🌐 IP: 192.168.4.1[0m
+[0;32mI (592) MESH_SLAVE: 📡 Canal: 9[0m
+[0;32mI (592) MESH_SLAVE: 🔧 Initialisation ESP-NOW[0m
+[0;32mI (592) ESPNOW: espnow [version: 2.0] init[0m
+[0;32mI (602) MESH_SLAVE: ✅ ESP-NOW initialisé et prêt à recevoir[0m
+[0;32mI (602) MESH_SLAVE: 🌐 Démarrage serveur HTTP sur port 80[0m
+[0;32mI (612) MESH_SLAVE: ✅ Serveur HTTP démarré[0m
+[0;33mW (612) httpd_uri: httpd_register_uri_handler: no slots left for registering handler[0m
+[0;33mW (622) httpd_uri: httpd_register_uri_handler: no slots left for registering handler[0m
+[0;33mW (632) httpd_uri: httpd_register_uri_handler: no slots left for registering handler[0m
+[0;33mW (642) httpd_uri: httpd_register_uri_handler: no slots left for registering handler[0m
+[0;33mW (642) httpd_uri: httpd_register_uri_handler: no slots left for registering handler[0m
+[0;33mW (652) httpd_uri: httpd_register_uri_handler: no slots left for registering handler[0m
+[0;32mI (662) MESH_SLAVE: 📁 Routes enregistrées: HTML (/,/index.html,/news.html,/login.html), CSS, JS, Images[0m
+[0;32mI (672) MESH_SLAVE: ✅ Slave opérationnel![0m
+[0;32mI (672) MESH_SLAVE: 🌐 Interface web: http://192.168.4.1[0m
+[0;32mI (682) MESH_SLAVE: 📡 En écoute ESP-NOW sur canal 9[0m
+[0;32mI (682) MESH_SLAVE: 📍 MAC Slave:[0m
+[0;32mI (682) MESH_SLAVE: 94:A9:90:2E:8C:ED[0m
+[0;32mI (1252) MESH_SLAVE: 📡 Données ESP-NOW reçues de:[0m
+[0;32mI (1252) MESH_SLAVE: B4:3A:45:A1:1F:38[0m
+[0;32mI (1252) MESH_SLAVE: ✅ ESP32 MASTER AUTORISÉ - Traitement des données[0m
+[0;32mI (1252) MESH_SLAVE: 📦 Taille: 264 bytes[0m
+[0;32mI (1262) MESH_SLAVE: 🧩 Fragment 1/1 (ID:423)[0m
+[0;32mI (1262) MESH_SLAVE: 🔄 Nouveau message - reinitialisation[0m
+[0;32mI (1272) MESH_SLAVE: 📥 Fragment ajouté (1/1)[0m
+[0;32mI (1272) MESH_SLAVE: 🎉 Message complet reçu![0m
+[0;32mI (1272) MESH_SLAVE: 🔤 Longueur totale: 29[0m
+[0;32mI (1282) MESH_SLAVE: ✅ JSON valide reconstruit[0m
+[0;32mI (1282) MESH_SLAVE: 🧪 JSON COMPLET: {"id":42,"t":"Test","c":"OK"}[0m
+[0;32mI (1292) MESH_SLAVE: 📄 Reçu format OBJET[0m
+[0;32mI (1292) MESH_SLAVE: 🆔 ID: 42[0m
+[0;32mI (1302) MESH_SLAVE: 💾 Message stocké [1/10]: {"id":42,"t":"Test","c":"OK"}[0m
+[0;32mI (13282) MESH_SLAVE: 📡 Données ESP-NOW reçues de:[0m
+[0;32mI (13282) MESH_SLAVE: B4:3A:45:A1:1F:38[0m
+[0;32mI (13282) MESH_SLAVE: ✅ ESP32 MASTER AUTORISÉ - Traitement des données[0m
+[0;32mI (13282) MESH_SLAVE: 📦 Taille: 264 bytes[0m
+[0;32mI (13292) MESH_SLAVE: 🧩 Fragment 1/1 (ID:424)[0m
+[0;32mI (13292) MESH_SLAVE: 🔄 Nouveau message - reinitialisation[0m
+[0;32mI (13302) MESH_SLAVE: 📥 Fragment ajouté (1/1)[0m
+[0;32mI (13302) MESH_SLAVE: 🎉 Message complet reçu![0m
+[0;32mI (13312) MESH_SLAVE: 🔤 Longueur totale: 29[0m
+[0;32mI (13312) MESH_SLAVE: ✅ JSON valide reconstruit[0m
+[0;32mI (13312) MESH_SLAVE: 🧪 JSON COMPLET: {"id":42,"t":"Test","c":"OK"}[0m
+[0;32mI (13322) MESH_SLAVE: 📄 Reçu format OBJET[0m
+[0;32mI (13322) MESH_SLAVE: 🆔 ID: 42[0m
+[0;32mI (13332) MESH_SLAVE: 💾 Message stocké [2/10]: {"id":42,"t":"Test","c":"OK"}[0m
+[0;32mI (25312) MESH_SLAVE: 📡 Données ESP-NOW reçues de:[0m
+[0;32mI (25312) MESH_SLAVE: B4:3A:45:A1:1F:38[0m
+[0;32mI (25312) MESH_SLAVE: ✅ ESP32 MASTER AUTORISÉ - Traitement des données[0m
+[0;32mI (25312) MESH_SLAVE: 📦 Taille: 264 bytes[0m
+[0;32mI (25322) MESH_SLAVE: 🧩 Fragment 1/1 (ID:425)[0m
+[0;32mI (25322) MESH_SLAVE: 🔄 Nouveau message - reinitialisation[0m
+[0;32mI (25332) MESH_SLAVE: 📥 Fragment ajouté (1/1)[0m
+[0;32mI (25332) MESH_SLAVE: 🎉 Message complet reçu![0m
+[0;32mI (25342) MESH_SLAVE: 🔤 Longueur totale: 29[0m
+[0;32mI (25342) MESH_SLAVE: ✅ JSON valide reconstruit[0m
+[0;32mI (25342) MESH_SLAVE: 🧪 JSON COMPLET: {"id":42,"t":"Test","c":"OK"}[0m
+[0;32mI (25352) MESH_SLAVE: 📄 Reçu format OBJET[0m
+[0;32mI (25352) MESH_SLAVE: 🆔 ID: 42[0m
+[0;32mI (25362) MESH_SLAVE: 💾 Message stocké [3/10]: {"id":42,"t":"Test","c":"OK"}[0m
+[0;32mI (30692) MESH_SLAVE: 💓 Slave actif - En écoute ESP-NOW[0m
+[0;32mI (30692) MESH_SLAVE: 📊 Messages stockés: 3/10[0m
+[0;32mI (37342) MESH_SLAVE: 📡 Données ESP-NOW reçues de:[0m
+[0;32mI (37342) MESH_SLAVE: B4:3A:45:A1:1F:38[0m
+[0;32mI (37342) MESH_SLAVE: ✅ ESP32 MASTER AUTORISÉ - Traitement des données[0m
+[0;32mI (37342) MESH_SLAVE: 📦 Taille: 264 bytes[0m
+[0;32mI (37352) MESH_SLAVE: 🧩 Fragment 1/1 (ID:426)[0m
+[0;32mI (37352) MESH_SLAVE: 🔄 Nouveau message - reinitialisation[0m
+[0;32mI (37362) MESH_SLAVE: 📥 Fragment ajouté (1/1)[0m
+[0;32mI (37362) MESH_SLAVE: 🎉 Message complet reçu![0m
+[0;32mI (37372) MESH_SLAVE: 🔤 Longueur totale: 29[0m
+[0;32mI (37372) MESH_SLAVE: ✅ JSON valide reconstruit[0m
+[0;32mI (37372) MESH_SLAVE: 🧪 JSON COMPLET: {"id":42,"t":"Test","c":"OK"}[0m
+[0;32mI (37382) MESH_SLAVE: 📄 Reçu format OBJET[0m
+[0;32mI (37382) MESH_SLAVE: 🆔 ID: 42[0m
+[0;32mI (37392) MESH_SLAVE: 💾 Message stocké [4/10]: {"id":42,"t":"Test","c":"OK"}[0m
+[0;32mI (49372) MESH_SLAVE: 📡 Données ESP-NOW reçues de:[0m
+[0;32mI (49372) MESH_SLAVE: B4:3A:45:A1:1F:38[0m
+[0;32mI (49372) MESH_SLAVE: ✅ ESP32 MASTER AUTORISÉ - Traitement des données[0m
+[0;32mI (49372) MESH_SLAVE: 📦 Taille: 264 bytes[0m
+[0;32mI (49382) MESH_SLAVE: 🧩 Fragment 1/1 (ID:427)[0m
+[0;32mI (49382) MESH_SLAVE: 🔄 Nouveau message - reinitialisation[0m
+[0;32mI (49392) MESH_SLAVE: 📥 Fragment ajouté (1/1)[0m
+[0;32mI (49392) MESH_SLAVE: 🎉 Message complet reçu![0m
+[0;32mI (49402) MESH_SLAVE: 🔤 Longueur totale: 29[0m
+[0;32mI (49402) MESH_SLAVE: ✅ JSON valide reconstruit[0m
+[0;32mI (49402) MESH_SLAVE: 🧪 JSON COMPLET: {"id":42,"t":"Test","c":"OK"}[0m
+[0;32mI (49412) MESH_SLAVE: 📄 Reçu format OBJET[0m
+[0;32mI (49412) MESH_SLAVE: 🆔 ID: 42[0m
+[0;32mI (49422) MESH_SLAVE: 💾 Message stocké [5/10]: {"id":42,"t":"Test","c":"OK"}[0m
+[0;32mI (60692) MESH_SLAVE: 💓 Slave actif - En écoute ESP-NOW[0m
+[0;32mI (60692) MESH_SLAVE: 📊 Messages stockés: 5/10[0m
+[0;32mI (61402) MESH_SLAVE: 📡 Données ESP-NOW reçues de:[0m
+[0;32mI (61402) MESH_SLAVE: B4:3A:45:A1:1F:38[0m
+[0;32mI (61402) MESH_SLAVE: ✅ ESP32 MASTER AUTORISÉ - Traitement des données[0m
+[0;32mI (61402) MESH_SLAVE: 📦 Taille: 264 bytes[0m
+[0;32mI (61412) MESH_SLAVE: 🧩 Fragment 1/1 (ID:428)[0m
+[0;32mI (61412) MESH_SLAVE: 🔄 Nouveau message - reinitialisation[0m
+[0;32mI (61422) MESH_SLAVE: 📥 Fragment ajouté (1/1)[0m
+[0;32mI (61422) MESH_SLAVE: 🎉 Message complet reçu![0m
+[0;32mI (61432) MESH_SLAVE: 🔤 Longueur totale: 29[0m
+[0;32mI (61432) MESH_SLAVE: ✅ JSON valide reconstruit[0m
+[0;32mI (61432) MESH_SLAVE: 🧪 JSON COMPLET: {"id":42,"t":"Test","c":"OK"}[0m
+[0;32mI (61442) MESH_SLAVE: 📄 Reçu format OBJET[0m
+[0;32mI (61442) MESH_SLAVE: 🆔 ID: 42[0m
+[0;32mI (61452) MESH_SLAVE: 💾 Message stocké [6/10]: {"id":42,"t":"Test","c":"OK"}[0m
+[0;32mI (73432) MESH_SLAVE: 📡 Données ESP-NOW reçues de:[0m
+[0;32mI (73432) MESH_SLAVE: B4:3A:45:A1:1F:38[0m
+[0;32mI (73432) MESH_SLAVE: ✅ ESP32 MASTER AUTORISÉ - Traitement des données[0m
+[0;32mI (73432) MESH_SLAVE: 📦 Taille: 264 bytes[0m
+[0;32mI (73442) MESH_SLAVE: 🧩 Fragment 1/1 (ID:429)[0m
+[0;32mI (73442) MESH_SLAVE: 🔄 Nouveau message - reinitialisation[0m
+[0;32mI (73452) MESH_SLAVE: 📥 Fragment ajouté (1/1)[0m
+[0;32mI (73452) MESH_SLAVE: 🎉 Message complet reçu![0m
+[0;32mI (73462) MESH_SLAVE: 🔤 Longueur totale: 29[0m
+[0;32mI (73462) MESH_SLAVE: ✅ JSON valide reconstruit[0m
+[0;32mI (73472) MESH_SLAVE: 🧪 JSON COMPLET: {"id":42,"t":"Test","c":"OK"}[0m
+[0;32mI (73472) MESH_SLAVE: 📄 Reçu format OBJET[0m
+[0;32mI (73482) MESH_SLAVE: 🆔 ID: 42[0m
+[0;32mI (73482) MESH_SLAVE: 💾 Message stocké [7/10]: {"id":42,"t":"Test","c":"OK"}[0m
+[0;32mI (85462) MESH_SLAVE: 📡 Données ESP-NOW reçues de:[0m
+[0;32mI (85462) MESH_SLAVE: B4:3A:45:A1:1F:38[0m
+[0;32mI (85462) MESH_SLAVE: ✅ ESP32 MASTER AUTORISÉ - Traitement des données[0m
+[0;32mI (85462) MESH_SLAVE: 📦 Taille: 264 bytes[0m
+[0;32mI (85472) MESH_SLAVE: 🧩 Fragment 1/1 (ID:430)[0m
+[0;32mI (85472) MESH_SLAVE: 🔄 Nouveau message - reinitialisation[0m
+[0;32mI (85482) MESH_SLAVE: 📥 Fragment ajouté (1/1)[0m
+[0;32mI (85482) MESH_SLAVE: 🎉 Message complet reçu![0m
+[0;32mI (85492) MESH_SLAVE: 🔤 Longueur totale: 29[0m
+[0;32mI (85492) MESH_SLAVE: ✅ JSON valide reconstruit[0m
+[0;32mI (85502) MESH_SLAVE: 🧪 JSON COMPLET: {"id":42,"t":"Test","c":"OK"}[0m
+[0;32mI (85502) MESH_SLAVE: 📄 Reçu format OBJET[0m
+[0;32mI (85512) MESH_SLAVE: 🆔 ID: 42[0m
+[0;32mI (85512) MESH_SLAVE: 💾 Message stocké [8/10]: {"id":42,"t":"Test","c":"OK"}[0m
+[0;32mI (90692) MESH_SLAVE: 💓 Slave actif - En écoute ESP-NOW[0m
+[0;32mI (90692) MESH_SLAVE: 📊 Messages stockés: 8/10[0m
+[0;32mI (97492) MESH_SLAVE: 📡 Données ESP-NOW reçues de:[0m
+[0;32mI (97492) MESH_SLAVE: B4:3A:45:A1:1F:38[0m
+[0;32mI (97492) MESH_SLAVE: ✅ ESP32 MASTER AUTORISÉ - Traitement des données[0m
+[0;32mI (97492) MESH_SLAVE: 📦 Taille: 264 bytes[0m
+[0;32mI (97502) MESH_SLAVE: 🧩 Fragment 1/1 (ID:431)[0m
+[0;32mI (97502) MESH_SLAVE: 🔄 Nouveau message - reinitialisation[0m
+[0;32mI (97512) MESH_SLAVE: 📥 Fragment ajouté (1/1)[0m
+[0;32mI (97512) MESH_SLAVE: 🎉 Message complet reçu![0m
+[0;32mI (97522) MESH_SLAVE: 🔤 Longueur totale: 29[0m
+[0;32mI (97522) MESH_SLAVE: ✅ JSON valide reconstruit[0m
+[0;32mI (97522) MESH_SLAVE: 🧪 JSON COMPLET: {"id":42,"t":"Test","c":"OK"}[0m
+[0;32mI (97532) MESH_SLAVE: 📄 Reçu format OBJET[0m
+[0;32mI (97532) MESH_SLAVE: 🆔 ID: 42[0m
+[0;32mI (97542) MESH_SLAVE: 💾 Message stocké [9/10]: {"id":42,"t":"Test","c":"OK"}[0m
+[

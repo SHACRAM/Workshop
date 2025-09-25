@@ -1,0 +1,555 @@
+Command: ninja all
+[1/9] Performing build step for 'bootloader'
+[1/1] cd /Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/build/bootloader/esp-idf/esptool_py && /Users/sebastienlotten/.espressif/python_env/idf5.5_py3.13_env/bin/python /Users/sebastienlotten/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/build/bootloader/bootloader.bin
+Bootloader binary size 0x5240 bytes. 0x2dc0 bytes (36%) free.
+[2/9] No install step for 'bootloader'
+[3/9] Completed 'bootloader'
+[4/9] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/mesh_slave_main.c.obj
+FAILED: [code=1] esp-idf/main/CMakeFiles/__idf_main.dir/mesh_slave_main.c.obj 
+/Users/sebastienlotten/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc -DESP_PLATFORM -DIDF_VER=\"v5.5.1\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -I/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/build/config -I/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main -I/Users/sebastienlotten/esp/esp-idf/components/newlib/platform_include -I/Users/sebastienlotten/esp/esp-idf/components/freertos/config/include -I/Users/sebastienlotten/esp/esp-idf/components/freertos/config/include/freertos -I/Users/sebastienlotten/esp/esp-idf/components/freertos/config/xtensa/include -I/Users/sebastienlotten/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include -I/Users/sebastienlotten/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -I/Users/sebastienlotten/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos -I/Users/sebastienlotten/esp/esp-idf/components/freertos/esp_additions/include -I/Users/sebastienlotten/esp/esp-idf/components/esp_hw_support/include -I/Users/sebastienlotten/esp/esp-idf/components/esp_hw_support/include/soc -I/Users/sebastienlotten/esp/esp-idf/components/esp_hw_support/include/soc/esp32s3 -I/Users/sebastienlotten/esp/esp-idf/components/esp_hw_support/dma/include -I/Users/sebastienlotten/esp/esp-idf/components/esp_hw_support/ldo/include -I/Users/sebastienlotten/esp/esp-idf/components/esp_hw_support/debug_probe/include -I/Users/sebastienlotten/esp/esp-idf/components/esp_hw_support/mspi_timing_tuning/include -I/Users/sebastienlotten/esp/esp-idf/components/esp_hw_support/mspi_timing_tuning/tuning_scheme_impl/include -I/Users/sebastienlotten/esp/esp-idf/components/esp_hw_support/power_supply/include -I/Users/sebastienlotten/esp/esp-idf/components/esp_hw_support/port/esp32s3/. -I/Users/sebastienlotten/esp/esp-idf/components/esp_hw_support/port/esp32s3/include -I/Users/sebastienlotten/esp/esp-idf/components/esp_hw_support/mspi_timing_tuning/port/esp32s3/. -I/Users/sebastienlotten/esp/esp-idf/components/esp_hw_support/mspi_timing_tuning/port/esp32s3/include -I/Users/sebastienlotten/esp/esp-idf/components/heap/include -I/Users/sebastienlotten/esp/esp-idf/components/heap/tlsf -I/Users/sebastienlotten/esp/esp-idf/components/log/include -I/Users/sebastienlotten/esp/esp-idf/components/soc/include -I/Users/sebastienlotten/esp/esp-idf/components/soc/esp32s3 -I/Users/sebastienlotten/esp/esp-idf/components/soc/esp32s3/include -I/Users/sebastienlotten/esp/esp-idf/components/soc/esp32s3/register -I/Users/sebastienlotten/esp/esp-idf/components/hal/platform_port/include -I/Users/sebastienlotten/esp/esp-idf/components/hal/esp32s3/include -I/Users/sebastienlotten/esp/esp-idf/components/hal/include -I/Users/sebastienlotten/esp/esp-idf/components/esp_rom/include -I/Users/sebastienlotten/esp/esp-idf/components/esp_rom/esp32s3/include -I/Users/sebastienlotten/esp/esp-idf/components/esp_rom/esp32s3/include/esp32s3 -I/Users/sebastienlotten/esp/esp-idf/components/esp_rom/esp32s3 -I/Users/sebastienlotten/esp/esp-idf/components/esp_common/include -I/Users/sebastienlotten/esp/esp-idf/components/esp_system/include -I/Users/sebastienlotten/esp/esp-idf/components/esp_system/port/soc -I/Users/sebastienlotten/esp/esp-idf/components/esp_system/port/include/private -I/Users/sebastienlotten/esp/esp-idf/components/xtensa/esp32s3/include -I/Users/sebastienlotten/esp/esp-idf/components/xtensa/include -I/Users/sebastienlotten/esp/esp-idf/components/xtensa/deprecated_include -I/Users/sebastienlotten/esp/esp-idf/components/lwip/include -I/Users/sebastienlotten/esp/esp-idf/components/lwip/include/apps -I/Users/sebastienlotten/esp/esp-idf/components/lwip/include/apps/sntp -I/Users/sebastienlotten/esp/esp-idf/components/lwip/lwip/src/include -I/Users/sebastienlotten/esp/esp-idf/components/lwip/port/include -I/Users/sebastienlotten/esp/esp-idf/components/lwip/port/freertos/include -I/Users/sebastienlotten/esp/esp-idf/components/lwip/port/esp32xx/include -I/Users/sebastienlotten/esp/esp-idf/components/lwip/port/esp32xx/include/arch -I/Users/sebastienlotten/esp/esp-idf/components/lwip/port/esp32xx/include/sys -I/Users/sebastienlotten/esp/esp-idf/components/nvs_flash/include -I/Users/sebastienlotten/esp/esp-idf/components/esp_partition/include -I/Users/sebastienlotten/esp/esp-idf/components/esp_event/include -I/Users/sebastienlotten/esp/esp-idf/components/esp_netif/include -I/Users/sebastienlotten/esp/esp-idf/components/esp_wifi/include -I/Users/sebastienlotten/esp/esp-idf/components/esp_wifi/include/local -I/Users/sebastienlotten/esp/esp-idf/components/esp_wifi/wifi_apps/include -I/Users/sebastienlotten/esp/esp-idf/components/esp_wifi/wifi_apps/nan_app/include -I/Users/sebastienlotten/esp/esp-idf/components/esp_phy/include -I/Users/sebastienlotten/esp/esp-idf/components/esp_phy/esp32s3/include -I/Users/sebastienlotten/esp/esp-idf/components/esp_http_server/include -I/Users/sebastienlotten/esp/esp-idf/components/http_parser -I/Users/sebastienlotten/esp/esp-idf/components/json/cJSON -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-error=extra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fno-shrink-wrap -fmacro-prefix-map=/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave=. -fmacro-prefix-map=/Users/sebastienlotten/esp/esp-idf=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu17 -Wno-old-style-declaration -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/mesh_slave_main.c.obj -MF esp-idf/main/CMakeFiles/__idf_main.dir/mesh_slave_main.c.obj.d -o esp-idf/main/CMakeFiles/__idf_main.dir/mesh_slave_main.c.obj -c /Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c
+In file included from /Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:20,
+                 from /Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:8:
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c: In function 'esp_now_recv_cb':
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:67:39: error: expected ')' before 'MACSTR'
+   67 |     ESP_LOGI(TAG, "Message reçu de: " MACSTR ", longueur: %d", MAC2STR(recv_info->src_addr), len);
+      |                                       ^~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log_format.h:15:88: note: in definition of macro 'LOG_FORMAT'
+   15 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                                                                        ^~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:165:94: note: in expansion of macro 'ESP_LOG_LEVEL'
+  165 | #define ESP_LOG_LEVEL_LOCAL(configs, tag, format, ...) do { if (_ESP_LOG_ENABLED(configs)) { ESP_LOG_LEVEL(configs, tag, format, ##__VA_ARGS__); } } while(0)
+      |                                                                                              ^~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:67:5: note: in expansion of macro 'ESP_LOGI'
+   67 |     ESP_LOGI(TAG, "Message reçu de: " MACSTR ", longueur: %d", MAC2STR(recv_info->src_addr), len);
+      |     ^~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:220:72: note: to match this '('
+  220 |         if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_ERROR)        { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_ERROR),   tag, LOG_FORMAT(E, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                        ^
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:165:94: note: in expansion of macro 'ESP_LOG_LEVEL'
+  165 | #define ESP_LOG_LEVEL_LOCAL(configs, tag, format, ...) do { if (_ESP_LOG_ENABLED(configs)) { ESP_LOG_LEVEL(configs, tag, format, ##__VA_ARGS__); } } while(0)
+      |                                                                                              ^~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:67:5: note: in expansion of macro 'ESP_LOGI'
+   67 |     ESP_LOGI(TAG, "Message reçu de: " MACSTR ", longueur: %d", MAC2STR(recv_info->src_addr), len);
+      |     ^~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:67:39: error: expected ')' before 'MACSTR'
+   67 |     ESP_LOGI(TAG, "Message reçu de: " MACSTR ", longueur: %d", MAC2STR(recv_info->src_addr), len);
+      |                                       ^~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log_format.h:15:88: note: in definition of macro 'LOG_FORMAT'
+   15 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                                                                        ^~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:165:94: note: in expansion of macro 'ESP_LOG_LEVEL'
+  165 | #define ESP_LOG_LEVEL_LOCAL(configs, tag, format, ...) do { if (_ESP_LOG_ENABLED(configs)) { ESP_LOG_LEVEL(configs, tag, format, ##__VA_ARGS__); } } while(0)
+      |                                                                                              ^~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:67:5: note: in expansion of macro 'ESP_LOGI'
+   67 |     ESP_LOGI(TAG, "Message reçu de: " MACSTR ", longueur: %d", MAC2STR(recv_info->src_addr), len);
+      |     ^~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:221:72: note: to match this '('
+  221 |         else if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_WARN)    { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_WARN),    tag, LOG_FORMAT(W, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                        ^
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:165:94: note: in expansion of macro 'ESP_LOG_LEVEL'
+  165 | #define ESP_LOG_LEVEL_LOCAL(configs, tag, format, ...) do { if (_ESP_LOG_ENABLED(configs)) { ESP_LOG_LEVEL(configs, tag, format, ##__VA_ARGS__); } } while(0)
+      |                                                                                              ^~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:67:5: note: in expansion of macro 'ESP_LOGI'
+   67 |     ESP_LOGI(TAG, "Message reçu de: " MACSTR ", longueur: %d", MAC2STR(recv_info->src_addr), len);
+      |     ^~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:67:39: error: expected ')' before 'MACSTR'
+   67 |     ESP_LOGI(TAG, "Message reçu de: " MACSTR ", longueur: %d", MAC2STR(recv_info->src_addr), len);
+      |                                       ^~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log_format.h:15:88: note: in definition of macro 'LOG_FORMAT'
+   15 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                                                                        ^~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:165:94: note: in expansion of macro 'ESP_LOG_LEVEL'
+  165 | #define ESP_LOG_LEVEL_LOCAL(configs, tag, format, ...) do { if (_ESP_LOG_ENABLED(configs)) { ESP_LOG_LEVEL(configs, tag, format, ##__VA_ARGS__); } } while(0)
+      |                                                                                              ^~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:67:5: note: in expansion of macro 'ESP_LOGI'
+   67 |     ESP_LOGI(TAG, "Message reçu de: " MACSTR ", longueur: %d", MAC2STR(recv_info->src_addr), len);
+      |     ^~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:222:72: note: to match this '('
+  222 |         else if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_DEBUG)   { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_DEBUG),   tag, LOG_FORMAT(D, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                        ^
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:165:94: note: in expansion of macro 'ESP_LOG_LEVEL'
+  165 | #define ESP_LOG_LEVEL_LOCAL(configs, tag, format, ...) do { if (_ESP_LOG_ENABLED(configs)) { ESP_LOG_LEVEL(configs, tag, format, ##__VA_ARGS__); } } while(0)
+      |                                                                                              ^~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:67:5: note: in expansion of macro 'ESP_LOGI'
+   67 |     ESP_LOGI(TAG, "Message reçu de: " MACSTR ", longueur: %d", MAC2STR(recv_info->src_addr), len);
+      |     ^~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:67:39: error: expected ')' before 'MACSTR'
+   67 |     ESP_LOGI(TAG, "Message reçu de: " MACSTR ", longueur: %d", MAC2STR(recv_info->src_addr), len);
+      |                                       ^~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log_format.h:15:88: note: in definition of macro 'LOG_FORMAT'
+   15 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                                                                        ^~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:165:94: note: in expansion of macro 'ESP_LOG_LEVEL'
+  165 | #define ESP_LOG_LEVEL_LOCAL(configs, tag, format, ...) do { if (_ESP_LOG_ENABLED(configs)) { ESP_LOG_LEVEL(configs, tag, format, ##__VA_ARGS__); } } while(0)
+      |                                                                                              ^~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:67:5: note: in expansion of macro 'ESP_LOGI'
+   67 |     ESP_LOGI(TAG, "Message reçu de: " MACSTR ", longueur: %d", MAC2STR(recv_info->src_addr), len);
+      |     ^~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:223:72: note: to match this '('
+  223 |         else if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_VERBOSE) { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_VERBOSE), tag, LOG_FORMAT(V, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                        ^
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:165:94: note: in expansion of macro 'ESP_LOG_LEVEL'
+  165 | #define ESP_LOG_LEVEL_LOCAL(configs, tag, format, ...) do { if (_ESP_LOG_ENABLED(configs)) { ESP_LOG_LEVEL(configs, tag, format, ##__VA_ARGS__); } } while(0)
+      |                                                                                              ^~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:67:5: note: in expansion of macro 'ESP_LOGI'
+   67 |     ESP_LOGI(TAG, "Message reçu de: " MACSTR ", longueur: %d", MAC2STR(recv_info->src_addr), len);
+      |     ^~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:67:39: error: expected ')' before 'MACSTR'
+   67 |     ESP_LOGI(TAG, "Message reçu de: " MACSTR ", longueur: %d", MAC2STR(recv_info->src_addr), len);
+      |                                       ^~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log_format.h:15:88: note: in definition of macro 'LOG_FORMAT'
+   15 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                                                                        ^~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:165:94: note: in expansion of macro 'ESP_LOG_LEVEL'
+  165 | #define ESP_LOG_LEVEL_LOCAL(configs, tag, format, ...) do { if (_ESP_LOG_ENABLED(configs)) { ESP_LOG_LEVEL(configs, tag, format, ##__VA_ARGS__); } } while(0)
+      |                                                                                              ^~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:67:5: note: in expansion of macro 'ESP_LOGI'
+   67 |     ESP_LOGI(TAG, "Message reçu de: " MACSTR ", longueur: %d", MAC2STR(recv_info->src_addr), len);
+      |     ^~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:224:72: note: to match this '('
+  224 |         else                                                  { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_INFO),    tag, LOG_FORMAT(I, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                        ^
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:165:94: note: in expansion of macro 'ESP_LOG_LEVEL'
+  165 | #define ESP_LOG_LEVEL_LOCAL(configs, tag, format, ...) do { if (_ESP_LOG_ENABLED(configs)) { ESP_LOG_LEVEL(configs, tag, format, ##__VA_ARGS__); } } while(0)
+      |                                                                                              ^~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:67:5: note: in expansion of macro 'ESP_LOGI'
+   67 |     ESP_LOGI(TAG, "Message reçu de: " MACSTR ", longueur: %d", MAC2STR(recv_info->src_addr), len);
+      |     ^~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:71:62: error: expected ')' before 'MACSTR'
+   71 |         ESP_LOGW(TAG, "Message ignoré - MAC non autorisée: " MACSTR, MAC2STR(recv_info->src_addr));
+      |                                                              ^~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log_format.h:15:88: note: in definition of macro 'LOG_FORMAT'
+   15 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                                                                        ^~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:165:94: note: in expansion of macro 'ESP_LOG_LEVEL'
+  165 | #define ESP_LOG_LEVEL_LOCAL(configs, tag, format, ...) do { if (_ESP_LOG_ENABLED(configs)) { ESP_LOG_LEVEL(configs, tag, format, ##__VA_ARGS__); } } while(0)
+      |                                                                                              ^~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:125:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  125 | #define ESP_LOGW(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_WARN, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:71:9: note: in expansion of macro 'ESP_LOGW'
+   71 |         ESP_LOGW(TAG, "Message ignoré - MAC non autorisée: " MACSTR, MAC2STR(recv_info->src_addr));
+      |         ^~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:220:72: note: to match this '('
+  220 |         if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_ERROR)        { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_ERROR),   tag, LOG_FORMAT(E, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                        ^
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:165:94: note: in expansion of macro 'ESP_LOG_LEVEL'
+  165 | #define ESP_LOG_LEVEL_LOCAL(configs, tag, format, ...) do { if (_ESP_LOG_ENABLED(configs)) { ESP_LOG_LEVEL(configs, tag, format, ##__VA_ARGS__); } } while(0)
+      |                                                                                              ^~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:125:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  125 | #define ESP_LOGW(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_WARN, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:71:9: note: in expansion of macro 'ESP_LOGW'
+   71 |         ESP_LOGW(TAG, "Message ignoré - MAC non autorisée: " MACSTR, MAC2STR(recv_info->src_addr));
+      |         ^~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:71:62: error: expected ')' before 'MACSTR'
+   71 |         ESP_LOGW(TAG, "Message ignoré - MAC non autorisée: " MACSTR, MAC2STR(recv_info->src_addr));
+      |                                                              ^~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log_format.h:15:88: note: in definition of macro 'LOG_FORMAT'
+   15 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                                                                        ^~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:165:94: note: in expansion of macro 'ESP_LOG_LEVEL'
+  165 | #define ESP_LOG_LEVEL_LOCAL(configs, tag, format, ...) do { if (_ESP_LOG_ENABLED(configs)) { ESP_LOG_LEVEL(configs, tag, format, ##__VA_ARGS__); } } while(0)
+      |                                                                                              ^~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:125:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  125 | #define ESP_LOGW(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_WARN, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:71:9: note: in expansion of macro 'ESP_LOGW'
+   71 |         ESP_LOGW(TAG, "Message ignoré - MAC non autorisée: " MACSTR, MAC2STR(recv_info->src_addr));
+      |         ^~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:221:72: note: to match this '('
+  221 |         else if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_WARN)    { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_WARN),    tag, LOG_FORMAT(W, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                        ^
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:165:94: note: in expansion of macro 'ESP_LOG_LEVEL'
+  165 | #define ESP_LOG_LEVEL_LOCAL(configs, tag, format, ...) do { if (_ESP_LOG_ENABLED(configs)) { ESP_LOG_LEVEL(configs, tag, format, ##__VA_ARGS__); } } while(0)
+      |                                                                                              ^~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:125:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  125 | #define ESP_LOGW(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_WARN, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:71:9: note: in expansion of macro 'ESP_LOGW'
+   71 |         ESP_LOGW(TAG, "Message ignoré - MAC non autorisée: " MACSTR, MAC2STR(recv_info->src_addr));
+      |         ^~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:71:62: error: expected ')' before 'MACSTR'
+   71 |         ESP_LOGW(TAG, "Message ignoré - MAC non autorisée: " MACSTR, MAC2STR(recv_info->src_addr));
+      |                                                              ^~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log_format.h:15:88: note: in definition of macro 'LOG_FORMAT'
+   15 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                                                                        ^~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:165:94: note: in expansion of macro 'ESP_LOG_LEVEL'
+  165 | #define ESP_LOG_LEVEL_LOCAL(configs, tag, format, ...) do { if (_ESP_LOG_ENABLED(configs)) { ESP_LOG_LEVEL(configs, tag, format, ##__VA_ARGS__); } } while(0)
+      |                                                                                              ^~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:125:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  125 | #define ESP_LOGW(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_WARN, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:71:9: note: in expansion of macro 'ESP_LOGW'
+   71 |         ESP_LOGW(TAG, "Message ignoré - MAC non autorisée: " MACSTR, MAC2STR(recv_info->src_addr));
+      |         ^~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:222:72: note: to match this '('
+  222 |         else if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_DEBUG)   { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_DEBUG),   tag, LOG_FORMAT(D, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                        ^
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:165:94: note: in expansion of macro 'ESP_LOG_LEVEL'
+  165 | #define ESP_LOG_LEVEL_LOCAL(configs, tag, format, ...) do { if (_ESP_LOG_ENABLED(configs)) { ESP_LOG_LEVEL(configs, tag, format, ##__VA_ARGS__); } } while(0)
+      |                                                                                              ^~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:125:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  125 | #define ESP_LOGW(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_WARN, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:71:9: note: in expansion of macro 'ESP_LOGW'
+   71 |         ESP_LOGW(TAG, "Message ignoré - MAC non autorisée: " MACSTR, MAC2STR(recv_info->src_addr));
+      |         ^~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:71:62: error: expected ')' before 'MACSTR'
+   71 |         ESP_LOGW(TAG, "Message ignoré - MAC non autorisée: " MACSTR, MAC2STR(recv_info->src_addr));
+      |                                                              ^~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log_format.h:15:88: note: in definition of macro 'LOG_FORMAT'
+   15 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                                                                        ^~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:165:94: note: in expansion of macro 'ESP_LOG_LEVEL'
+  165 | #define ESP_LOG_LEVEL_LOCAL(configs, tag, format, ...) do { if (_ESP_LOG_ENABLED(configs)) { ESP_LOG_LEVEL(configs, tag, format, ##__VA_ARGS__); } } while(0)
+      |                                                                                              ^~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:125:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  125 | #define ESP_LOGW(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_WARN, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:71:9: note: in expansion of macro 'ESP_LOGW'
+   71 |         ESP_LOGW(TAG, "Message ignoré - MAC non autorisée: " MACSTR, MAC2STR(recv_info->src_addr));
+      |         ^~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:223:72: note: to match this '('
+  223 |         else if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_VERBOSE) { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_VERBOSE), tag, LOG_FORMAT(V, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                        ^
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:165:94: note: in expansion of macro 'ESP_LOG_LEVEL'
+  165 | #define ESP_LOG_LEVEL_LOCAL(configs, tag, format, ...) do { if (_ESP_LOG_ENABLED(configs)) { ESP_LOG_LEVEL(configs, tag, format, ##__VA_ARGS__); } } while(0)
+      |                                                                                              ^~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:125:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  125 | #define ESP_LOGW(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_WARN, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:71:9: note: in expansion of macro 'ESP_LOGW'
+   71 |         ESP_LOGW(TAG, "Message ignoré - MAC non autorisée: " MACSTR, MAC2STR(recv_info->src_addr));
+      |         ^~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:71:62: error: expected ')' before 'MACSTR'
+   71 |         ESP_LOGW(TAG, "Message ignoré - MAC non autorisée: " MACSTR, MAC2STR(recv_info->src_addr));
+      |                                                              ^~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log_format.h:15:88: note: in definition of macro 'LOG_FORMAT'
+   15 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                                                                        ^~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:165:94: note: in expansion of macro 'ESP_LOG_LEVEL'
+  165 | #define ESP_LOG_LEVEL_LOCAL(configs, tag, format, ...) do { if (_ESP_LOG_ENABLED(configs)) { ESP_LOG_LEVEL(configs, tag, format, ##__VA_ARGS__); } } while(0)
+      |                                                                                              ^~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:125:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  125 | #define ESP_LOGW(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_WARN, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:71:9: note: in expansion of macro 'ESP_LOGW'
+   71 |         ESP_LOGW(TAG, "Message ignoré - MAC non autorisée: " MACSTR, MAC2STR(recv_info->src_addr));
+      |         ^~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:224:72: note: to match this '('
+  224 |         else                                                  { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_INFO),    tag, LOG_FORMAT(I, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                        ^
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:165:94: note: in expansion of macro 'ESP_LOG_LEVEL'
+  165 | #define ESP_LOG_LEVEL_LOCAL(configs, tag, format, ...) do { if (_ESP_LOG_ENABLED(configs)) { ESP_LOG_LEVEL(configs, tag, format, ##__VA_ARGS__); } } while(0)
+      |                                                                                              ^~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:125:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  125 | #define ESP_LOGW(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_WARN, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:71:9: note: in expansion of macro 'ESP_LOGW'
+   71 |         ESP_LOGW(TAG, "Message ignoré - MAC non autorisée: " MACSTR, MAC2STR(recv_info->src_addr));
+      |         ^~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c: In function 'esp_now_init_slave':
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:437:52: error: expected ')' before 'MACSTR'
+  437 |     ESP_LOGI(TAG, "MAC autorisée pour réception: " MACSTR, MAC2STR(master_mac));
+      |                                                    ^~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log_format.h:15:88: note: in definition of macro 'LOG_FORMAT'
+   15 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                                                                        ^~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:165:94: note: in expansion of macro 'ESP_LOG_LEVEL'
+  165 | #define ESP_LOG_LEVEL_LOCAL(configs, tag, format, ...) do { if (_ESP_LOG_ENABLED(configs)) { ESP_LOG_LEVEL(configs, tag, format, ##__VA_ARGS__); } } while(0)
+      |                                                                                              ^~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:437:5: note: in expansion of macro 'ESP_LOGI'
+  437 |     ESP_LOGI(TAG, "MAC autorisée pour réception: " MACSTR, MAC2STR(master_mac));
+      |     ^~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:220:72: note: to match this '('
+  220 |         if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_ERROR)        { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_ERROR),   tag, LOG_FORMAT(E, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                        ^
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:165:94: note: in expansion of macro 'ESP_LOG_LEVEL'
+  165 | #define ESP_LOG_LEVEL_LOCAL(configs, tag, format, ...) do { if (_ESP_LOG_ENABLED(configs)) { ESP_LOG_LEVEL(configs, tag, format, ##__VA_ARGS__); } } while(0)
+      |                                                                                              ^~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:437:5: note: in expansion of macro 'ESP_LOGI'
+  437 |     ESP_LOGI(TAG, "MAC autorisée pour réception: " MACSTR, MAC2STR(master_mac));
+      |     ^~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:437:52: error: expected ')' before 'MACSTR'
+  437 |     ESP_LOGI(TAG, "MAC autorisée pour réception: " MACSTR, MAC2STR(master_mac));
+      |                                                    ^~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log_format.h:15:88: note: in definition of macro 'LOG_FORMAT'
+   15 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                                                                        ^~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:165:94: note: in expansion of macro 'ESP_LOG_LEVEL'
+  165 | #define ESP_LOG_LEVEL_LOCAL(configs, tag, format, ...) do { if (_ESP_LOG_ENABLED(configs)) { ESP_LOG_LEVEL(configs, tag, format, ##__VA_ARGS__); } } while(0)
+      |                                                                                              ^~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:437:5: note: in expansion of macro 'ESP_LOGI'
+  437 |     ESP_LOGI(TAG, "MAC autorisée pour réception: " MACSTR, MAC2STR(master_mac));
+      |     ^~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:221:72: note: to match this '('
+  221 |         else if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_WARN)    { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_WARN),    tag, LOG_FORMAT(W, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                        ^
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:165:94: note: in expansion of macro 'ESP_LOG_LEVEL'
+  165 | #define ESP_LOG_LEVEL_LOCAL(configs, tag, format, ...) do { if (_ESP_LOG_ENABLED(configs)) { ESP_LOG_LEVEL(configs, tag, format, ##__VA_ARGS__); } } while(0)
+      |                                                                                              ^~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:437:5: note: in expansion of macro 'ESP_LOGI'
+  437 |     ESP_LOGI(TAG, "MAC autorisée pour réception: " MACSTR, MAC2STR(master_mac));
+      |     ^~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:437:52: error: expected ')' before 'MACSTR'
+  437 |     ESP_LOGI(TAG, "MAC autorisée pour réception: " MACSTR, MAC2STR(master_mac));
+      |                                                    ^~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log_format.h:15:88: note: in definition of macro 'LOG_FORMAT'
+   15 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                                                                        ^~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:165:94: note: in expansion of macro 'ESP_LOG_LEVEL'
+  165 | #define ESP_LOG_LEVEL_LOCAL(configs, tag, format, ...) do { if (_ESP_LOG_ENABLED(configs)) { ESP_LOG_LEVEL(configs, tag, format, ##__VA_ARGS__); } } while(0)
+      |                                                                                              ^~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:437:5: note: in expansion of macro 'ESP_LOGI'
+  437 |     ESP_LOGI(TAG, "MAC autorisée pour réception: " MACSTR, MAC2STR(master_mac));
+      |     ^~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:222:72: note: to match this '('
+  222 |         else if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_DEBUG)   { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_DEBUG),   tag, LOG_FORMAT(D, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                        ^
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:165:94: note: in expansion of macro 'ESP_LOG_LEVEL'
+  165 | #define ESP_LOG_LEVEL_LOCAL(configs, tag, format, ...) do { if (_ESP_LOG_ENABLED(configs)) { ESP_LOG_LEVEL(configs, tag, format, ##__VA_ARGS__); } } while(0)
+      |                                                                                              ^~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:437:5: note: in expansion of macro 'ESP_LOGI'
+  437 |     ESP_LOGI(TAG, "MAC autorisée pour réception: " MACSTR, MAC2STR(master_mac));
+      |     ^~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:437:52: error: expected ')' before 'MACSTR'
+  437 |     ESP_LOGI(TAG, "MAC autorisée pour réception: " MACSTR, MAC2STR(master_mac));
+      |                                                    ^~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log_format.h:15:88: note: in definition of macro 'LOG_FORMAT'
+   15 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                                                                        ^~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:165:94: note: in expansion of macro 'ESP_LOG_LEVEL'
+  165 | #define ESP_LOG_LEVEL_LOCAL(configs, tag, format, ...) do { if (_ESP_LOG_ENABLED(configs)) { ESP_LOG_LEVEL(configs, tag, format, ##__VA_ARGS__); } } while(0)
+      |                                                                                              ^~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:437:5: note: in expansion of macro 'ESP_LOGI'
+  437 |     ESP_LOGI(TAG, "MAC autorisée pour réception: " MACSTR, MAC2STR(master_mac));
+      |     ^~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:223:72: note: to match this '('
+  223 |         else if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_VERBOSE) { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_VERBOSE), tag, LOG_FORMAT(V, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                        ^
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:165:94: note: in expansion of macro 'ESP_LOG_LEVEL'
+  165 | #define ESP_LOG_LEVEL_LOCAL(configs, tag, format, ...) do { if (_ESP_LOG_ENABLED(configs)) { ESP_LOG_LEVEL(configs, tag, format, ##__VA_ARGS__); } } while(0)
+      |                                                                                              ^~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:437:5: note: in expansion of macro 'ESP_LOGI'
+  437 |     ESP_LOGI(TAG, "MAC autorisée pour réception: " MACSTR, MAC2STR(master_mac));
+      |     ^~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:437:52: error: expected ')' before 'MACSTR'
+  437 |     ESP_LOGI(TAG, "MAC autorisée pour réception: " MACSTR, MAC2STR(master_mac));
+      |                                                    ^~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log_format.h:15:88: note: in definition of macro 'LOG_FORMAT'
+   15 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                                                                        ^~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:165:94: note: in expansion of macro 'ESP_LOG_LEVEL'
+  165 | #define ESP_LOG_LEVEL_LOCAL(configs, tag, format, ...) do { if (_ESP_LOG_ENABLED(configs)) { ESP_LOG_LEVEL(configs, tag, format, ##__VA_ARGS__); } } while(0)
+      |                                                                                              ^~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:437:5: note: in expansion of macro 'ESP_LOGI'
+  437 |     ESP_LOGI(TAG, "MAC autorisée pour réception: " MACSTR, MAC2STR(master_mac));
+      |     ^~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:224:72: note: to match this '('
+  224 |         else                                                  { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_INFO),    tag, LOG_FORMAT(I, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                        ^
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:165:94: note: in expansion of macro 'ESP_LOG_LEVEL'
+  165 | #define ESP_LOG_LEVEL_LOCAL(configs, tag, format, ...) do { if (_ESP_LOG_ENABLED(configs)) { ESP_LOG_LEVEL(configs, tag, format, ##__VA_ARGS__); } } while(0)
+      |                                                                                              ^~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:437:5: note: in expansion of macro 'ESP_LOGI'
+  437 |     ESP_LOGI(TAG, "MAC autorisée pour réception: " MACSTR, MAC2STR(master_mac));
+      |     ^~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c: In function 'app_main':
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:468:68: error: expected ')' before 'MACSTR'
+  468 |     ESP_LOGI(TAG, "Filtrage MAC actif - Seule adresse autorisée: " MACSTR, MAC2STR(master_mac));
+      |                                                                    ^~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log_format.h:15:88: note: in definition of macro 'LOG_FORMAT'
+   15 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                                                                        ^~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:165:94: note: in expansion of macro 'ESP_LOG_LEVEL'
+  165 | #define ESP_LOG_LEVEL_LOCAL(configs, tag, format, ...) do { if (_ESP_LOG_ENABLED(configs)) { ESP_LOG_LEVEL(configs, tag, format, ##__VA_ARGS__); } } while(0)
+      |                                                                                              ^~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:468:5: note: in expansion of macro 'ESP_LOGI'
+  468 |     ESP_LOGI(TAG, "Filtrage MAC actif - Seule adresse autorisée: " MACSTR, MAC2STR(master_mac));
+      |     ^~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:220:72: note: to match this '('
+  220 |         if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_ERROR)        { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_ERROR),   tag, LOG_FORMAT(E, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                        ^
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:165:94: note: in expansion of macro 'ESP_LOG_LEVEL'
+  165 | #define ESP_LOG_LEVEL_LOCAL(configs, tag, format, ...) do { if (_ESP_LOG_ENABLED(configs)) { ESP_LOG_LEVEL(configs, tag, format, ##__VA_ARGS__); } } while(0)
+      |                                                                                              ^~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:468:5: note: in expansion of macro 'ESP_LOGI'
+  468 |     ESP_LOGI(TAG, "Filtrage MAC actif - Seule adresse autorisée: " MACSTR, MAC2STR(master_mac));
+      |     ^~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:468:68: error: expected ')' before 'MACSTR'
+  468 |     ESP_LOGI(TAG, "Filtrage MAC actif - Seule adresse autorisée: " MACSTR, MAC2STR(master_mac));
+      |                                                                    ^~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log_format.h:15:88: note: in definition of macro 'LOG_FORMAT'
+   15 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                                                                        ^~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:165:94: note: in expansion of macro 'ESP_LOG_LEVEL'
+  165 | #define ESP_LOG_LEVEL_LOCAL(configs, tag, format, ...) do { if (_ESP_LOG_ENABLED(configs)) { ESP_LOG_LEVEL(configs, tag, format, ##__VA_ARGS__); } } while(0)
+      |                                                                                              ^~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:468:5: note: in expansion of macro 'ESP_LOGI'
+  468 |     ESP_LOGI(TAG, "Filtrage MAC actif - Seule adresse autorisée: " MACSTR, MAC2STR(master_mac));
+      |     ^~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:221:72: note: to match this '('
+  221 |         else if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_WARN)    { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_WARN),    tag, LOG_FORMAT(W, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                        ^
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:165:94: note: in expansion of macro 'ESP_LOG_LEVEL'
+  165 | #define ESP_LOG_LEVEL_LOCAL(configs, tag, format, ...) do { if (_ESP_LOG_ENABLED(configs)) { ESP_LOG_LEVEL(configs, tag, format, ##__VA_ARGS__); } } while(0)
+      |                                                                                              ^~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:468:5: note: in expansion of macro 'ESP_LOGI'
+  468 |     ESP_LOGI(TAG, "Filtrage MAC actif - Seule adresse autorisée: " MACSTR, MAC2STR(master_mac));
+      |     ^~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:468:68: error: expected ')' before 'MACSTR'
+  468 |     ESP_LOGI(TAG, "Filtrage MAC actif - Seule adresse autorisée: " MACSTR, MAC2STR(master_mac));
+      |                                                                    ^~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log_format.h:15:88: note: in definition of macro 'LOG_FORMAT'
+   15 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                                                                        ^~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:165:94: note: in expansion of macro 'ESP_LOG_LEVEL'
+  165 | #define ESP_LOG_LEVEL_LOCAL(configs, tag, format, ...) do { if (_ESP_LOG_ENABLED(configs)) { ESP_LOG_LEVEL(configs, tag, format, ##__VA_ARGS__); } } while(0)
+      |                                                                                              ^~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:468:5: note: in expansion of macro 'ESP_LOGI'
+  468 |     ESP_LOGI(TAG, "Filtrage MAC actif - Seule adresse autorisée: " MACSTR, MAC2STR(master_mac));
+      |     ^~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:222:72: note: to match this '('
+  222 |         else if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_DEBUG)   { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_DEBUG),   tag, LOG_FORMAT(D, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                        ^
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:165:94: note: in expansion of macro 'ESP_LOG_LEVEL'
+  165 | #define ESP_LOG_LEVEL_LOCAL(configs, tag, format, ...) do { if (_ESP_LOG_ENABLED(configs)) { ESP_LOG_LEVEL(configs, tag, format, ##__VA_ARGS__); } } while(0)
+      |                                                                                              ^~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:468:5: note: in expansion of macro 'ESP_LOGI'
+  468 |     ESP_LOGI(TAG, "Filtrage MAC actif - Seule adresse autorisée: " MACSTR, MAC2STR(master_mac));
+      |     ^~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:468:68: error: expected ')' before 'MACSTR'
+  468 |     ESP_LOGI(TAG, "Filtrage MAC actif - Seule adresse autorisée: " MACSTR, MAC2STR(master_mac));
+      |                                                                    ^~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log_format.h:15:88: note: in definition of macro 'LOG_FORMAT'
+   15 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                                                                        ^~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:165:94: note: in expansion of macro 'ESP_LOG_LEVEL'
+  165 | #define ESP_LOG_LEVEL_LOCAL(configs, tag, format, ...) do { if (_ESP_LOG_ENABLED(configs)) { ESP_LOG_LEVEL(configs, tag, format, ##__VA_ARGS__); } } while(0)
+      |                                                                                              ^~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:468:5: note: in expansion of macro 'ESP_LOGI'
+  468 |     ESP_LOGI(TAG, "Filtrage MAC actif - Seule adresse autorisée: " MACSTR, MAC2STR(master_mac));
+      |     ^~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:223:72: note: to match this '('
+  223 |         else if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_VERBOSE) { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_VERBOSE), tag, LOG_FORMAT(V, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                        ^
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:165:94: note: in expansion of macro 'ESP_LOG_LEVEL'
+  165 | #define ESP_LOG_LEVEL_LOCAL(configs, tag, format, ...) do { if (_ESP_LOG_ENABLED(configs)) { ESP_LOG_LEVEL(configs, tag, format, ##__VA_ARGS__); } } while(0)
+      |                                                                                              ^~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:468:5: note: in expansion of macro 'ESP_LOGI'
+  468 |     ESP_LOGI(TAG, "Filtrage MAC actif - Seule adresse autorisée: " MACSTR, MAC2STR(master_mac));
+      |     ^~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:468:68: error: expected ')' before 'MACSTR'
+  468 |     ESP_LOGI(TAG, "Filtrage MAC actif - Seule adresse autorisée: " MACSTR, MAC2STR(master_mac));
+      |                                                                    ^~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log_format.h:15:88: note: in definition of macro 'LOG_FORMAT'
+   15 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                                                                        ^~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:165:94: note: in expansion of macro 'ESP_LOG_LEVEL'
+  165 | #define ESP_LOG_LEVEL_LOCAL(configs, tag, format, ...) do { if (_ESP_LOG_ENABLED(configs)) { ESP_LOG_LEVEL(configs, tag, format, ##__VA_ARGS__); } } while(0)
+      |                                                                                              ^~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:468:5: note: in expansion of macro 'ESP_LOGI'
+  468 |     ESP_LOGI(TAG, "Filtrage MAC actif - Seule adresse autorisée: " MACSTR, MAC2STR(master_mac));
+      |     ^~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:224:72: note: to match this '('
+  224 |         else                                                  { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_INFO),    tag, LOG_FORMAT(I, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                        ^
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:165:94: note: in expansion of macro 'ESP_LOG_LEVEL'
+  165 | #define ESP_LOG_LEVEL_LOCAL(configs, tag, format, ...) do { if (_ESP_LOG_ENABLED(configs)) { ESP_LOG_LEVEL(configs, tag, format, ##__VA_ARGS__); } } while(0)
+      |                                                                                              ^~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:468:5: note: in expansion of macro 'ESP_LOGI'
+  468 |     ESP_LOGI(TAG, "Filtrage MAC actif - Seule adresse autorisée: " MACSTR, MAC2STR(master_mac));
+      |     ^~~~~~~~
+ninja: build stopped: subcommand failed.

@@ -1,0 +1,1728 @@
+Command: /Users/sebastienlotten/.espressif/python_env/idf5.5_py3.13_env/bin/python /Users/sebastienlotten/esp/esp-idf/tools/idf_monitor.py -p /dev/cu.usbmodem5A840187951 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 /Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/build/mesh_slave.elf /Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/build/bootloader/bootloader.elf -m '/Users/sebastienlotten/.espressif/python_env/idf5.5_py3.13_env/bin/python' '/Users/sebastienlotten/esp/esp-idf/tools/idf.py'
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x158c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f34
+entry 0x403c8924
+[0;32mI (24) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (25) boot: compile time Sep 25 2025 10:13:28[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (28) boot: efuse block revision: v1.3[0m
+[0;32mI (31) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (35) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3c0a0020 size=31d20h (204064) map[0m
+[0;32mI (122) esp_image: segment 1: paddr=00041d48 vaddr=3fc9a800 size=04a24h ( 18980) load[0m
+[0;32mI (126) esp_image: segment 2: paddr=00046774 vaddr=40374000 size=098a4h ( 39076) load[0m
+[0;32mI (135) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=90638h (591416) map[0m
+[0;32mI (240) esp_image: segment 4: paddr=000e0660 vaddr=4037d8a4 size=0cf1ch ( 53020) load[0m
+[0;32mI (252) esp_image: segment 5: paddr=000ed584 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (261) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (261) boot: Disabling RNG early entropy source...[0m
+[0;32mI (271) cpu_start: Multicore app[0m
+[0;32mI (280) cpu_start: Pro cpu start user code[0m
+[0;32mI (280) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (280) app_init: Application information:[0m
+[0;32mI (280) app_init: Project name:     mesh_slave[0m
+[0;32mI (284) app_init: App version:      1[0m
+[0;32mI (288) app_init: Compile time:     Sep 25 2025 12:08:36[0m
+[0;32mI (293) app_init: ELF file SHA256:  024c4cd9c...[0m
+[0;32mI (297) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (301) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (305) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (309) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (313) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (319) heap_init: At 3FCA4B68 len 00044BA8 (274 KiB): RAM[0m
+[0;32mI (324) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (329) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (334) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (341) spi_flash: detected chip: generic[0m
+[0;32mI (343) spi_flash: flash io: dio[0m
+[0;33mW (346) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (359) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (365) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (372) main_task: Started on CPU0[0m
+[0;32mI (392) main_task: Calling app_main()[0m
+[0;32mI (392) MESH_SLAVE: 🚀 DÉMARRAGE SLAVE ESP32 - City News[0m
+[0;32mI (392) MESH_SLAVE: 📡 Mode: Réception ESP-NOW + Serveur Web AP[0m
+[0;32mI (412) pp: pp rom version: e7ae62f[0m
+[0;32mI (412) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (422) wifi:wifi driver task: 3fced4dc, prio:23, stack:6656, core=0[0m
+[0;32mI (422) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (422) wifi:wifi certification version: v7.0[0m
+[0;32mI (422) wifi:config NVS flash: enabled[0m
+[0;32mI (422) wifi:config nano formatting: disabled[0m
+[0;32mI (432) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (432) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (442) wifi:Init management short buffer num: 32[0m
+[0;32mI (442) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (452) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (452) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (452) wifi:Init static rx buffer num: 10[0m
+[0;32mI (462) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (462) wifi_init: rx ba win: 6[0m
+[0;32mI (462) wifi_init: accept mbox: 6[0m
+[0;32mI (472) wifi_init: tcpip mbox: 32[0m
+[0;32mI (472) wifi_init: udp mbox: 6[0m
+[0;32mI (472) wifi_init: tcp mbox: 6[0m
+[0;32mI (482) wifi_init: tcp tx win: 5760[0m
+[0;32mI (482) wifi_init: tcp rx win: 5760[0m
+[0;32mI (482) wifi_init: tcp mss: 1440[0m
+[0;32mI (492) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (492) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (502) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10[0m
+[0;32mI (542) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (562) wifi:mode : softAP (94:a9:90:2e:8c:ed)[0m
+[0;32mI (562) wifi:Total power save buffer number: 16[0m
+[0;32mI (562) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (562) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (562) MESH_SLAVE: 📶 WiFi AP démarré[0m
+[0;32mI (562) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (582) MESH_SLAVE: 🏷️ SSID: City-News[0m
+[0;32mI (582) MESH_SLAVE: 🔒 Password: 123456789[0m
+[0;32mI (582) MESH_SLAVE: 🌐 IP: 192.168.4.1[0m
+[0;32mI (592) MESH_SLAVE: 📡 Canal: 9[0m
+[0;32mI (592) MESH_SLAVE: 🔧 Initialisation ESP-NOW[0m
+[0;32mI (592) ESPNOW: espnow [version: 2.0] init[0m
+[0;32mI (602) MESH_SLAVE: ✅ ESP-NOW initialisé et prêt à recevoir[0m
+[0;32mI (602) MESH_SLAVE: 🌐 Démarrage serveur HTTP sur port 80[0m
+[0;32mI (612) MESH_SLAVE: ✅ Serveur HTTP démarré[0m
+[0;32mI (612) MESH_SLAVE: 📁 Routes enregistrées: HTML (/,/index.html,/news.html,/login.html), CSS, JS, Images[0m
+[0;32mI (622) MESH_SLAVE: ✅ Slave opérationnel![0m
+[0;32mI (632) MESH_SLAVE: 🌐 Interface web: http://192.168.4.1[0m
+[0;32mI (632) MESH_SLAVE: 📡 En écoute ESP-NOW sur canal 9[0m
+[0;32mI (642) MESH_SLAVE: 📍 MAC Slave:[0m
+[0;32mI (642) MESH_SLAVE: 94:A9:90:2E:8C:ED[0m
+[0;32mI (9942) MESH_SLAVE: 📡 Données ESP-NOW reçues de:[0m
+[0;32mI (9942) MESH_SLAVE: B4:3A:45:A1:1F:38[0m
+[0;32mI (9942) MESH_SLAVE: ✅ ESP32 MASTER AUTORISÉ - Traitement des données[0m
+[0;32mI (9952) MESH_SLAVE: 📦 Taille: 264 bytes[0m
+[0;32mI (9952) MESH_SLAVE: 🧩 Fragment 1/1 (ID:457)[0m
+[0;32mI (9952) MESH_SLAVE: 🔄 Nouveau message - reinitialisation[0m
+[0;32mI (9962) MESH_SLAVE: 📥 Fragment ajouté (1/1)[0m
+[0;32mI (9962) MESH_SLAVE: 🎉 Message complet reçu![0m
+[0;32mI (9972) MESH_SLAVE: 🔤 Longueur totale: 29[0m
+[0;32mI (9972) MESH_SLAVE: ✅ JSON valide reconstruit[0m
+[0;32mI (9982) MESH_SLAVE: 🧪 JSON COMPLET: {"id":42,"t":"Test","c":"OK"}[0m
+[0;32mI (9982) MESH_SLAVE: 📄 Reçu format OBJET[0m
+[0;32mI (9992) MESH_SLAVE: 🆔 ID: 42[0m
+[0;32mI (9992) MESH_SLAVE: 💾 Message stocké [1/10]: {"id":42,"t":"Test","c":"OK"}[0m
+[0;32mI (21972) MESH_SLAVE: 📡 Données ESP-NOW reçues de:[0m
+[0;32mI (21972) MESH_SLAVE: B4:3A:45:A1:1F:38[0m
+[0;32mI (21972) MESH_SLAVE: ✅ ESP32 MASTER AUTORISÉ - Traitement des données[0m
+[0;32mI (21982) MESH_SLAVE: 📦 Taille: 264 bytes[0m
+[0;32mI (21982) MESH_SLAVE: 🧩 Fragment 1/1 (ID:458)[0m
+[0;32mI (21982) MESH_SLAVE: 🔄 Nouveau message - reinitialisation[0m
+[0;32mI (21992) MESH_SLAVE: 📥 Fragment ajouté (1/1)[0m
+[0;32mI (21992) MESH_SLAVE: 🎉 Message complet reçu![0m
+[0;32mI (22002) MESH_SLAVE: 🔤 Longueur totale: 29[0m
+[0;32mI (22002) MESH_SLAVE: ✅ JSON valide reconstruit[0m
+[0;32mI (22012) MESH_SLAVE: 🧪 JSON COMPLET: {"id":42,"t":"Test","c":"OK"}[0m
+[0;32mI (22012) MESH_SLAVE: 📄 Reçu format OBJET[0m
+[0;32mI (22022) MESH_SLAVE: 🆔 ID: 42[0m
+[0;32mI (22022) MESH_SLAVE: 💾 Message stocké [2/10]: {"id":42,"t":"Test","c":"OK"}[0m
+[0;32mI (30642) MESH_SLAVE: 💓 Slave actif - En écoute ESP-NOW[0m
+[0;32mI (30642) MESH_SLAVE: 📊 Messages stockés: 2/10[0m
+[0;32mI (34002) MESH_SLAVE: 📡 Données ESP-NOW reçues de:[0m
+[0;32mI (34002) MESH_SLAVE: B4:3A:45:A1:1F:38[0m
+[0;32mI (34002) MESH_SLAVE: ✅ ESP32 MASTER AUTORISÉ - Traitement des données[0m
+[0;32mI (34012) MESH_SLAVE: 📦 Taille: 264 bytes[0m
+[0;32mI (34012) MESH_SLAVE: 🧩 Fragment 1/1 (ID:459)[0m
+[0;32mI (34022) MESH_SLAVE: 🔄 Nouveau message - reinitialisation[0m
+[0;32mI (34022) MESH_SLAVE: 📥 Fragment ajouté (1/1)[0m
+[0;32mI (34032) MESH_SLAVE: 🎉 Message complet reçu![0m
+[0;32mI (34032) MESH_SLAVE: 🔤 Longueur totale: 29[0m
+[0;32mI (34032) MESH_SLAVE: ✅ JSON valide reconstruit[0m
+[0;32mI (34042) MESH_SLAVE: 🧪 JSON COMPLET: {"id":42,"t":"Test","c":"OK"}[0m
+[0;32mI (34052) MESH_SLAVE: 📄 Reçu format OBJET[0m
+[0;32mI (34052) MESH_SLAVE: 🆔 ID: 42[0m
+[0;32mI (34052) MESH_SLAVE: 💾 Message stocké [3/10]: {"id":42,"t":"Test","c":"OK"}[0m
+[0;32mI (46042) MESH_SLAVE: 📡 Données ESP-NOW reçues de:[0m
+[0;32mI (46042) MESH_SLAVE: B4:3A:45:A1:1F:38[0m
+[0;32mI (46042) MESH_SLAVE: ✅ ESP32 MASTER AUTORISÉ - Traitement des données[0m
+[0;32mI (46042) MESH_SLAVE: 📦 Taille: 264 bytes[0m
+[0;32mI (46042) MESH_SLAVE: 🧩 Fragment 1/1 (ID:460)[0m
+[0;32mI (46052) MESH_SLAVE: 🔄 Nouveau message - reinitialisation[0m
+[0;32mI (46052) MESH_SLAVE: 📥 Fragment ajouté (1/1)[0m
+[0;32mI (46062) MESH_SLAVE: 🎉 Message complet reçu![0m
+[0;32mI (46062) MESH_SLAVE: 🔤 Longueur totale: 29[0m
+[0;32mI (46072) MESH_SLAVE: ✅ JSON valide reconstruit[0m
+[0;32mI (46072) MESH_SLAVE: 🧪 JSON COMPLET: {"id":42,"t":"Test","c":"OK"}[0m
+[0;32mI (46082) MESH_SLAVE: 📄 Reçu format OBJET[0m
+[0;32mI (46082) MESH_SLAVE: 🆔 ID: 42[0m
+[0;32mI (46082) MESH_SLAVE: 💾 Message stocké [4/10]: {"id":42,"t":"Test","c":"OK"}[0m
+[0;32mI (58062) MESH_SLAVE: 📡 Données ESP-NOW reçues de:[0m
+[0;32mI (58062) MESH_SLAVE: B4:3A:45:A1:1F:38[0m
+[0;32mI (58062) MESH_SLAVE: ✅ ESP32 MASTER AUTORISÉ - Traitement des données[0m
+[0;32mI (58072) MESH_SLAVE: 📦 Taille: 264 bytes[0m
+[0;32mI (58072) MESH_SLAVE: 🧩 Fragment 1/1 (ID:461)[0m
+[0;32mI (58072) MESH_SLAVE: 🔄 Nouveau message - reinitialisation[0m
+[0;32mI (58082) MESH_SLAVE: 📥 Fragment ajouté (1/1)[0m
+[0;32mI (58082) MESH_SLAVE: 🎉 Message complet reçu![0m
+[0;32mI (58092) MESH_SLAVE: 🔤 Longueur totale: 29[0m
+[0;32mI (58092) MESH_SLAVE: ✅ JSON valide reconstruit[0m
+[0;32mI (58102) MESH_SLAVE: 🧪 JSON COMPLET: {"id":42,"t":"Test","c":"OK"}[0m
+[0;32mI (58102) MESH_SLAVE: 📄 Reçu format OBJET[0m
+[0;32mI (58112) MESH_SLAVE: 🆔 ID: 42[0m
+[0;32mI (58112) MESH_SLAVE: 💾 Message stocké [5/10]: {"id":42,"t":"Test","c":"OK"}[0m
+[0;32mI (60642) MESH_SLAVE: 💓 Slave actif - En écoute ESP-NOW[0m
+[0;32mI (60642) MESH_SLAVE: 📊 Messages stockés: 5/10[0m
+[0;32mI (70092) MESH_SLAVE: 📡 Données ESP-NOW reçues de:[0m
+[0;32mI (70092) MESH_SLAVE: B4:3A:45:A1:1F:38[0m
+[0;32mI (70092) MESH_SLAVE: ✅ ESP32 MASTER AUTORISÉ - Traitement des données[0m
+[0;32mI (70102) MESH_SLAVE: 📦 Taille: 264 bytes[0m
+[0;32mI (70102) MESH_SLAVE: 🧩 Fragment 1/1 (ID:462)[0m
+[0;32mI (70102) MESH_SLAVE: 🔄 Nouveau message - reinitialisation[0m
+[0;32mI (70112) MESH_SLAVE: 📥 Fragment ajouté (1/1)[0m
+[0;32mI (70112) MESH_SLAVE: 🎉 Message complet reçu![0m
+[0;32mI (70122) MESH_SLAVE: 🔤 Longueur totale: 29[0m
+[0;32mI (70122) MESH_SLAVE: ✅ JSON valide reconstruit[0m
+[0;32mI (70132) MESH_SLAVE: 🧪 JSON COMPLET: {"id":42,"t":"Test","c":"OK"}[0m
+[0;32mI (70132) MESH_SLAVE: 📄 Reçu format OBJET[0m
+[0;32mI (70142) MESH_SLAVE: 🆔 ID: 42[0m
+[0;32mI (70142) MESH_SLAVE: 💾 Message stocké [6/10]: {"id":42,"t":"Test","c":"OK"}[0m
+[0;32mI (82122) MESH_SLAVE: 📡 Données ESP-NOW reçues de:[0m
+[0;32mI (82122) MESH_SLAVE: B4:3A:45:A1:1F:38[0m
+[0;32mI (82122) MESH_SLAVE: ✅ ESP32 MASTER AUTORISÉ - Traitement des données[0m
+[0;32mI (82132) MESH_SLAVE: 📦 Taille: 264 bytes[0m
+[0;32mI (82132) MESH_SLAVE: 🧩 Fragment 1/1 (ID:463)[0m
+[0;32mI (82132) MESH_SLAVE: 🔄 Nouveau message - reinitialisation[0m
+[0;32mI (82142) MESH_SLAVE: 📥 Fragment ajouté (1/1)[0m
+[0;32mI (82142) MESH_SLAVE: 🎉 Message complet reçu![0m
+[0;32mI (82152) MESH_SLAVE: 🔤 Longueur totale: 29[0m
+[0;32mI (82152) MESH_SLAVE: ✅ JSON valide reconstruit[0m
+[0;32mI (82162) MESH_SLAVE: 🧪 JSON COMPLET: {"id":42,"t":"Test","c":"OK"}[0m
+[0;32mI (82162) MESH_SLAVE: 📄 Reçu format OBJET[0m
+[0;32mI (82172) MESH_SLAVE: 🆔 ID: 42[0m
+[0;32mI (82172) MESH_SLAVE: 💾 Message stocké [7/10]: {"id":42,"t":"Test","c":"OK"}[0m
+[0;32mI (90642) MESH_SLAVE: 💓 Slave actif - En écoute ESP-NOW[0m
+[0;32mI (90642) MESH_SLAVE: 📊 Messages stockés: 7/10[0m
+[0;32mI (94162) MESH_SLAVE: 📡 Données ESP-NOW reçues de:[0m
+[0;32mI (94162) MESH_SLAVE: B4:3A:45:A1:1F:38[0m
+[0;32mI (94162) MESH_SLAVE: ✅ ESP32 MASTER AUTORISÉ - Traitement des données[0m
+[0;32mI (94162) MESH_SLAVE: 📦 Taille: 264 bytes[0m
+[0;32mI (94172) MESH_SLAVE: 🧩 Fragment 1/1 (ID:464)[0m
+[0;32mI (94172) MESH_SLAVE: 🔄 Nouveau message - reinitialisation[0m
+[0;32mI (94182) MESH_SLAVE: 📥 Fragment ajouté (1/1)[0m
+[0;32mI (94182) MESH_SLAVE: 🎉 Message complet reçu![0m
+[0;32mI (94182) MESH_SLAVE: 🔤 Longueur totale: 29[0m
+[0;32mI (94192) MESH_SLAVE: ✅ JSON valide reconstruit[0m
+[0;32mI (94192) MESH_SLAVE: 🧪 JSON COMPLET: {"id":42,"t":"Test","c":"OK"}[0m
+[0;32mI (94202) MESH_SLAVE: 📄 Reçu format OBJET[0m
+[0;32mI (94202) MESH_SLAVE: 🆔 ID: 42[0m
+[0;32mI (94212) MESH_SLAVE: 💾 Message stocké [8/10]: {"id":42,"t":"Test","c":"OK"}[0m
+[0;32mI (99582) wifi:new:<9,0>, old:<9,1>, ap:<9,0>, sta:<255,255>, prof:9, snd_ch_cfg:0x0[0m
+[0;32mI (99582) wifi:station: 12:7d:5c:51:9d:8d join, AID=1, bgn, 20[0m
+[0;32mI (99602) MESH_SLAVE: 👤 Station connectée, AID=1[0m
+[0;32mI (99692) wifi:<ba-add>idx:2 (ifx:1, 12:7d:5c:51:9d:8d), tid:6, ssn:0, winSize:64[0m
+[0;32mI (99902) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+[0;32mI (100152) wifi:<ba-add>idx:3 (ifx:1, 12:7d:5c:51:9d:8d), tid:0, ssn:2, winSize:64[0m
+[0;32mI (106182) MESH_SLAVE: 📡 Données ESP-NOW reçues de:[0m
+[0;32mI (106182) MESH_SLAVE: B4:3A:45:A1:1F:38[0m
+[0;32mI (106182) MESH_SLAVE: ✅ ESP32 MASTER AUTORISÉ - Traitement des données[0m
+[0;32mI (106192) MESH_SLAVE: 📦 Taille: 264 bytes[0m
+[0;32mI (106192) MESH_SLAVE: 🧩 Fragment 1/1 (ID:465)[0m
+[0;32mI (106202) MESH_SLAVE: 🔄 Nouveau message - reinitialisation[0m
+[0;32mI (106202) MESH_SLAVE: 📥 Fragment ajouté (1/1)[0m
+[0;32mI (106212) MESH_SLAVE: 🎉 Message complet reçu![0m
+[0;32mI (106212) MESH_SLAVE: 🔤 Longueur totale: 29[0m
+[0;32mI (106222) MESH_SLAVE: ✅ JSON valide reconstruit[0m
+[0;32mI (106222) MESH_SLAVE: 🧪 JSON COMPLET: {"id":42,"t":"Test","c":"OK"}[0m
+[0;32mI (106232) MESH_SLAVE: 📄 Reçu format OBJET[0m
+[0;32mI (106232) MESH_SLAVE: 🆔 ID: 42[0m
+[0;32mI (106232) MESH_SLAVE: 💾 Message stocké [9/10]: {"id":42,"t":"Test","c":"OK"}[0m
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x4207ea0f  PS      : 0x00060730  A0      : 0x82079ce0  A1      : 0x3fcb2460  
+A2      : 0x3fcb2a68  A3      : 0x00000000  A4      : 0x3fcb2470  A5      : 0x3fcb27f0  
+A6      : 0x3fcb27d0  A7      : 0x0000000c  A8      : 0x00000000  A9      : 0x3fcb2440  
+A10     : 0x3fcb2a68  A11     : 0x3c0ca7d6  A12     : 0x000000ff  A13     : 0x0000ff00  
+A14     : 0x00ff0000  A15     : 0xff000000  SAR     : 0x0000001c  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000064  LBEG    : 0x400556d5  LEND    : 0x400556e5  LCOUNT  : 0xffffffbc  
+
+
+Backtrace: 0x4207ea0c:0x3fcb2460 0x42079cdd:0x3fcb2780 0x4038333b:0x3fcb27b0 0x4200b52b:0x3fcb2810 0x42016013:0x3fcb3840 0x420168e5:0x3fcb3880 0x4201698e:0x3fcb3910 0x420156b0:0x3fcb3930 0x420148f2:0x3fcb3950 0x42087fd7:0x3fcb3970 0x420150ae:0x3fcb3990 0x4201511b:0x3fcb39e0 0x4037cb91:0x3fcb3a00
+
+
+
+
+ELF file SHA256: 024c4cd9c
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4037c030
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x158c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f34
+entry 0x403c8924
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Sep 25 2025 10:13:28[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v0.2[0m
+[0;32mI (32) boot: efuse block revision: v1.3[0m
+[0;32mI (36) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (40) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (47) boot: Enabling RNG early entropy source...[0m
+[0;32mI (52) boot: Partition Table:[0m
+[0;32mI (54) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (67) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (80) boot: End of partition table[0m
+[0;32mI (83) esp_image: segment 0: paddr=00010020 vaddr=3c0a0020 size=31d20h (204064) map[0m
+[0;32mI (127) esp_image: segment 1: paddr=00041d48 vaddr=3fc9a800 size=04a24h ( 18980) load[0m
+[0;32mI (131) esp_image: segment 2: paddr=00046774 vaddr=40374000 size=098a4h ( 39076) load[0m
+[0;32mI (140) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=90638h (591416) map[0m
+[0;32mI (244) esp_image: segment 4: paddr=000e0660 vaddr=4037d8a4 size=0cf1ch ( 53020) load[0m
+[0;32mI (256) esp_image: segment 5: paddr=000ed584 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (265) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (265) boot: Disabling RNG early entropy source...[0m
+[0;32mI (275) cpu_start: Multicore app[0m
+[0;32mI (285) cpu_start: Pro cpu start user code[0m
+[0;32mI (285) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (285) app_init: Application information:[0m
+[0;32mI (285) app_init: Project name:     mesh_slave[0m
+[0;32mI (289) app_init: App version:      1[0m
+[0;32mI (292) app_init: Compile time:     Sep 25 2025 12:08:36[0m
+[0;32mI (297) app_init: ELF file SHA256:  024c4cd9c...[0m
+[0;32mI (302) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (305) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (309) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (313) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (317) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (323) heap_init: At 3FCA4B68 len 00044BA8 (274 KiB): RAM[0m
+[0;32mI (328) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (334) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (339) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (345) spi_flash: detected chip: generic[0m
+[0;32mI (348) spi_flash: flash io: dio[0m
+[0;33mW (351) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (363) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (369) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (376) main_task: Started on CPU0[0m
+[0;32mI (396) main_task: Calling app_main()[0m
+[0;32mI (396) MESH_SLAVE: 🚀 DÉMARRAGE SLAVE ESP32 - City News[0m
+[0;32mI (396) MESH_SLAVE: 📡 Mode: Réception ESP-NOW + Serveur Web AP[0m
+[0;32mI (416) pp: pp rom version: e7ae62f[0m
+[0;32mI (416) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (426) wifi:wifi driver task: 3fced458, prio:23, stack:6656, core=0[0m
+[0;32mI (436) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (436) wifi:wifi certification version: v7.0[0m
+[0;32mI (436) wifi:config NVS flash: enabled[0m
+[0;32mI (436) wifi:config nano formatting: disabled[0m
+[0;32mI (436) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (446) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (446) wifi:Init management short buffer num: 32[0m
+[0;32mI (446) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (456) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (456) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (466) wifi:Init static rx buffer num: 10[0m
+[0;32mI (466) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (466) wifi_init: rx ba win: 6[0m
+[0;32mI (476) wifi_init: accept mbox: 6[0m
+[0;32mI (476) wifi_init: tcpip mbox: 32[0m
+[0;32mI (476) wifi_init: udp mbox: 6[0m
+[0;32mI (486) wifi_init: tcp mbox: 6[0m
+[0;32mI (486) wifi_init: tcp tx win: 5760[0m
+[0;32mI (486) wifi_init: tcp rx win: 5760[0m
+[0;32mI (486) wifi_init: tcp mss: 1440[0m
+[0;32mI (496) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (496) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (506) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10[0m
+[0;32mI (546) wifi:mode : softAP (94:a9:90:2e:8c:ed)[0m
+[0;32mI (546) wifi:Total power save buffer number: 16[0m
+[0;32mI (546) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (546) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (556) MESH_SLAVE: 📶 WiFi AP démarré[0m
+[0;32mI (556) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (566) MESH_SLAVE: 🏷️ SSID: City-News[0m
+[0;32mI (566) MESH_SLAVE: 🔒 Password: 123456789[0m
+[0;32mI (566) MESH_SLAVE: 🌐 IP: 192.168.4.1[0m
+[0;32mI (576) MESH_SLAVE: 📡 Canal: 9[0m
+[0;32mI (576) MESH_SLAVE: 🔧 Initialisation ESP-NOW[0m
+[0;32mI (586) ESPNOW: espnow [version: 2.0] init[0m
+[0;32mI (586) MESH_SLAVE: ✅ ESP-NOW initialisé et prêt à recevoir[0m
+[0;32mI (586) MESH_SLAVE: 🌐 Démarrage serveur HTTP sur port 80[0m
+[0;32mI (596) MESH_SLAVE: ✅ Serveur HTTP démarré[0m
+[0;32mI (596) MESH_SLAVE: 📁 Routes enregistrées: HTML (/,/index.html,/news.html,/login.html), CSS, JS, Images[0m
+[0;32mI (606) MESH_SLAVE: ✅ Slave opérationnel![0m
+[0;32mI (616) MESH_SLAVE: 🌐 Interface web: http://192.168.4.1[0m
+[0;32mI (616) MESH_SLAVE: 📡 En écoute ESP-NOW sur canal 9[0m
+[0;32mI (626) MESH_SLAVE: 📍 MAC Slave:[0m
+[0;32mI (626) MESH_SLAVE: 94:A9:90:2E:8C:ED[0m
+[0;32mI (2666) wifi:new:<9,0>, old:<9,1>, ap:<9,0>, sta:<255,255>, prof:9, snd_ch_cfg:0x0[0m
+[0;32mI (2666) wifi:station: 12:7d:5c:51:9d:8d join, AID=1, bgn, 20[0m
+[0;32mI (2686) MESH_SLAVE: 👤 Station connectée, AID=1[0m
+[0;32mI (2906) wifi:<ba-add>idx:2 (ifx:1, 12:7d:5c:51:9d:8d), tid:6, ssn:0, winSize:64I (2906) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+
+[0;32mI (2966) wifi:<ba-add>idx:3 (ifx:1, 12:7d:5c:51:9d:8d), tid:0, ssn:2, winSize:64[0m
+[0;32mI (2996) MESH_SLAVE: 📡 API /api/news appelée - aucune donnée, envoi: [{"id":0,"t":"En attente","c":"Aucune donnée reçue du master ESP32"}][0m
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400556d5  PS      : 0x00060d30  A0      : 0x82015a00  A1      : 0x3fcb27d0  
+A2      : 0x00000000  A3      : 0xfffffffc  A4      : 0x000000ff  A5      : 0x0000ff00  
+A6      : 0x00ff0000  A7      : 0xff000000  A8      : 0x00000000  A9      : 0x3fcb27a0  
+A10     : 0x3fcb4ed4  A11     : 0x00000039  A12     : 0x3fcb4ed4  A13     : 0x00000045  
+A14     : 0x00000000  A15     : 0x00000003  SAR     : 0x0000000e  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000000  LBEG    : 0x400556d5  LEND    : 0x400556e5  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x400556d2:0x3fcb27d0 0x420159fd:0x3fcb27e0 0x4200b577:0x3fcb2820 0x42016013:0x3fcb3850 0x420168e5:0x3fcb3890 0x4201698e:0x3fcb3920 0x420156b0:0x3fcb3940 0x420148f2:0x3fcb3960 0x42087fd7:0x3fcb3980 0x420150ae:0x3fcb39a0 0x4201511b:0x3fcb39f0 0x4037cb91:0x3fcb3a10
+
+
+
+
+ELF file SHA256: 024c4cd9c
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4037c030
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x158c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f34
+entry 0x403c8924
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Sep 25 2025 10:13:28[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v0.2[0m
+[0;32mI (32) boot: efuse block revision: v1.3[0m
+[0;32mI (36) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (40) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (47) boot: Enabling RNG early entropy source...[0m
+[0;32mI (52) boot: Partition Table:[0m
+[0;32mI (54) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (67) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (80) boot: End of partition table[0m
+[0;32mI (83) esp_image: segment 0: paddr=00010020 vaddr=3c0a0020 size=31d20h (204064) map[0m
+[0;32mI (127) esp_image: segment 1: paddr=00041d48 vaddr=3fc9a800 size=04a24h ( 18980) load[0m
+[0;32mI (131) esp_image: segment 2: paddr=00046774 vaddr=40374000 size=098a4h ( 39076) load[0m
+[0;32mI (140) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=90638h (591416) map[0m
+[0;32mI (244) esp_image: segment 4: paddr=000e0660 vaddr=4037d8a4 size=0cf1ch ( 53020) load[0m
+[0;32mI (256) esp_image: segment 5: paddr=000ed584 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (265) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (265) boot: Disabling RNG early entropy source...[0m
+[0;32mI (275) cpu_start: Multicore app[0m
+[0;32mI (285) cpu_start: Pro cpu start user code[0m
+[0;32mI (285) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (285) app_init: Application information:[0m
+[0;32mI (285) app_init: Project name:     mesh_slave[0m
+[0;32mI (289) app_init: App version:      1[0m
+[0;32mI (292) app_init: Compile time:     Sep 25 2025 12:08:36[0m
+[0;32mI (297) app_init: ELF file SHA256:  024c4cd9c...[0m
+[0;32mI (302) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (305) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (309) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (313) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (317) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (323) heap_init: At 3FCA4B68 len 00044BA8 (274 KiB): RAM[0m
+[0;32mI (328) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (334) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (339) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (345) spi_flash: detected chip: generic[0m
+[0;32mI (348) spi_flash: flash io: dio[0m
+[0;33mW (351) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (363) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (369) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (376) main_task: Started on CPU0[0m
+[0;32mI (396) main_task: Calling app_main()[0m
+[0;32mI (396) MESH_SLAVE: 🚀 DÉMARRAGE SLAVE ESP32 - City News[0m
+[0;32mI (396) MESH_SLAVE: 📡 Mode: Réception ESP-NOW + Serveur Web AP[0m
+[0;32mI (416) pp: pp rom version: e7ae62f[0m
+[0;32mI (416) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (426) wifi:wifi driver task: 3fced458, prio:23, stack:6656, core=0[0m
+[0;32mI (436) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (436) wifi:wifi certification version: v7.0[0m
+[0;32mI (436) wifi:config NVS flash: enabled[0m
+[0;32mI (436) wifi:config nano formatting: disabled[0m
+[0;32mI (436) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (446) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (446) wifi:Init management short buffer num: 32[0m
+[0;32mI (446) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (456) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (456) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (466) wifi:Init static rx buffer num: 10[0m
+[0;32mI (466) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (466) wifi_init: rx ba win: 6[0m
+[0;32mI (476) wifi_init: accept mbox: 6[0m
+[0;32mI (476) wifi_init: tcpip mbox: 32[0m
+[0;32mI (476) wifi_init: udp mbox: 6[0m
+[0;32mI (486) wifi_init: tcp mbox: 6[0m
+[0;32mI (486) wifi_init: tcp tx win: 5760[0m
+[0;32mI (486) wifi_init: tcp rx win: 5760[0m
+[0;32mI (486) wifi_init: tcp mss: 1440[0m
+[0;32mI (496) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (496) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (506) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10[0m
+[0;32mI (546) wifi:mode : softAP (94:a9:90:2e:8c:ed)[0m
+[0;32mI (546) wifi:Total power save buffer number: 16[0m
+[0;32mI (546) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (546) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (556) MESH_SLAVE: 📶 WiFi AP démarré[0m
+[0;32mI (556) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (566) MESH_SLAVE: 🏷️ SSID: City-News[0m
+[0;32mI (566) MESH_SLAVE: 🔒 Password: 123456789[0m
+[0;32mI (576) MESH_SLAVE: 🌐 IP: 192.168.4.1[0m
+[0;32mI (576) MESH_SLAVE: 📡 Canal: 9[0m
+[0;32mI (576) MESH_SLAVE: 🔧 Initialisation ESP-NOW[0m
+[0;32mI (586) ESPNOW: espnow [version: 2.0] init[0m
+[0;32mI (586) MESH_SLAVE: ✅ ESP-NOW initialisé et prêt à recevoir[0m
+[0;32mI (596) MESH_SLAVE: 🌐 Démarrage serveur HTTP sur port 80[0m
+[0;32mI (596) MESH_SLAVE: ✅ Serveur HTTP démarré[0m
+[0;32mI (606) MESH_SLAVE: 📁 Routes enregistrées: HTML (/,/index.html,/news.html,/login.html), CSS, JS, Images[0m
+[0;32mI (616) MESH_SLAVE: ✅ Slave opérationnel![0m
+[0;32mI (616) MESH_SLAVE: 🌐 Interface web: http://192.168.4.1[0m
+[0;32mI (626) MESH_SLAVE: 📡 En écoute ESP-NOW sur canal 9[0m
+[0;32mI (626) MESH_SLAVE: 📍 MAC Slave:[0m
+[0;32mI (626) MESH_SLAVE: 94:A9:90:2E:8C:ED[0m
+[0;32mI (2696) wifi:new:<9,0>, old:<9,1>, ap:<9,0>, sta:<255,255>, prof:9, snd_ch_cfg:0x0[0m
+[0;32mI (2696) wifi:station: 12:7d:5c:51:9d:8d join, AID=1, bgn, 20[0m
+[0;32mI (2716) MESH_SLAVE: 👤 Station connectée, AID=1[0m
+[0;32mI (2816) wifi:<ba-add>idx:2 (ifx:1, 12:7d:5c:51:9d:8d), tid:6, ssn:0, winSize:64I (2816) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+
+[0;32mI (3086) wifi:<ba-add>idx:3 (ifx:1, 12:7d:5c:51:9d:8d), tid:0, ssn:2, winSize:64[0m
+[0;32mI (7936) MESH_SLAVE: 📡 API /api/news appelée - aucune donnée, envoi: [{"id":0,"t":"En attente","c":"Aucune donnée reçue du master ESP32"}][0m
+Guru Meditation Error: Core  0 panic'ed (InstrFetchProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0xffffffb9  PS      : 0x00060f30  A0      : 0x820148ea  A1      : 0x3fcb3930  
+A2      : 0x3fcb1d70  A3      : 0x3fcb2318  A4      : 0x00000001  A5      : 0x00060f23  
+A6      : 0x0000003a  A7      : 0x3fcb1d70  A8      : 0x82087ff9  A9      : 0x00000001  
+A10     : 0x3fcb1d70  A11     : 0x0000000a  A12     : 0x00000000  A13     : 0x00000000  
+A14     : 0x3fcb2014  A15     : 0x3fcb1df0  SAR     : 0x00000016  EXCCAUSE: 0x00000014  
+EXCVADDR: 0xffffffb8  LBEG    : 0x40056f5c  LEND    : 0x40056f72  LCOUNT  : 0x00000000  
+
+
+Backtrace: 0x7fffffb6:0x3fcb3930 0x420148e7:0x3fcb3950 0x42087fd7:0x3fcb3970 0x420150ae:0x3fcb3990 0x4201511b:0x3fcb39e0 0x4037cb91:0x3fcb3a00
+
+
+
+
+ELF file SHA256: 024c4cd9c
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4037c030
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x158c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f34
+entry 0x403c8924
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Sep 25 2025 10:13:28[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v0.2[0m
+[0;32mI (32) boot: efuse block revision: v1.3[0m
+[0;32mI (36) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (40) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (47) boot: Enabling RNG early entropy source...[0m
+[0;32mI (52) boot: Partition Table:[0m
+[0;32mI (54) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (67) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (80) boot: End of partition table[0m
+[0;32mI (83) esp_image: segment 0: paddr=00010020 vaddr=3c0a0020 size=31d20h (204064) map[0m
+[0;32mI (127) esp_image: segment 1: paddr=00041d48 vaddr=3fc9a800 size=04a24h ( 18980) load[0m
+[0;32mI (131) esp_image: segment 2: paddr=00046774 vaddr=40374000 size=098a4h ( 39076) load[0m
+[0;32mI (140) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=90638h (591416) map[0m
+[0;32mI (244) esp_image: segment 4: paddr=000e0660 vaddr=4037d8a4 size=0cf1ch ( 53020) load[0m
+[0;32mI (256) esp_image: segment 5: paddr=000ed584 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (265) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (265) boot: Disabling RNG early entropy source...[0m
+[0;32mI (275) cpu_start: Multicore app[0m
+[0;32mI (285) cpu_start: Pro cpu start user code[0m
+[0;32mI (285) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (285) app_init: Application information:[0m
+[0;32mI (285) app_init: Project name:     mesh_slave[0m
+[0;32mI (289) app_init: App version:      1[0m
+[0;32mI (292) app_init: Compile time:     Sep 25 2025 12:08:36[0m
+[0;32mI (297) app_init: ELF file SHA256:  024c4cd9c...[0m
+[0;32mI (302) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (305) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (309) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (313) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (317) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (323) heap_init: At 3FCA4B68 len 00044BA8 (274 KiB): RAM[0m
+[0;32mI (328) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (334) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (339) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (345) spi_flash: detected chip: generic[0m
+[0;32mI (348) spi_flash: flash io: dio[0m
+[0;33mW (351) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (363) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (370) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (376) main_task: Started on CPU0[0m
+[0;32mI (396) main_task: Calling app_main()[0m
+[0;32mI (396) MESH_SLAVE: 🚀 DÉMARRAGE SLAVE ESP32 - City News[0m
+[0;32mI (396) MESH_SLAVE: 📡 Mode: Réception ESP-NOW + Serveur Web AP[0m
+[0;32mI (416) pp: pp rom version: e7ae62f[0m
+[0;32mI (416) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (426) wifi:wifi driver task: 3fced458, prio:23, stack:6656, core=0[0m
+[0;32mI (436) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (436) wifi:wifi certification version: v7.0[0m
+[0;32mI (436) wifi:config NVS flash: enabled[0m
+[0;32mI (436) wifi:config nano formatting: disabled[0m
+[0;32mI (436) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (446) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (446) wifi:Init management short buffer num: 32[0m
+[0;32mI (446) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (456) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (456) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (466) wifi:Init static rx buffer num: 10[0m
+[0;32mI (466) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (466) wifi_init: rx ba win: 6[0m
+[0;32mI (476) wifi_init: accept mbox: 6[0m
+[0;32mI (476) wifi_init: tcpip mbox: 32[0m
+[0;32mI (476) wifi_init: udp mbox: 6[0m
+[0;32mI (486) wifi_init: tcp mbox: 6[0m
+[0;32mI (486) wifi_init: tcp tx win: 5760[0m
+[0;32mI (486) wifi_init: tcp rx win: 5760[0m
+[0;32mI (486) wifi_init: tcp mss: 1440[0m
+[0;32mI (496) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (496) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (506) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10[0m
+[0;32mI (546) wifi:mode : softAP (94:a9:90:2e:8c:ed)[0m
+[0;32mI (546) wifi:Total power save buffer number: 16[0m
+[0;32mI (546) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (546) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (556) MESH_SLAVE: 📶 WiFi AP démarré[0m
+[0;32mI (556) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (566) MESH_SLAVE: 🏷️ SSID: City-News[0m
+[0;32mI (566) MESH_SLAVE: 🔒 Password: 123456789[0m
+[0;32mI (566) MESH_SLAVE: 🌐 IP: 192.168.4.1[0m
+[0;32mI (576) MESH_SLAVE: 📡 Canal: 9[0m
+[0;32mI (576) MESH_SLAVE: 🔧 Initialisation ESP-NOW[0m
+[0;32mI (576) ESPNOW: espnow [version: 2.0] init[0m
+[0;32mI (586) MESH_SLAVE: ✅ ESP-NOW initialisé et prêt à recevoir[0m
+[0;32mI (586) MESH_SLAVE: 🌐 Démarrage serveur HTTP sur port 80[0m
+[0;32mI (596) MESH_SLAVE: ✅ Serveur HTTP démarré[0m
+[0;32mI (596) MESH_SLAVE: 📁 Routes enregistrées: HTML (/,/index.html,/news.html,/login.html), CSS, JS, Images[0m
+[0;32mI (606) MESH_SLAVE: ✅ Slave opérationnel![0m
+[0;32mI (616) MESH_SLAVE: 🌐 Interface web: http://192.168.4.1[0m
+[0;32mI (616) MESH_SLAVE: 📡 En écoute ESP-NOW sur canal 9[0m
+[0;32mI (626) MESH_SLAVE: 📍 MAC Slave:[0m
+[0;32mI (626) MESH_SLAVE: 94:A9:90:2E:8C:ED[0m
+[0;32mI (2556) wifi:new:<9,0>, old:<9,1>, ap:<9,0>, sta:<255,255>, prof:9, snd_ch_cfg:0x0[0m
+[0;32mI (2556) wifi:station: 12:7d:5c:51:9d:8d join, AID=1, bgn, 20[0m
+[0;32mI (2576) MESH_SLAVE: 👤 Station connectée, AID=1[0m
+[0;32mI (2596) wifi:<ba-add>idx:2 (ifx:1, 12:7d:5c:51:9d:8d), tid:0, ssn:24, winSize:64[0m
+[0;32mI (2636) wifi:<ba-add>idx:3 (ifx:1, 12:7d:5c:51:9d:8d), tid:6, ssn:50, winSize:64[0m
+[0;32mI (2636) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+[0;32mI (12576) MESH_SLAVE: 📡 Données ESP-NOW reçues de:[0m
+[0;32mI (12576) MESH_SLAVE: B4:3A:45:A1:1F:38[0m
+[0;32mI (12576) MESH_SLAVE: ✅ ESP32 MASTER AUTORISÉ - Traitement des données[0m
+[0;32mI (12576) MESH_SLAVE: 📦 Taille: 264 bytes[0m
+[0;32mI (12586) MESH_SLAVE: 🧩 Fragment 1/1 (ID:467)[0m
+[0;32mI (12586) MESH_SLAVE: 🔄 Nouveau message - reinitialisation[0m
+[0;32mI (12596) MESH_SLAVE: 📥 Fragment ajouté (1/1)[0m
+[0;32mI (12596) MESH_SLAVE: 🎉 Message complet reçu![0m
+[0;32mI (12606) MESH_SLAVE: 🔤 Longueur totale: 29[0m
+[0;32mI (12606) MESH_SLAVE: ✅ JSON valide reconstruit[0m
+[0;32mI (12616) MESH_SLAVE: 🧪 JSON COMPLET: {"id":42,"t":"Test","c":"OK"}[0m
+[0;32mI (12616) MESH_SLAVE: 📄 Reçu format OBJET[0m
+[0;32mI (12626) MESH_SLAVE: 🆔 ID: 42[0m
+[0;32mI (12626) MESH_SLAVE: 💾 Message stocké [1/10]: {"id":42,"t":"Test","c":"OK"}[0m
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x4207ea0f  PS      : 0x00060130  A0      : 0x82079ce0  A1      : 0x3fcb2460  
+A2      : 0x3fcb2a68  A3      : 0x00000000  A4      : 0x3fcb2470  A5      : 0x3fcb27f0  
+A6      : 0x3fcb27d0  A7      : 0x0000000c  A8      : 0x00000000  A9      : 0x3fcb2440  
+A10     : 0x3fcb2a68  A11     : 0x3c0ca7d6  A12     : 0x000000ff  A13     : 0x0000ff00  
+A14     : 0x00ff0000  A15     : 0xff000000  SAR     : 0x0000001d  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000064  LBEG    : 0x400556d5  LEND    : 0x400556e5  LCOUNT  : 0xfffffff8  
+
+
+Backtrace: 0x4207ea0c:0x3fcb2460 0x42079cdd:0x3fcb2780 0x4038333b:0x3fcb27b0 0x4200b52b:0x3fcb2810 0x42016013:0x3fcb3840 0x420168e5:0x3fcb3880 0x4201698e:0x3fcb3910 0x420156b0:0x3fcb3930 0x420148f2:0x3fcb3950 0x42087fd7:0x3fcb3970 0x420150ae:0x3fcb3990 0x4201511b:0x3fcb39e0 0x4037cb91:0x3fcb3a00
+
+
+
+
+ELF file SHA256: 024c4cd9c
+
+Rebooting...
+���ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4037c030
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x158c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f34
+entry 0x403c8924
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Sep 25 2025 10:13:28[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v0.2[0m
+[0;32mI (32) boot: efuse block revision: v1.3[0m
+[0;32mI (36) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (40) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (47) boot: Enabling RNG early entropy source...[0m
+[0;32mI (52) boot: Partition Table:[0m
+[0;32mI (54) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (67) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (80) boot: End of partition table[0m
+[0;32mI (83) esp_image: segment 0: paddr=00010020 vaddr=3c0a0020 size=31d20h (204064) map[0m
+[0;32mI (127) esp_image: segment 1: paddr=00041d48 vaddr=3fc9a800 size=04a24h ( 18980) load[0m
+[0;32mI (131) esp_image: segment 2: paddr=00046774 vaddr=40374000 size=098a4h ( 39076) load[0m
+[0;32mI (140) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=90638h (591416) map[0m
+[0;32mI (244) esp_image: segment 4: paddr=000e0660 vaddr=4037d8a4 size=0cf1ch ( 53020) load[0m
+[0;32mI (256) esp_image: segment 5: paddr=000ed584 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (265) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (265) boot: Disabling RNG early entropy source...[0m
+[0;32mI (275) cpu_start: Multicore app[0m
+[0;32mI (285) cpu_start: Pro cpu start user code[0m
+[0;32mI (285) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (285) app_init: Application information:[0m
+[0;32mI (285) app_init: Project name:     mesh_slave[0m
+[0;32mI (289) app_init: App version:      1[0m
+[0;32mI (292) app_init: Compile time:     Sep 25 2025 12:08:36[0m
+[0;32mI (297) app_init: ELF file SHA256:  024c4cd9c...[0m
+[0;32mI (302) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (305) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (309) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (313) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (317) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (323) heap_init: At 3FCA4B68 len 00044BA8 (274 KiB): RAM[0m
+[0;32mI (328) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (334) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (339) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (345) spi_flash: detected chip: generic[0m
+[0;32mI (348) spi_flash: flash io: dio[0m
+[0;33mW (351) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (363) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (369) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (376) main_task: Started on CPU0[0m
+[0;32mI (396) main_task: Calling app_main()[0m
+[0;32mI (396) MESH_SLAVE: 🚀 DÉMARRAGE SLAVE ESP32 - City News[0m
+[0;32mI (396) MESH_SLAVE: 📡 Mode: Réception ESP-NOW + Serveur Web AP[0m
+[0;32mI (416) pp: pp rom version: e7ae62f[0m
+[0;32mI (416) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (426) wifi:wifi driver task: 3fced458, prio:23, stack:6656, core=0[0m
+[0;32mI (436) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (436) wifi:wifi certification version: v7.0[0m
+[0;32mI (436) wifi:config NVS flash: enabled[0m
+[0;32mI (436) wifi:config nano formatting: disabled[0m
+[0;32mI (436) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (446) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (446) wifi:Init management short buffer num: 32[0m
+[0;32mI (446) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (456) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (456) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (466) wifi:Init static rx buffer num: 10[0m
+[0;32mI (466) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (466) wifi_init: rx ba win: 6[0m
+[0;32mI (476) wifi_init: accept mbox: 6[0m
+[0;32mI (476) wifi_init: tcpip mbox: 32[0m
+[0;32mI (476) wifi_init: udp mbox: 6[0m
+[0;32mI (486) wifi_init: tcp mbox: 6[0m
+[0;32mI (486) wifi_init: tcp tx win: 5760[0m
+[0;32mI (486) wifi_init: tcp rx win: 5760[0m
+[0;32mI (486) wifi_init: tcp mss: 1440[0m
+[0;32mI (496) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (496) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (506) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10[0m
+[0;32mI (546) wifi:mode : softAP (94:a9:90:2e:8c:ed)[0m
+[0;32mI (546) wifi:Total power save buffer number: 16[0m
+[0;32mI (546) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (556) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (556) MESH_SLAVE: 📶 WiFi AP démarré[0m
+[0;32mI (556) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (566) MESH_SLAVE: 🏷️ SSID: City-News[0m
+[0;32mI (566) MESH_SLAVE: 🔒 Password: 123456789[0m
+[0;32mI (576) MESH_SLAVE: 🌐 IP: 192.168.4.1[0m
+[0;32mI (576) MESH_SLAVE: 📡 Canal: 9[0m
+[0;32mI (576) MESH_SLAVE: 🔧 Initialisation ESP-NOW[0m
+[0;32mI (586) ESPNOW: espnow [version: 2.0] init[0m
+[0;32mI (586) MESH_SLAVE: ✅ ESP-NOW initialisé et prêt à recevoir[0m
+[0;32mI (596) MESH_SLAVE: 🌐 Démarrage serveur HTTP sur port 80[0m
+[0;32mI (606) MESH_SLAVE: ✅ Serveur HTTP démarré[0m
+[0;32mI (606) MESH_SLAVE: 📁 Routes enregistrées: HTML (/,/index.html,/news.html,/login.html), CSS, JS, Images[0m
+[0;32mI (616) MESH_SLAVE: ✅ Slave opérationnel![0m
+[0;32mI (616) MESH_SLAVE: 🌐 Interface web: http://192.168.4.1[0m
+[0;32mI (626) MESH_SLAVE: 📡 En écoute ESP-NOW sur canal 9[0m
+[0;32mI (626) MESH_SLAVE: 📍 MAC Slave:[0m
+[0;32mI (626) MESH_SLAVE: 94:A9:90:2E:8C:ED[0m
+[0;32mI (3816) wifi:new:<9,0>, old:<9,1>, ap:<9,0>, sta:<255,255>, prof:9, snd_ch_cfg:0x0[0m
+[0;32mI (3816) wifi:station: 12:7d:5c:51:9d:8d join, AID=1, bgn, 20[0m
+[0;32mI (3836) MESH_SLAVE: 👤 Station connectée, AID=1[0m
+[0;32mI (4056) wifi:<ba-add>idx:2 (ifx:1, 12:7d:5c:51:9d:8d), tid:6, ssn:0, winSize:64[0m
+[0;32mI (4056) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+[0;32mI (4316) wifi:<ba-add>idx:3 (ifx:1, 12:7d:5c:51:9d:8d), tid:0, ssn:2, winSize:64[0m
+[0;32mI (5806) MESH_SLAVE: 📡 API /api/news appelée - aucune donnée, envoi: [{"id":0,"t":"En attente","c":"Aucune donnée reçue du master ESP32"}][0m
+Guru Meditation Error: Core  1 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  1 register dump:
+PC      : 0x400556d5  PS      : 0x00060930  A0      : 0x82015a00  A1      : 0x3fcb27d0  
+A2      : 0x00000000  A3      : 0xfffffffc  A4      : 0x000000ff  A5      : 0x0000ff00  
+A6      : 0x00ff0000  A7      : 0xff000000  A8      : 0x00000000  A9      : 0x3fcb27a0  
+A10     : 0x3fcb4948  A11     : 0x00000039  A12     : 0x3fcb4948  A13     : 0x00000045  
+A14     : 0x00000000  A15     : 0x00000003  SAR     : 0x00000003  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000000  LBEG    : 0x400556d5  LEND    : 0x400556e5  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x400556d2:0x3fcb27d0 0x420159fd:0x3fcb27e0 0x4200b577:0x3fcb2820 0x42016013:0x3fcb3850 0x420168e5:0x3fcb3890 0x4201698e:0x3fcb3920 0x420156b0:0x3fcb3940 0x420148f2:0x3fcb3960 0x42087fd7:0x3fcb3980 0x420150ae:0x3fcb39a0 0x4201511b:0x3fcb39f0 0x4037cb91:0x3fcb3a10
+
+
+
+
+ELF file SHA256: 024c4cd9c
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x42046354
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x158c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f34
+entry 0x403c8924
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Sep 25 2025 10:13:28[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v0.2[0m
+[0;32mI (32) boot: efuse block revision: v1.3[0m
+[0;32mI (36) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (40) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (47) boot: Enabling RNG early entropy source...[0m
+[0;32mI (52) boot: Partition Table:[0m
+[0;32mI (54) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (67) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (80) boot: End of partition table[0m
+[0;32mI (83) esp_image: segment 0: paddr=00010020 vaddr=3c0a0020 size=31d20h (204064) map[0m
+[0;32mI (127) esp_image: segment 1: paddr=00041d48 vaddr=3fc9a800 size=04a24h ( 18980) load[0m
+[0;32mI (131) esp_image: segment 2: paddr=00046774 vaddr=40374000 size=098a4h ( 39076) load[0m
+[0;32mI (140) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=90638h (591416) map[0m
+[0;32mI (245) esp_image: segment 4: paddr=000e0660 vaddr=4037d8a4 size=0cf1ch ( 53020) load[0m
+[0;32mI (257) esp_image: segment 5: paddr=000ed584 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (266) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (266) boot: Disabling RNG early entropy source...[0m
+[0;32mI (276) cpu_start: Multicore app[0m
+[0;32mI (285) cpu_start: Pro cpu start user code[0m
+[0;32mI (285) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (285) app_init: Application information:[0m
+[0;32mI (285) app_init: Project name:     mesh_slave[0m
+[0;32mI (290) app_init: App version:      1[0m
+[0;32mI (293) app_init: Compile time:     Sep 25 2025 12:08:36[0m
+[0;32mI (298) app_init: ELF file SHA256:  024c4cd9c...[0m
+[0;32mI (302) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (306) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (310) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (314) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (318) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (324) heap_init: At 3FCA4B68 len 00044BA8 (274 KiB): RAM[0m
+[0;32mI (329) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (334) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (340) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (346) spi_flash: detected chip: generic[0m
+[0;32mI (349) spi_flash: flash io: dio[0m
+[0;33mW (352) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (364) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (370) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (377) main_task: Started on CPU0[0m
+[0;32mI (397) main_task: Calling app_main()[0m
+[0;32mI (397) MESH_SLAVE: 🚀 DÉMARRAGE SLAVE ESP32 - City News[0m
+[0;32mI (397) MESH_SLAVE: 📡 Mode: Réception ESP-NOW + Serveur Web AP[0m
+[0;32mI (417) pp: pp rom version: e7ae62f[0m
+[0;32mI (417) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (427) wifi:wifi driver task: 3fced458, prio:23, stack:6656, core=0[0m
+[0;32mI (437) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (437) wifi:wifi certification version: v7.0[0m
+[0;32mI (437) wifi:config NVS flash: enabled[0m
+[0;32mI (437) wifi:config nano formatting: disabled[0m
+[0;32mI (437) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (447) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (447) wifi:Init management short buffer num: 32[0m
+[0;32mI (447) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (457) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (457) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (467) wifi:Init static rx buffer num: 10[0m
+[0;32mI (467) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (467) wifi_init: rx ba win: 6[0m
+[0;32mI (477) wifi_init: accept mbox: 6[0m
+[0;32mI (477) wifi_init: tcpip mbox: 32[0m
+[0;32mI (477) wifi_init: udp mbox: 6[0m
+[0;32mI (487) wifi_init: tcp mbox: 6[0m
+[0;32mI (487) wifi_init: tcp tx win: 5760[0m
+[0;32mI (487) wifi_init: tcp rx win: 5760[0m
+[0;32mI (487) wifi_init: tcp mss: 1440[0m
+[0;32mI (497) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (497) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (507) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10[0m
+[0;32mI (547) wifi:mode : softAP (94:a9:90:2e:8c:ed)[0m
+[0;32mI (547) wifi:Total power save buffer number: 16[0m
+[0;32mI (547) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (547) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (557) MESH_SLAVE: 📶 WiFi AP démarré[0m
+[0;32mI (557) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (567) MESH_SLAVE: 🏷️ SSID: City-News[0m
+[0;32mI (567) MESH_SLAVE: 🔒 Password: 123456789[0m
+[0;32mI (577) MESH_SLAVE: 🌐 IP: 192.168.4.1[0m
+[0;32mI (577) MESH_SLAVE: 📡 Canal: 9[0m
+[0;32mI (577) MESH_SLAVE: 🔧 Initialisation ESP-NOW[0m
+[0;32mI (587) ESPNOW: espnow [version: 2.0] init[0m
+[0;32mI (587) MESH_SLAVE: ✅ ESP-NOW initialisé et prêt à recevoir[0m
+[0;32mI (597) MESH_SLAVE: 🌐 Démarrage serveur HTTP sur port 80[0m
+[0;32mI (607) MESH_SLAVE: ✅ Serveur HTTP démarré[0m
+[0;32mI (607) MESH_SLAVE: 📁 Routes enregistrées: HTML (/,/index.html,/news.html,/login.html), CSS, JS, Images[0m
+[0;32mI (617) MESH_SLAVE: ✅ Slave opérationnel![0m
+[0;32mI (617) MESH_SLAVE: 🌐 Interface web: http://192.168.4.1[0m
+[0;32mI (617) MESH_SLAVE: 📡 En écoute ESP-NOW sur canal 9[0m
+[0;32mI (627) MESH_SLAVE: 📍 MAC Slave:[0m
+[0;32mI (627) MESH_SLAVE: 94:A9:90:2E:8C:ED[0m
+[0;32mI (2507) wifi:new:<9,0>, old:<9,1>, ap:<9,0>, sta:<255,255>, prof:9, snd_ch_cfg:0x0[0m
+[0;32mI (2507) wifi:station: 12:7d:5c:51:9d:8d join, AID=1, bgn, 20[0m
+[0;32mI (2537) MESH_SLAVE: 👤 Station connectée, AID=1[0m
+[0;32mI (2767) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+[0;32mI (2767) wifi:<ba-add>idx:2 (ifx:1, 12:7d:5c:51:9d:8d), tid:6, ssn:0, winSize:64[0m
+[0;32mI (3057) wifi:<ba-add>idx:3 (ifx:1, 12:7d:5c:51:9d:8d), tid:0, ssn:2, winSize:64[0m
+[0;32mI (3067) MESH_SLAVE: 📡 API /api/news appelée - aucune donnée, envoi: [{"id":0,"t":"En attente","c":"Aucune donnée reçue du master ESP32"}][0m
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400556b4  PS      : 0x00060d30  A0      : 0x82015a00  A1      : 0x3fcb2820  
+A2      : 0xffffffff  A3      : 0xfffffffb  A4      : 0x000000ff  A5      : 0x0000ff00  
+A6      : 0x00ff0000  A7      : 0xff000000  A8      : 0x803845b8  A9      : 0x3fcb27f0  
+A10     : 0x3fcb1258  A11     : 0x00000039  A12     : 0x3fcb1258  A13     : 0x00000045  
+A14     : 0x00000000  A15     : 0x00000003  SAR     : 0x00000008  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0xffffffff  LBEG    : 0x40056f5c  LEND    : 0x40056f72  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x400556b1:0x3fcb2820 0x420159fd:0x3fcb2830 0x4200b577:0x3fcb2870 0x42016013:0x3fcb38a0 0x420168e5:0x3fcb38e0 0x4201698e:0x3fcb3970 0x420156b0:0x3fcb3990 0x420148f2:0x3fcb39b0 0x42087fd7:0x3fcb39d0 0x420150ae:0x3fcb39f0 0x4201511b:0x3fcb3a40 0x4037cb91:0x3fcb3a60
+
+
+
+
+ELF file SHA256: 024c4cd9c
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4037c030
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x158c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f34
+entry 0x403c8924
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Sep 25 2025 10:13:28[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v0.2[0m
+[0;32mI (32) boot: efuse block revision: v1.3[0m
+[0;32mI (36) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (40) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (47) boot: Enabling RNG early entropy source...[0m
+[0;32mI (52) boot: Partition Table:[0m
+[0;32mI (54) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (67) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (80) boot: End of partition table[0m
+[0;32mI (83) esp_image: segment 0: paddr=00010020 vaddr=3c0a0020 size=31d20h (204064) map[0m
+[0;32mI (127) esp_image: segment 1: paddr=00041d48 vaddr=3fc9a800 size=04a24h ( 18980) load[0m
+[0;32mI (131) esp_image: segment 2: paddr=00046774 vaddr=40374000 size=098a4h ( 39076) load[0m
+[0;32mI (140) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=90638h (591416) map[0m
+[0;32mI (244) esp_image: segment 4: paddr=000e0660 vaddr=4037d8a4 size=0cf1ch ( 53020) load[0m
+[0;32mI (256) esp_image: segment 5: paddr=000ed584 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (265) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (265) boot: Disabling RNG early entropy source...[0m
+[0;32mI (275) cpu_start: Multicore app[0m
+[0;32mI (285) cpu_start: Pro cpu start user code[0m
+[0;32mI (285) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (285) app_init: Application information:[0m
+[0;32mI (285) app_init: Project name:     mesh_slave[0m
+[0;32mI (289) app_init: App version:      1[0m
+[0;32mI (292) app_init: Compile time:     Sep 25 2025 12:08:36[0m
+[0;32mI (297) app_init: ELF file SHA256:  024c4cd9c...[0m
+[0;32mI (302) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (305) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (309) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (313) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (317) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (323) heap_init: At 3FCA4B68 len 00044BA8 (274 KiB): RAM[0m
+[0;32mI (328) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (334) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (339) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (345) spi_flash: detected chip: generic[0m
+[0;32mI (348) spi_flash: flash io: dio[0m
+[0;33mW (351) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (363) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (369) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (376) main_task: Started on CPU0[0m
+[0;32mI (396) main_task: Calling app_main()[0m
+[0;32mI (396) MESH_SLAVE: 🚀 DÉMARRAGE SLAVE ESP32 - City News[0m
+[0;32mI (396) MESH_SLAVE: 📡 Mode: Réception ESP-NOW + Serveur Web AP[0m
+[0;32mI (416) pp: pp rom version: e7ae62f[0m
+[0;32mI (416) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (426) wifi:wifi driver task: 3fced458, prio:23, stack:6656, core=0[0m
+[0;32mI (436) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (436) wifi:wifi certification version: v7.0[0m
+[0;32mI (436) wifi:config NVS flash: enabled[0m
+[0;32mI (436) wifi:config nano formatting: disabled[0m
+[0;32mI (436) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (446) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (446) wifi:Init management short buffer num: 32[0m
+[0;32mI (446) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (456) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (456) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (466) wifi:Init static rx buffer num: 10[0m
+[0;32mI (466) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (466) wifi_init: rx ba win: 6[0m
+[0;32mI (476) wifi_init: accept mbox: 6[0m
+[0;32mI (476) wifi_init: tcpip mbox: 32[0m
+[0;32mI (476) wifi_init: udp mbox: 6[0m
+[0;32mI (486) wifi_init: tcp mbox: 6[0m
+[0;32mI (486) wifi_init: tcp tx win: 5760[0m
+[0;32mI (486) wifi_init: tcp rx win: 5760[0m
+[0;32mI (486) wifi_init: tcp mss: 1440[0m
+[0;32mI (496) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (496) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (506) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10[0m
+[0;32mI (546) wifi:mode : softAP (94:a9:90:2e:8c:ed)[0m
+[0;32mI (546) wifi:Total power save buffer number: 16[0m
+[0;32mI (546) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (546) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (556) MESH_SLAVE: 📶 WiFi AP démarré[0m
+[0;32mI (556) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (566) MESH_SLAVE: 🏷️ SSID: City-News[0m
+[0;32mI (566) MESH_SLAVE: 🔒 Password: 123456789[0m
+[0;32mI (576) MESH_SLAVE: 🌐 IP: 192.168.4.1[0m
+[0;32mI (576) MESH_SLAVE: 📡 Canal: 9[0m
+[0;32mI (576) MESH_SLAVE: 🔧 Initialisation ESP-NOW[0m
+[0;32mI (586) ESPNOW: espnow [version: 2.0] init[0m
+[0;32mI (586) MESH_SLAVE: ✅ ESP-NOW initialisé et prêt à recevoir[0m
+[0;32mI (596) MESH_SLAVE: 🌐 Démarrage serveur HTTP sur port 80[0m
+[0;32mI (596) MESH_SLAVE: ✅ Serveur HTTP démarré[0m
+[0;32mI (606) MESH_SLAVE: 📁 Routes enregistrées: HTML (/,/index.html,/news.html,/login.html), CSS, JS, Images[0m
+[0;32mI (616) MESH_SLAVE: ✅ Slave opérationnel![0m
+[0;32mI (616) MESH_SLAVE: 🌐 Interface web: http://192.168.4.1[0m
+[0;32mI (616) MESH_SLAVE: 📡 En écoute ESP-NOW sur canal 9[0m
+[0;32mI (626) MESH_SLAVE: 📍 MAC Slave:[0m
+[0;32mI (626) MESH_SLAVE: 94:A9:90:2E:8C:ED[0m
+[0;32mI (1876) wifi:new:<9,0>, old:<9,1>, ap:<9,0>, sta:<255,255>, prof:9, snd_ch_cfg:0x0[0m
+[0;32mI (1876) wifi:station: 12:7d:5c:51:9d:8d join, AID=1, bgn, 20[0m
+[0;32mI (1896) MESH_SLAVE: 👤 Station connectée, AID=1[0m
+[0;32mI (1896) wifi:<ba-add>idx:2 (ifx:1, 12:7d:5c:51:9d:8d), tid:6, ssn:34, winSize:64[0m
+[0;32mI (1926) wifi:<ba-add>idx:3 (ifx:1, 12:7d:5c:51:9d:8d), tid:0, ssn:12, winSize:64[0m
+[0;32mI (1956) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+[0;32mI (2056) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+[0;32mI (2676) MESH_SLAVE: 📡 Données ESP-NOW reçues de:[0m
+[0;32mI (2676) MESH_SLAVE: B4:3A:45:A1:1F:38[0m
+[0;32mI (2676) MESH_SLAVE: ✅ ESP32 MASTER AUTORISÉ - Traitement des données[0m
+[0;32mI (2676) MESH_SLAVE: 📦 Taille: 264 bytes[0m
+[0;32mI (2676) MESH_SLAVE: 🧩 Fragment 1/1 (ID:468)[0m
+[0;32mI (2686) MESH_SLAVE: 🔄 Nouveau message - reinitialisation[0m
+[0;32mI (2686) MESH_SLAVE: 📥 Fragment ajouté (1/1)[0m
+[0;32mI (2696) MESH_SLAVE: 🎉 Message complet reçu![0m
+[0;32mI (2696) MESH_SLAVE: 🔤 Longueur totale: 29[0m
+[0;32mI (2706) MESH_SLAVE: ✅ JSON valide reconstruit[0m
+[0;32mI (2706) MESH_SLAVE: 🧪 JSON COMPLET: {"id":42,"t":"Test","c":"OK"}[0m
+[0;32mI (2716) MESH_SLAVE: 📄 Reçu format OBJET[0m
+[0;32mI (2716) MESH_SLAVE: 🆔 ID: 42[0m
+[0;32mI (2716) MESH_SLAVE: 💾 Message stocké [1/10]: {"id":42,"t":"Test","c":"OK"}[0m
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x4207ea0f  PS      : 0x00060130  A0      : 0x82079ce0  A1      : 0x3fcb2470  
+A2      : 0x3fcb2a74  A3      : 0x00000000  A4      : 0x3fcb2480  A5      : 0x3fcb2800  
+A6      : 0x3fcb27e0  A7      : 0x0000000c  A8      : 0x00000000  A9      : 0x3fcb2450  
+A10     : 0x3fcb2a74  A11     : 0x3c0ca7d6  A12     : 0x000000ff  A13     : 0x0000ff00  
+A14     : 0x00ff0000  A15     : 0xff000000  SAR     : 0x0000001d  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000064  LBEG    : 0x400556d5  LEND    : 0x400556e5  LCOUNT  : 0xfffffff8  
+
+
+Backtrace: 0x4207ea0c:0x3fcb2470 0x42079cdd:0x3fcb2790 0x4038333b:0x3fcb27c0 0x4200b52b:0x3fcb2820 0x42016013:0x3fcb3850 0x420168e5:0x3fcb3890 0x4201698e:0x3fcb3920 0x420156b0:0x3fcb3940 0x420148f2:0x3fcb3960 0x42087fd7:0x3fcb3980 0x420150ae:0x3fcb39a0 0x4201511b:0x3fcb39f0 0x4037cb91:0x3fcb3a10
+
+
+
+
+ELF file SHA256: 024c4cd9c
+
+Rebooting...
+���ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4037c030
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x158c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f34
+entry 0x403c8924
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Sep 25 2025 10:13:28[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v0.2[0m
+[0;32mI (32) boot: efuse block revision: v1.3[0m
+[0;32mI (36) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (40) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (47) boot: Enabling RNG early entropy source...[0m
+[0;32mI (52) boot: Partition Table:[0m
+[0;32mI (54) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (67) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (80) boot: End of partition table[0m
+[0;32mI (83) esp_image: segment 0: paddr=00010020 vaddr=3c0a0020 size=31d20h (204064) map[0m
+[0;32mI (127) esp_image: segment 1: paddr=00041d48 vaddr=3fc9a800 size=04a24h ( 18980) load[0m
+[0;32mI (131) esp_image: segment 2: paddr=00046774 vaddr=40374000 size=098a4h ( 39076) load[0m
+[0;32mI (140) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=90638h (591416) map[0m
+[0;32mI (244) esp_image: segment 4: paddr=000e0660 vaddr=4037d8a4 size=0cf1ch ( 53020) load[0m
+[0;32mI (256) esp_image: segment 5: paddr=000ed584 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (265) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (265) boot: Disabling RNG early entropy source...[0m
+[0;32mI (275) cpu_start: Multicore app[0m
+[0;32mI (285) cpu_start: Pro cpu start user code[0m
+[0;32mI (285) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (285) app_init: Application information:[0m
+[0;32mI (285) app_init: Project name:     mesh_slave[0m
+[0;32mI (289) app_init: App version:      1[0m
+[0;32mI (292) app_init: Compile time:     Sep 25 2025 12:08:36[0m
+[0;32mI (297) app_init: ELF file SHA256:  024c4cd9c...[0m
+[0;32mI (302) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (305) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (309) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (313) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (317) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (323) heap_init: At 3FCA4B68 len 00044BA8 (274 KiB): RAM[0m
+[0;32mI (328) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (334) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (339) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (345) spi_flash: detected chip: generic[0m
+[0;32mI (348) spi_flash: flash io: dio[0m
+[0;33mW (351) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (363) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (369) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (376) main_task: Started on CPU0[0m
+[0;32mI (396) main_task: Calling app_main()[0m
+[0;32mI (396) MESH_SLAVE: 🚀 DÉMARRAGE SLAVE ESP32 - City News[0m
+[0;32mI (396) MESH_SLAVE: 📡 Mode: Réception ESP-NOW + Serveur Web AP[0m
+[0;32mI (416) pp: pp rom version: e7ae62f[0m
+[0;32mI (416) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (426) wifi:wifi driver task: 3fced458, prio:23, stack:6656, core=0[0m
+[0;32mI (436) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (436) wifi:wifi certification version: v7.0[0m
+[0;32mI (436) wifi:config NVS flash: enabled[0m
+[0;32mI (436) wifi:config nano formatting: disabled[0m
+[0;32mI (436) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (446) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (446) wifi:Init management short buffer num: 32[0m
+[0;32mI (446) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (456) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (456) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (466) wifi:Init static rx buffer num: 10[0m
+[0;32mI (466) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (466) wifi_init: rx ba win: 6[0m
+[0;32mI (476) wifi_init: accept mbox: 6[0m
+[0;32mI (476) wifi_init: tcpip mbox: 32[0m
+[0;32mI (476) wifi_init: udp mbox: 6[0m
+[0;32mI (486) wifi_init: tcp mbox: 6[0m
+[0;32mI (486) wifi_init: tcp tx win: 5760[0m
+[0;32mI (486) wifi_init: tcp rx win: 5760[0m
+[0;32mI (486) wifi_init: tcp mss: 1440[0m
+[0;32mI (496) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (496) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (506) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10[0m
+[0;32mI (546) wifi:mode : softAP (94:a9:90:2e:8c:ed)[0m
+[0;32mI (546) wifi:Total power save buffer number: 16[0m
+[0;32mI (546) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (546) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (556) MESH_SLAVE: 📶 WiFi AP démarré[0m
+[0;32mI (556) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (566) MESH_SLAVE: 🏷️ SSID: City-News[0m
+[0;32mI (566) MESH_SLAVE: 🔒 Password: 123456789[0m
+[0;32mI (576) MESH_SLAVE: 🌐 IP: 192.168.4.1[0m
+[0;32mI (576) MESH_SLAVE: 📡 Canal: 9[0m
+[0;32mI (576) MESH_SLAVE: 🔧 Initialisation ESP-NOW[0m
+[0;32mI (586) ESPNOW: espnow [version: 2.0] init[0m
+[0;32mI (586) MESH_SLAVE: ✅ ESP-NOW initialisé et prêt à recevoir[0m
+[0;32mI (596) MESH_SLAVE: 🌐 Démarrage serveur HTTP sur port 80[0m
+[0;32mI (596) MESH_SLAVE: ✅ Serveur HTTP démarré[0m
+[0;32mI (606) MESH_SLAVE: 📁 Routes enregistrées: HTML (/,/index.html,/news.html,/login.html), CSS, JS, Images[0m
+[0;32mI (606) MESH_SLAVE: ✅ Slave opérationnel![0m
+[0;32mI (616) MESH_SLAVE: 🌐 Interface web: http://192.168.4.1[0m
+[0;32mI (616) MESH_SLAVE: 📡 En écoute ESP-NOW sur canal 9[0m
+[0;32mI (626) MESH_SLAVE: 📍 MAC Slave:[0m
+[0;32mI (626) MESH_SLAVE: 94:A9:90:2E:8C:ED[0m
+[0;32mI (4686) MESH_SLAVE: 📡 Données ESP-NOW reçues de:[0m
+[0;32mI (4686) MESH_SLAVE: B4:3A:45:A1:1F:38[0m
+[0;32mI (4686) MESH_SLAVE: ✅ ESP32 MASTER AUTORISÉ - Traitement des données[0m
+[0;32mI (4686) MESH_SLAVE: 📦 Taille: 264 bytes[0m
+[0;32mI (4686) MESH_SLAVE: 🧩 Fragment 1/1 (ID:469)[0m
+[0;32mI (4696) MESH_SLAVE: 🔄 Nouveau message - reinitialisation[0m
+[0;32mI (4696) MESH_SLAVE: 📥 Fragment ajouté (1/1)[0m
+[0;32mI (4706) MESH_SLAVE: 🎉 Message complet reçu![0m
+[0;32mI (4706) MESH_SLAVE: 🔤 Longueur totale: 29[0m
+[0;32mI (4716) MESH_SLAVE: ✅ JSON valide reconstruit[0m
+[0;32mI (4716) MESH_SLAVE: 🧪 JSON COMPLET: {"id":42,"t":"Test","c":"OK"}[0m
+[0;32mI (4726) MESH_SLAVE: 📄 Reçu format OBJET[0m
+[0;32mI (4726) MESH_SLAVE: 🆔 ID: 42[0m
+[0;32mI (4726) MESH_SLAVE: 💾 Message stocké [1/10]: {"id":42,"t":"Test","c":"OK"}[0m
+[0;32mI (6066) wifi:new:<9,0>, old:<9,1>, ap:<9,0>, sta:<255,255>, prof:9, snd_ch_cfg:0x0[0m
+[0;32mI (6066) wifi:station: 12:7d:5c:51:9d:8d join, AID=1, bgn, 20[0m
+[0;32mI (6086) MESH_SLAVE: 👤 Station connectée, AID=1[0m
+[0;32mI (6336) wifi:<ba-add>idx:2 (ifx:1, 12:7d:5c:51:9d:8d), tid:6, ssn:0, winSize:64[0m
+[0;32mI (6346) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+[0;32mI (6606) wifi:<ba-add>idx:3 (ifx:1, 12:7d:5c:51:9d:8d), tid:0, ssn:2, winSize:64[0m
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x4207ea0f  PS      : 0x00060330  A0      : 0x82079ce0  A1      : 0x3fcb24e0  
+A2      : 0x3fcb2ae4  A3      : 0x00000000  A4      : 0x3fcb24f0  A5      : 0x3fcb2870  
+A6      : 0x3fcb2850  A7      : 0x0000000c  A8      : 0x00000000  A9      : 0x3fcb24c0  
+A10     : 0x3fcb2ae4  A11     : 0x3c0ca7d6  A12     : 0x000000ff  A13     : 0x0000ff00  
+A14     : 0x00ff0000  A15     : 0xff000000  SAR     : 0x0000001c  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000064  LBEG    : 0x400556d5  LEND    : 0x400556e5  LCOUNT  : 0xfffffff8  
+
+
+Backtrace: 0x4207ea0c:0x3fcb24e0 0x42079cdd:0x3fcb2800 0x4038333b:0x3fcb2830 0x4200b52b:0x3fcb2890 0x42016013:0x3fcb38c0 0x420168e5:0x3fcb3900 0x4201698e:0x3fcb3990 0x420156b0:0x3fcb39b0 0x420148f2:0x3fcb39d0 0x42087fd7:0x3fcb39f0 0x420150ae:0x3fcb3a10 0x4201511b:0x3fcb3a60 0x4037cb91:0x3fcb3a80
+
+
+
+
+ELF file SHA256: 024c4cd9c
+
+Rebooting...
+���ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4037c030
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x158c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f34
+entry 0x403c8924
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Sep 25 2025 10:13:28[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v0.2[0m
+[0;32mI (32) boot: efuse block revision: v1.3[0m
+[0;32mI (36) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (40) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (47) boot: Enabling RNG early entropy source...[0m
+[0;32mI (52) boot: Partition Table:[0m
+[0;32mI (54) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (67) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (80) boot: End of partition table[0m
+[0;32mI (83) esp_image: segment 0: paddr=00010020 vaddr=3c0a0020 size=31d20h (204064) map[0m
+[0;32mI (127) esp_image: segment 1: paddr=00041d48 vaddr=3fc9a800 size=04a24h ( 18980) load[0m
+[0;32mI (131) esp_image: segment 2: paddr=00046774 vaddr=40374000 size=098a4h ( 39076) load[0m
+[0;32mI (140) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=90638h (591416) map[0m
+[0;32mI (244) esp_image: segment 4: paddr=000e0660 vaddr=4037d8a4 size=0cf1ch ( 53020) load[0m
+[0;32mI (256) esp_image: segment 5: paddr=000ed584 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (265) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (265) boot: Disabling RNG early entropy source...[0m
+[0;32mI (275) cpu_start: Multicore app[0m
+[0;32mI (285) cpu_start: Pro cpu start user code[0m
+[0;32mI (285) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (285) app_init: Application information:[0m
+[0;32mI (285) app_init: Project name:     mesh_slave[0m
+[0;32mI (289) app_init: App version:      1[0m
+[0;32mI (292) app_init: Compile time:     Sep 25 2025 12:08:36[0m
+[0;32mI (297) app_init: ELF file SHA256:  024c4cd9c...[0m
+[0;32mI (302) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (305) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (309) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (313) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (317) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (323) heap_init: At 3FCA4B68 len 00044BA8 (274 KiB): RAM[0m
+[0;32mI (328) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (334) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (339) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (345) spi_flash: detected chip: generic[0m
+[0;32mI (348) spi_flash: flash io: dio[0m
+[0;33mW (351) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (363) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (370) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (376) main_task: Started on CPU0[0m
+[0;32mI (396) main_task: Calling app_main()[0m
+[0;32mI (396) MESH_SLAVE: 🚀 DÉMARRAGE SLAVE ESP32 - City News[0m
+[0;32mI (396) MESH_SLAVE: 📡 Mode: Réception ESP-NOW + Serveur Web AP[0m
+[0;32mI (416) pp: pp rom version: e7ae62f[0m
+[0;32mI (416) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (426) wifi:wifi driver task: 3fced458, prio:23, stack:6656, core=0[0m
+[0;32mI (436) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (436) wifi:wifi certification version: v7.0[0m
+[0;32mI (436) wifi:config NVS flash: enabled[0m
+[0;32mI (436) wifi:config nano formatting: disabled[0m
+[0;32mI (436) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (446) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (446) wifi:Init management short buffer num: 32[0m
+[0;32mI (446) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (456) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (456) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (466) wifi:Init static rx buffer num: 10[0m
+[0;32mI (466) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (466) wifi_init: rx ba win: 6[0m
+[0;32mI (476) wifi_init: accept mbox: 6[0m
+[0;32mI (476) wifi_init: tcpip mbox: 32[0m
+[0;32mI (476) wifi_init: udp mbox: 6[0m
+[0;32mI (486) wifi_init: tcp mbox: 6[0m
+[0;32mI (486) wifi_init: tcp tx win: 5760[0m
+[0;32mI (486) wifi_init: tcp rx win: 5760[0m
+[0;32mI (486) wifi_init: tcp mss: 1440[0m
+[0;32mI (496) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (496) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (506) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10[0m
+[0;32mI (546) wifi:mode : softAP (94:a9:90:2e:8c:ed)[0m
+[0;32mI (546) wifi:Total power save buffer number: 16[0m
+[0;32mI (546) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (546) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (556) MESH_SLAVE: 📶 WiFi AP démarré[0m
+[0;32mI (556) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (566) MESH_SLAVE: 🏷️ SSID: City-News[0m
+[0;32mI (566) MESH_SLAVE: 🔒 Password: 123456789[0m
+[0;32mI (566) MESH_SLAVE: 🌐 IP: 192.168.4.1[0m
+[0;32mI (576) MESH_SLAVE: 📡 Canal: 9[0m
+[0;32mI (576) MESH_SLAVE: 🔧 Initialisation ESP-NOW[0m
+[0;32mI (586) ESPNOW: espnow [version: 2.0] init[0m
+[0;32mI (586) MESH_SLAVE: ✅ ESP-NOW initialisé et prêt à recevoir[0m
+[0;32mI (596) MESH_SLAVE: 🌐 Démarrage serveur HTTP sur port 80[0m
+[0;32mI (596) MESH_SLAVE: ✅ Serveur HTTP démarré[0m
+[0;32mI (606) MESH_SLAVE: 📁 Routes enregistrées: HTML (/,/index.html,/news.html,/login.html), CSS, JS, Images[0m
+[0;32mI (606) MESH_SLAVE: ✅ Slave opérationnel![0m
+[0;32mI (616) MESH_SLAVE: 🌐 Interface web: http://192.168.4.1[0m
+[0;32mI (616) MESH_SLAVE: 📡 En écoute ESP-NOW sur canal 9[0m
+[0;32mI (626) MESH_SLAVE: 📍 MAC Slave:[0m
+[0;32mI (626) MESH_SLAVE: 94:A9:90:2E:8C:ED[0m
+[0;32mI (2706) wifi:new:<9,0>, old:<9,1>, ap:<9,0>, sta:<255,255>, prof:9, snd_ch_cfg:0x0[0m
+[0;32mI (2706) wifi:station: 12:7d:5c:51:9d:8d join, AID=1, bgn, 20[0m
+[0;32mI (2736) MESH_SLAVE: 👤 Station connectée, AID=1[0m
+[0;32mI (2856) wifi:<ba-add>idx:2 (ifx:1, 12:7d:5c:51:9d:8d), tid:6, ssn:0, winSize:64[0m
+[0;32mI (2866) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+[0;32mI (2986) wifi:<ba-add>idx:3 (ifx:1, 12:7d:5c:51:9d:8d), tid:0, ssn:2, winSize:64[0m
+[0;32mI (2996) MESH_SLAVE: 📡 API /api/news appelée - aucune donnée, envoi: [{"id":0,"t":"En attente","c":"Aucune donnée reçue du master ESP32"}][0m
+Guru Meditation Error: Core  1 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  1 register dump:
+PC      : 0x400556b4  PS      : 0x00060530  A0      : 0x82015a2d  A1      : 0x3fcb27c0  
+A2      : 0x8204d135  A3      : 0x8204d131  A4      : 0x000000ff  A5      : 0x0000ff00  
+A6      : 0x00ff0000  A7      : 0xff000000  A8      : 0x82088030  A9      : 0x3fcb2790  
+A10     : 0x00000002  A11     : 0x00000039  A12     : 0x3c0a0a5c  A13     : 0x00000002  
+A14     : 0x00000000  A15     : 0x00000003  SAR     : 0x0000001d  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x8204d135  LBEG    : 0x40056f5c  LEND    : 0x40056f72  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x400556b1:0x3fcb27c0 0x42015a2a:0x3fcb27d0 0x4200b577:0x3fcb2810 0x42016013:0x3fcb3840 0x420168e5:0x3fcb3880 0x4201698e:0x3fcb3910 0x420156b0:0x3fcb3930 0x420148f2:0x3fcb3950 0x42087fd7:0x3fcb3970 0x420150ae:0x3fcb3990 0x4201511b:0x3fcb39e0 0x4037cb91:0x3fcb3a00
+
+
+
+
+ELF file SHA256: 024c4cd9c
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40379cb6
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x158c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f34
+entry 0x403c8924
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Sep 25 2025 10:13:28[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v0.2[0m
+[0;32mI (32) boot: efuse block revision: v1.3[0m
+[0;32mI (36) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (40) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (47) boot: Enabling RNG early entropy source...[0m
+[0;32mI (52) boot: Partition Table:[0m
+[0;32mI (54) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (67) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (80) boot: End of partition table[0m
+[0;32mI (83) esp_image: segment 0: paddr=00010020 vaddr=3c0a0020 size=31d20h (204064) map[0m
+[0;32mI (127) esp_image: segment 1: paddr=00041d48 vaddr=3fc9a800 size=04a24h ( 18980) load[0m
+[0;32mI (131) esp_image: segment 2: paddr=00046774 vaddr=40374000 size=098a4h ( 39076) load[0m
+[0;32mI (140) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=90638h (591416) map[0m
+[0;32mI (245) esp_image: segment 4: paddr=000e0660 vaddr=4037d8a4 size=0cf1ch ( 53020) load[0m
+[0;32mI (257) esp_image: segment 5: paddr=000ed584 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (266) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (266) boot: Disabling RNG early entropy source...[0m
+[0;32mI (276) cpu_start: Multicore app[0m
+[0;32mI (285) cpu_start: Pro cpu start user code[0m
+[0;32mI (285) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (285) app_init: Application information:[0m
+[0;32mI (285) app_init: Project name:     mesh_slave[0m
+[0;32mI (290) app_init: App version:      1[0m
+[0;32mI (293) app_init: Compile time:     Sep 25 2025 12:08:36[0m
+[0;32mI (298) app_init: ELF file SHA256:  024c4cd9c...[0m
+[0;32mI (302) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (306) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (310) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (314) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (318) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (324) heap_init: At 3FCA4B68 len 00044BA8 (274 KiB): RAM[0m
+[0;32mI (329) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (334) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (340) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (346) spi_flash: detected chip: generic[0m
+[0;32mI (349) spi_flash: flash io: dio[0m
+[0;33mW (352) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (364) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (370) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (377) main_task: Started on CPU0[0m
+[0;32mI (397) main_task: Calling app_main()[0m
+[0;32mI (397) MESH_SLAVE: 🚀 DÉMARRAGE SLAVE ESP32 - City News[0m
+[0;32mI (397) MESH_SLAVE: 📡 Mode: Réception ESP-NOW + Serveur Web AP[0m
+[0;32mI (417) pp: pp rom version: e7ae62f[0m
+[0;32mI (417) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (427) wifi:wifi driver task: 3fced458, prio:23, stack:6656, core=0[0m
+[0;32mI (527) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (527) wifi:wifi certification version: v7.0[0m
+[0;32mI (527) wifi:config NVS flash: enabled[0m
+[0;32mI (527) wifi:config nano formatting: disabled[0m
+[0;32mI (527) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (537) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (537) wifi:Init management short buffer num: 32[0m
+[0;32mI (537) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (547) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (547) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (557) wifi:Init static rx buffer num: 10[0m
+[0;32mI (557) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (557) wifi_init: rx ba win: 6[0m
+[0;32mI (567) wifi_init: accept mbox: 6[0m
+[0;32mI (567) wifi_init: tcpip mbox: 32[0m
+[0;32mI (567) wifi_init: udp mbox: 6[0m
+[0;32mI (577) wifi_init: tcp mbox: 6[0m
+[0;32mI (577) wifi_init: tcp tx win: 5760[0m
+[0;32mI (577) wifi_init: tcp rx win: 5760[0m
+[0;32mI (577) wifi_init: tcp mss: 1440[0m
+[0;32mI (587) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (587) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (597) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10[0m
+[0;32mI (637) wifi:mode : softAP (94:a9:90:2e:8c:ed)[0m
+[0;32mI (637) wifi:Total power save buffer number: 16[0m
+[0;32mI (637) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (637) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (647) MESH_SLAVE: 📶 WiFi AP démarré[0m
+[0;32mI (647) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (647) MESH_SLAVE: 🏷️ SSID: City-News[0m
+[0;32mI (657) MESH_SLAVE: 🔒 Password: 123456789[0m
+[0;32mI (657) MESH_SLAVE: 🌐 IP: 192.168.4.1[0m
+[0;32mI (667) MESH_SLAVE: 📡 Canal: 9[0m
+[0;32mI (667) MESH_SLAVE: 🔧 Initialisation ESP-NOW[0m
+[0;32mI (677) ESPNOW: espnow [version: 2.0] init[0m
+[0;32mI (677) MESH_SLAVE: ✅ ESP-NOW initialisé et prêt à recevoir[0m
+[0;32mI (677) MESH_SLAVE: 🌐 Démarrage serveur HTTP sur port 80[0m
+[0;32mI (687) MESH_SLAVE: ✅ Serveur HTTP démarré[0m
+[0;32mI (697) MESH_SLAVE: 📁 Routes enregistrées: HTML (/,/index.html,/news.html,/login.html), CSS, JS, Images[0m
+[0;32mI (697) MESH_SLAVE: ✅ Slave opérationnel![0m
+[0;32mI (707) MESH_SLAVE: 🌐 Interface web: http://192.168.4.1[0m
+[0;32mI (707) MESH_SLAVE: 📡 En écoute ESP-NOW sur canal 9[0m
+[0;32mI (717) MESH_SLAVE: 📍 MAC Slave:[0m
+[0;32mI (717) MESH_SLAVE: 94:A9:90:2E:8C:ED[0m
+[0;32mI (4677) wifi:new:<9,0>, old:<9,1>, ap:<9,0>, sta:<255,255>, prof:9, snd_ch_cfg:0x0[0m
+[0;32mI (4677) wifi:station: 12:7d:5c:51:9d:8d join, AID=1, bgn, 20[0m
+[0;32mI (4697) MESH_SLAVE: 👤 Station connectée, AID=1[0m
+[0;32mI (4937) wifi:<ba-add>idx:2 (ifx:1, 12:7d:5c:51:9d:8d), tid:6, ssn:0, winSize:64I (4937) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+
+[0;32mI (5317) wifi:<ba-add>idx:3 (ifx:1, 12:7d:5c:51:9d:8d), tid:0, ssn:2, winSize:64[0m
+[0;32mI (6237) MESH_SLAVE: 📡 Données ESP-NOW reçues de:[0m
+[0;32mI (6237) MESH_SLAVE: B4:3A:45:A1:1F:38[0m
+[0;32mI (6237) MESH_SLAVE: ✅ ESP32 MASTER AUTORISÉ - Traitement des données[0m
+[0;32mI (6237) MESH_SLAVE: 📦 Taille: 264 bytes[0m
+[0;32mI (6247) MESH_SLAVE: 🧩 Fragment 1/1 (ID:470)[0m
+[0;32mI (6247) MESH_SLAVE: 🔄 Nouveau message - reinitialisation[0m
+[0;32mI (6247) MESH_SLAVE: 📥 Fragment ajouté (1/1)[0m
+[0;32mI (6257) MESH_SLAVE: 🎉 Message complet reçu![0m
+[0;32mI (6257) MESH_SLAVE: 🔤 Longueur totale: 29[0m
+[0;32mI (6267) MESH_SLAVE: ✅ JSON valide reconstruit[0m
+[0;32mI (6267) MESH_SLAVE: 🧪 JSON COMPLET: {"id":42,"t":"Test","c":"OK"}[0m
+[0;32mI (6277) MESH_SLAVE: 📄 Reçu format OBJET[0m
+[0;32mI (6277) MESH_SLAVE: 🆔 ID: 42[0m
+[0;32mI (6277) MESH_SLAVE: 💾 Message stocké [1/10]: {"id":42,"t":"Test","c":"OK"}[0m
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x4207ea0f  PS      : 0x00060930  A0      : 0x82079ce0  A1      : 0x3fcb25b0  
+A2      : 0x3fcb2bb4  A3      : 0x00000000  A4      : 0x3fcb25c0  A5      : 0x3fcb2940  
+A6      : 0x3fcb2920  A7      : 0x0000000c  A8      : 0x00000000  A9      : 0x3fcb2590  
+A10     : 0x3fcb2bb4  A11     : 0x3c0ca7d6  A12     : 0x000000ff  A13     : 0x0000ff00  
+A14     : 0x00ff0000  A15     : 0xff000000  SAR     : 0x0000001c  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000064  LBEG    : 0x400556d5  LEND    : 0x400556e5  LCOUNT  : 0xfffffff8  
+
+
+Backtrace: 0x4207ea0c:0x3fcb25b0 0x42079cdd:0x3fcb28d0 0x4038333b:0x3fcb2900 0x4200b52b:0x3fcb2960 0x42016013:0x3fcb3990 0x420168e5:0x3fcb39d0 0x4201698e:0x3fcb3a60 0x420156b0:0x3fcb3a80 0x420148f2:0x3fcb3aa0 0x42087fd7:0x3fcb3ac0 0x420150ae:0x3fcb3ae0 0x4201511b:0x3fcb3b30 0x4037cb91:0x3fcb3b50
+
+
+
+
+ELF file SHA256: 024c4cd9c
+
+Rebooting...
+���ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4037c030
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x158c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f34
+entry 0x403c8924
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Sep 25 2025 10:13:28[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v0.2[0m
+[0;32mI (32) boot: efuse block revision: v1.3[0m
+[0;32mI (36) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (40) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (47) boot: Enabling RNG early entropy source...[0m
+[0;32mI (52) boot: Partition Table:[0m
+[0;32mI (54) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (67) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (80) boot: End of partition table[0m
+[0;32mI (83) esp_image: segment 0: paddr=00010020 vaddr=3c0a0020 size=31d20h (204064) map[0m
+[0;32mI (127) esp_image: segment 1: paddr=00041d48 vaddr=3fc9a800 size=04a24h ( 18980) load[0m
+[0;32mI (131) esp_image: segment 2: paddr=00046774 vaddr=40374000 size=098a4h ( 39076) load[0m
+[0;32mI (140) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=90638h (591416) map[0m
+[0;32mI (244) esp_image: segment 4: paddr=000e0660 vaddr=4037d8a4 size=0cf1ch ( 53020) load[0m
+[0;32mI (256) esp_image: segment 5: paddr=000ed584 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (265) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (265) boot: Disabling RNG early entropy source...[0m
+[0;32mI (275) cpu_start: Multicore app[0m
+[0;32mI (285) cpu_start: Pro cpu start user code[0m
+[0;32mI (285) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (285) app_init: Application information:[0m
+[0;32mI (285) app_init: Project name:     mesh_slave[0m
+[0;32mI (289) app_init: App version:      1[0m
+[0;32mI (292) app_init: Compile time:     Sep 25 2025 12:08:36[0m
+[0;32mI (297) app_init: ELF file SHA256:  024c4cd9c...[0m
+[0;32mI (302) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (305) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (309) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (313) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (317) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (323) heap_init: At 3FCA4B68 len 00044BA8 (274 KiB): RAM[0m
+[0;32mI (328) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (334) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (339) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (345) spi_flash: detected chip: generic[0m
+[0;32mI (348) spi_flash: flash io: dio[0m
+[0;33mW (351) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (363) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (369) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (376) main_task: Started on CPU0[0m
+[0;32mI (396) main_task: Calling app_main()[0m
+[0;32mI (396) MESH_SLAVE: 🚀 DÉMARRAGE SLAVE ESP32 - City News[0m
+[0;32mI (396) MESH_SLAVE: 📡 Mode: Réception ESP-NOW + Serveur Web AP[0m
+[0;32mI (416) pp: pp rom version: e7ae62f[0m
+[0;32mI (416) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (426) wifi:wifi driver task: 3fced4dc, prio:23, stack:6656, core=0[0m
+[0;32mI (436) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (436) wifi:wifi certification version: v7.0[0m
+[0;32mI (436) wifi:config NVS flash: enabled[0m
+[0;32mI (436) wifi:config nano formatting: disabled[0m
+[0;32mI (436) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (446) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (446) wifi:Init management short buffer num: 32[0m
+[0;32mI (446) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (456) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (456) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (466) wifi:Init static rx buffer num: 10[0m
+[0;32mI (466) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (466) wifi_init: rx ba win: 6[0m
+[0;32mI (476) wifi_init: accept mbox: 6[0m
+[0;32mI (476) wifi_init: tcpip mbox: 32[0m
+[0;32mI (476) wifi_init: udp mbox: 6[0m
+[0;32mI (486) wifi_init: tcp mbox: 6[0m
+[0;32mI (486) wifi_init: tcp tx win: 5760[0m
+[0;32mI (486) wifi_init: tcp rx win: 5760[0m
+[0;32mI (486) wifi_init: tcp mss: 1440[0m
+[0;32mI (496) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (496) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (506) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10[0m
+[0;32mI (546) wifi:mode : softAP (94:a9:90:2e:8c:ed)[0m
+[0;32mI (546) wifi:Total power save buffer number: 16[0m
+[0;32mI (546) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (546) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (556) MESH_SLAVE: 📶 WiFi AP démarré[0m
+[0;32mI (556) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (556) MESH_SLAVE: 🏷️ SSID: City-News[0m
+[0;32mI (566) MESH_SLAVE: 🔒 Password: 123456789[0m
+[0;32mI (566) MESH_SLAVE: 🌐 IP: 192.168.4.1[0m
+[0;32mI (576) MESH_SLAVE: 📡 Canal: 9[0m
+[0;32mI (576) MESH_SLAVE: 🔧 Initialisation ESP-NOW[0m
+[0;32mI (586) ESPNOW: espnow [version: 2.0] init[0m
+[0;32mI (586) MESH_SLAVE: ✅ ESP-NOW initialisé et prêt à recevoir[0m
+[0;32mI (586) MESH_SLAVE: 🌐 Démarrage serveur HTTP sur port 80[0m
+[0;32mI (596) MESH_SLAVE: ✅ Serveur HTTP démarré[0m
+[0;32mI (596) MESH_SLAVE: 📁 Routes enregistrées: HTML (/,/index.html,/news.html,/login.html), CSS, JS, Images[0m
+[0;32mI (606) MESH_SLAVE: ✅ Slave opérationnel![0m
+[0;32mI (616) MESH_SLAVE: 🌐 Interface web: http://192.168.4.1[0m
+[0;32mI (616) MESH_SLAVE: 📡 En écoute ESP-NOW sur canal 9[0m
+[0;32mI (626) MESH_SLAVE: 📍 MAC Slave:[0m
+[0;32mI (626) MESH_SLAVE: 94:A9:90:2E:8C:ED[0m
+[0;32mI (6066) wifi:new:<9,0>, old:<9,1>, ap:<9,0>, sta:<255,255>, prof:9, snd_ch_cfg:0x0[0m
+[0;32mI (6066) wifi:station: 12:7d:5c:51:9d:8d join, AID=1, bgn, 20[0m
+[0;32mI (6086) MESH_SLAVE: 👤 Station connectée, AID=1[0m
+[0;32mI (6296) wifi:<ba-add>idx:2 (ifx:1, 12:7d:5c:51:9d:8d), tid:6, ssn:0, winSize:64[0m
+[0;32mI (6296) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+[0;32mI (6546) wifi:<ba-add>idx:3 (ifx:1, 12:7d:5c:51:9d:8d), tid:0, ssn:2, winSize:64[0m
+[0;32mI (7206) MESH_SLAVE: 📡 API /api/news appelée - aucune donnée, envoi: [{"id":0,"t":"En attente","c":"Aucune donnée reçue du master ESP32"}][0m
+Guru Meditation Error: Core  1 panic'ed (StoreProhibited). Exception was unhandled.
+
+Core  1 register dump:
+PC      : 0x403825e8  PS      : 0x00060f33  A0      : 0x80381eb4  A1      : 0x3fcb2680  
+A2      : 0x3fcb2960  A3      : 0x0000000c  A4      : 0x0000002c  A5      : 0x0000ff00  
+A6      : 0x00ff0000  A7      : 0x3fca526c  A8      : 0x3fca4b7c  A9      : 0x3fcb2970  
+A10     : 0xa53f97c8  A11     : 0x65746e55  A12     : 0x00000003  A13     : 0x3fcb2968  
+A14     : 0x65746e64  A15     : 0xfffffffc  SAR     : 0x0000001d  EXCCAUSE: 0x0000001d  
+EXCVADDR: 0xa53f97c8  LBEG    : 0x400556d5  LEND    : 0x400556e5  LCOUNT  : 0xfffffff5  
+
+
+Backtrace: 0x403825e5:0x3fcb2680 0x40381eb1:0x3fcb26a0 0x40375f39:0x3fcb26c0 0x40376041:0x3fcb26e0 0x40376071:0x3fcb2710 0x40375c5c:0x3fcb2730 0x40375c91:0x3fcb2750 0x40384595:0x3fcb2770 0x4204d25c:0x3fcb2790 0x4205c6dd:0x3fcb27b0 0x4205c75d:0x3fcb27d0 0x4205d55f:0x3fcb27f0 0x4205d87b:0x3fcb2810 0x4205d8e1:0x3fcb2860 0x4204c853:0x3fcb2890 0x42015d30:0x3fcb28c0 0x4208802d:0x3fcb28e0 0x42015a09:0x3fcb2900 0x4200b577:0x3fcb2940 0x42016013:0x3fcb3970 0x420168e5:0x3fcb39b0 0x4201698e:0x3fcb3a40 0x420156b0:0x3fcb3a60 0x420148f2:0x3fcb3a80 0x42087fd7:0x3fcb3aa0 0x420150ae:0x3fcb3ac0 0x4201511b:0x3fcb3b10 0x4037cb91:0x3fcb3b30
+
+
+
+
+ELF file SHA256: 024c4cd9c
+
+Rebooting...
+���ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40379cb6
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x158c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f34
+entry 0x403c8924
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Sep 25 2025 10:13:28[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v0.2[0m
+[0;32mI (32) boot: efuse block revision: v1.3[0m
+[0;32mI (36) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (40) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (47) boot: Enabling RNG early entropy source...[0m
+[0;32mI (52) boot: Partition Table:[0m
+[0;32mI (54) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (67) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (80) boot: End of partition table[0m
+[0;32mI (83) esp_image: segment 0: paddr=00010020 vaddr=3c0a0020 size=31d20h (204064) map[0m
+[0;32mI (127) esp_image: segment 1: paddr=00041d48 vaddr=3fc9a800 size=04a24h ( 18980) load[0m
+[0;32mI (131) esp_image: segment 2: paddr=00046774 vaddr=40374000 size=098a4h ( 39076) load[0m
+[0;32mI (140) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=90638h (591416) map[0m
+[0;32mI (245) esp_image: segment 4: paddr=000e0660 vaddr=4037d8a4 size=0cf1ch ( 53020) load[0m
+[0;32mI (257) esp_image: segment 5: paddr=000ed584 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (266) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (266) boot: Disabling RNG early entropy source...[0m
+[0;32mI (276) cpu_start: Multicore app[0m
+[0;32mI (285) cpu_start: Pro cpu start user code[0m
+[0;32mI (285) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (285) app_init: Application information:[0m
+[0;32mI (285) app_init: Project name:     mesh_slave[0m
+[0;32mI (290) app_init: App version:      1[0m
+[0;32mI (293) app_init: Compile time:     Sep 25 2025 12:08:36[0m
+[0;32mI (298) app_init: ELF file SHA256:  024c4cd9c...[0m
+[0;32mI (302) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (306) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (310) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (314) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (318) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (324) heap_init: At 3FCA4B68 len 00044BA8 (274 KiB): RAM[0m
+[0;32mI (329) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (334) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (340) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (346) spi_flash: detected chip: generic[0m
+[0;32mI (349) spi_flash: flash io: dio[0m
+[0;33mW (352) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (364) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (370) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (377) main_task: Started on CPU0[0m
+[0;32mI (397) main_task: Calling app_main()[0m
+[0;32mI (397) MESH_SLAVE: 🚀 DÉMARRAGE SLAVE ESP32 - City News[0m
+[0;32mI (397) MESH_SLAVE: 📡 Mode: Réception ESP-NOW + Serveur Web AP[0m
+[0;32mI (417) pp: pp rom version: e7ae62f[0m
+[0;32mI (417) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (427) wifi:wifi driver task: 3fced4dc, prio:23, stack:6656, core=0[0m
+[0;32mI (437) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (437) wifi:wifi certification version: v7.0[0m
+[0;32mI (437) wifi:config NVS flash: enabled[0m
+[0;32mI (437) wifi:config nano formatting: disabled[0m
+[0;32mI (437) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (447) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (447) wifi:Init management short buffer num: 32[0m
+[0;32mI (447) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (457) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (457) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (467) wifi:Init static rx buffer num: 10[0m
+[0;32mI (467) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (467) wifi_init: rx ba win: 6[0m
+[0;32mI (477) wifi_init: accept mbox: 6[0m
+[0;32mI (477) wifi_init: tcpip mbox: 32[0m
+[0;32mI (477) wifi_init: udp mbox: 6[0m
+[0;32mI (487) wifi_init: tcp mbox: 6[0m
+[0;32mI (487) wifi_init: tcp tx win: 5760[0m
+[0;32mI (487) wifi_init: tcp rx win: 5760[0m
+[0;32mI (487) wifi_init: tcp mss: 1440[0m
+[0;32mI (497) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (497) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (507) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10[0m
+[0;32mI (547) wifi:mode : softAP (94:a9:90:2e:8c:ed)[0m
+[0;32mI (547) wifi:Total power save buffer number: 16[0m
+[0;32mI (547) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (547) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (557) MESH_SLAVE: 📶 WiFi AP démarré[0m
+[0;32mI (557) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF wit

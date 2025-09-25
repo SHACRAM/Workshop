@@ -1,0 +1,344 @@
+Command: ninja all
+[1/9] Performing build step for 'bootloader'
+[1/1] cd /Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/build/bootloader/esp-idf/esptool_py && /Users/sebastienlotten/.espressif/python_env/idf5.5_py3.13_env/bin/python /Users/sebastienlotten/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/build/bootloader/bootloader.bin
+Bootloader binary size 0x5240 bytes. 0x2dc0 bytes (36%) free.
+[2/9] No install step for 'bootloader'
+[3/9] Completed 'bootloader'
+[4/9] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/mesh_slave_main.c.obj
+FAILED: [code=1] esp-idf/main/CMakeFiles/__idf_main.dir/mesh_slave_main.c.obj 
+/Users/sebastienlotten/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc -DESP_PLATFORM -DIDF_VER=\"v5.5.1\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -I/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/build/config -I/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main -I/Users/sebastienlotten/esp/esp-idf/components/newlib/platform_include -I/Users/sebastienlotten/esp/esp-idf/components/freertos/config/include -I/Users/sebastienlotten/esp/esp-idf/components/freertos/config/include/freertos -I/Users/sebastienlotten/esp/esp-idf/components/freertos/config/xtensa/include -I/Users/sebastienlotten/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include -I/Users/sebastienlotten/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -I/Users/sebastienlotten/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos -I/Users/sebastienlotten/esp/esp-idf/components/freertos/esp_additions/include -I/Users/sebastienlotten/esp/esp-idf/components/esp_hw_support/include -I/Users/sebastienlotten/esp/esp-idf/components/esp_hw_support/include/soc -I/Users/sebastienlotten/esp/esp-idf/components/esp_hw_support/include/soc/esp32s3 -I/Users/sebastienlotten/esp/esp-idf/components/esp_hw_support/dma/include -I/Users/sebastienlotten/esp/esp-idf/components/esp_hw_support/ldo/include -I/Users/sebastienlotten/esp/esp-idf/components/esp_hw_support/debug_probe/include -I/Users/sebastienlotten/esp/esp-idf/components/esp_hw_support/mspi_timing_tuning/include -I/Users/sebastienlotten/esp/esp-idf/components/esp_hw_support/mspi_timing_tuning/tuning_scheme_impl/include -I/Users/sebastienlotten/esp/esp-idf/components/esp_hw_support/power_supply/include -I/Users/sebastienlotten/esp/esp-idf/components/esp_hw_support/port/esp32s3/. -I/Users/sebastienlotten/esp/esp-idf/components/esp_hw_support/port/esp32s3/include -I/Users/sebastienlotten/esp/esp-idf/components/esp_hw_support/mspi_timing_tuning/port/esp32s3/. -I/Users/sebastienlotten/esp/esp-idf/components/esp_hw_support/mspi_timing_tuning/port/esp32s3/include -I/Users/sebastienlotten/esp/esp-idf/components/heap/include -I/Users/sebastienlotten/esp/esp-idf/components/heap/tlsf -I/Users/sebastienlotten/esp/esp-idf/components/log/include -I/Users/sebastienlotten/esp/esp-idf/components/soc/include -I/Users/sebastienlotten/esp/esp-idf/components/soc/esp32s3 -I/Users/sebastienlotten/esp/esp-idf/components/soc/esp32s3/include -I/Users/sebastienlotten/esp/esp-idf/components/soc/esp32s3/register -I/Users/sebastienlotten/esp/esp-idf/components/hal/platform_port/include -I/Users/sebastienlotten/esp/esp-idf/components/hal/esp32s3/include -I/Users/sebastienlotten/esp/esp-idf/components/hal/include -I/Users/sebastienlotten/esp/esp-idf/components/esp_rom/include -I/Users/sebastienlotten/esp/esp-idf/components/esp_rom/esp32s3/include -I/Users/sebastienlotten/esp/esp-idf/components/esp_rom/esp32s3/include/esp32s3 -I/Users/sebastienlotten/esp/esp-idf/components/esp_rom/esp32s3 -I/Users/sebastienlotten/esp/esp-idf/components/esp_common/include -I/Users/sebastienlotten/esp/esp-idf/components/esp_system/include -I/Users/sebastienlotten/esp/esp-idf/components/esp_system/port/soc -I/Users/sebastienlotten/esp/esp-idf/components/esp_system/port/include/private -I/Users/sebastienlotten/esp/esp-idf/components/xtensa/esp32s3/include -I/Users/sebastienlotten/esp/esp-idf/components/xtensa/include -I/Users/sebastienlotten/esp/esp-idf/components/xtensa/deprecated_include -I/Users/sebastienlotten/esp/esp-idf/components/lwip/include -I/Users/sebastienlotten/esp/esp-idf/components/lwip/include/apps -I/Users/sebastienlotten/esp/esp-idf/components/lwip/include/apps/sntp -I/Users/sebastienlotten/esp/esp-idf/components/lwip/lwip/src/include -I/Users/sebastienlotten/esp/esp-idf/components/lwip/port/include -I/Users/sebastienlotten/esp/esp-idf/components/lwip/port/freertos/include -I/Users/sebastienlotten/esp/esp-idf/components/lwip/port/esp32xx/include -I/Users/sebastienlotten/esp/esp-idf/components/lwip/port/esp32xx/include/arch -I/Users/sebastienlotten/esp/esp-idf/components/lwip/port/esp32xx/include/sys -I/Users/sebastienlotten/esp/esp-idf/components/nvs_flash/include -I/Users/sebastienlotten/esp/esp-idf/components/esp_partition/include -I/Users/sebastienlotten/esp/esp-idf/components/esp_event/include -I/Users/sebastienlotten/esp/esp-idf/components/esp_netif/include -I/Users/sebastienlotten/esp/esp-idf/components/esp_wifi/include -I/Users/sebastienlotten/esp/esp-idf/components/esp_wifi/include/local -I/Users/sebastienlotten/esp/esp-idf/components/esp_wifi/wifi_apps/include -I/Users/sebastienlotten/esp/esp-idf/components/esp_wifi/wifi_apps/nan_app/include -I/Users/sebastienlotten/esp/esp-idf/components/esp_phy/include -I/Users/sebastienlotten/esp/esp-idf/components/esp_phy/esp32s3/include -I/Users/sebastienlotten/esp/esp-idf/components/esp_http_server/include -I/Users/sebastienlotten/esp/esp-idf/components/http_parser -I/Users/sebastienlotten/esp/esp-idf/components/json/cJSON -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-error=extra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fno-shrink-wrap -fmacro-prefix-map=/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave=. -fmacro-prefix-map=/Users/sebastienlotten/esp/esp-idf=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu17 -Wno-old-style-declaration -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/mesh_slave_main.c.obj -MF esp-idf/main/CMakeFiles/__idf_main.dir/mesh_slave_main.c.obj.d -o esp-idf/main/CMakeFiles/__idf_main.dir/mesh_slave_main.c.obj -c /Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:13:10: warning: missing terminating " character
+   13 | #include "esp_wifi.h        // Enregistrer toutes les routes COMPLÈTES comme avant
+      |          ^
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:13:10: error: #include expects "FILENAME" or <FILENAME>
+   13 | #include "esp_wifi.h        // Enregistrer toutes les routes COMPLÈTES comme avant
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:14:22: error: expected ')' before string constant
+   14 |         ESP_LOGI(TAG, "📌 Enregistrement route 1: /");
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                      )
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:15:43: error: expected ')' before '&' token
+   15 |         httpd_register_uri_handler(server, &root);
+      |                                           ^~
+      |                                           )
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:16:22: error: expected ')' before string constant
+   16 |         ESP_LOGI(TAG, "📌 Enregistrement route 2: /index.html");
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                      )
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:17:43: error: expected ')' before '&' token
+   17 |         httpd_register_uri_handler(server, &index_html_route);
+      |                                           ^~
+      |                                           )
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:18:22: error: expected ')' before string constant
+   18 |         ESP_LOGI(TAG, "📌 Enregistrement route 3: /main.css");
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                      )
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:19:43: error: expected ')' before '&' token
+   19 |         httpd_register_uri_handler(server, &main_css_route);
+      |                                           ^~
+      |                                           )
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:20:22: error: expected ')' before string constant
+   20 |         ESP_LOGI(TAG, "📌 Enregistrement route 4: /hidden.css");
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                      )
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:21:43: error: expected ')' before '&' token
+   21 |         httpd_register_uri_handler(server, &hidden_css_route);
+      |                                           ^~
+      |                                           )
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:22:22: error: expected ')' before string constant
+   22 |         ESP_LOGI(TAG, "📌 Enregistrement route 5: /login.css");
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                      )
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:23:43: error: expected ')' before '&' token
+   23 |         httpd_register_uri_handler(server, &login_css_route);
+      |                                           ^~
+      |                                           )
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:24:22: error: expected ')' before string constant
+   24 |         ESP_LOGI(TAG, "� Enregistrement route 6: /script.js");
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                      )
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:25:43: error: expected ')' before '&' token
+   25 |         httpd_register_uri_handler(server, &js_route);
+      |                                           ^~
+      |                                           )
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:26:22: error: expected ')' before string constant
+   26 |         ESP_LOGI(TAG, "�🚨 Enregistrement route 7: /api/news - CRITIQUE !");
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                      )
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:27:43: error: expected ')' before '&' token
+   27 |         httpd_register_uri_handler(server, &api_news_route);
+      |                                           ^~
+      |                                           )
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:28:22: error: expected ')' before string constant
+   28 |         ESP_LOGI(TAG, "📌 Enregistrement route 8: /login.html");
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                      )
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:29:43: error: expected ')' before '&' token
+   29 |         httpd_register_uri_handler(server, &login_html_route);
+      |                                           ^~
+      |                                           )
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:30:22: error: expected ')' before string constant
+   30 |         ESP_LOGI(TAG, "📌 Enregistrement route 9: /news.html");
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                      )
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:31:43: error: expected ')' before '&' token
+   31 |         httpd_register_uri_handler(server, &news_html_route);
+      |                                           ^~
+      |                                           )
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:32:22: error: expected ')' before string constant
+   32 |         ESP_LOGI(TAG, "📌 Enregistrement route 10: /favicon.ico");
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                      )
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:33:43: error: expected ')' before '&' token
+   33 |         httpd_register_uri_handler(server, &favicon_ico_route);
+      |                                           ^~
+      |                                           )
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:34:22: error: expected ')' before string constant
+   34 |         ESP_LOGI(TAG, "📌 Enregistrement route 11: /assets/dembele.png");
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                      )
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:35:43: error: expected ')' before '&' token
+   35 |         httpd_register_uri_handler(server, &dembele_png_assets_route);
+      |                                           ^~
+      |                                           )
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:36:22: error: expected ')' before string constant
+   36 |         ESP_LOGI(TAG, "📌 Enregistrement route 12: /assets/logo.png");
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                      )
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:37:43: error: expected ')' before '&' token
+   37 |         httpd_register_uri_handler(server, &logo_png_assets_route);
+      |                                           ^~
+      |                                           )
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:39:22: error: expected ')' before string constant
+   39 |         ESP_LOGI(TAG, "✅ TOUTES LES ROUTES COMPLÈTES ENREGISTRÉES!");sp_wifi_types_generic.h"
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                      )
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:39:92: error: expected '=', ',', ';', 'asm' or '__attribute__' before '.' token
+   39 |         ESP_LOGI(TAG, "✅ TOUTES LES ROUTES COMPLÈTES ENREGISTRÉES!");sp_wifi_types_generic.h"
+      |                                                                                            ^
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:39:94: warning: missing terminating " character
+   39 |         ESP_LOGI(TAG, "✅ TOUTES LES ROUTES COMPLÈTES ENREGISTRÉES!");sp_wifi_types_generic.h"
+      |                                                                                              ^
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:39:94: error: missing terminating " character
+In file included from /Users/sebastienlotten/esp/esp-idf/components/esp_event/include/esp_event.h:17,
+                 from /Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:40:
+/Users/sebastienlotten/esp/esp-idf/components/esp_event/include/esp_event_base.h:23:37: error: unknown type name 'esp_event_base_t'
+   23 |                                     esp_event_base_t event_base,
+      |                                     ^~~~~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/esp_event/include/esp_event.h:139:38: error: unknown type name 'esp_event_base_t'
+  139 | esp_err_t esp_event_handler_register(esp_event_base_t event_base,
+      |                                      ^~~~~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/esp_event/include/esp_event.h:141:38: error: unknown type name 'esp_event_handler_t'; did you mean 'esp_event_loop_handle_t'?
+  141 |                                      esp_event_handler_t event_handler,
+      |                                      ^~~~~~~~~~~~~~~~~~~
+      |                                      esp_event_loop_handle_t
+/Users/sebastienlotten/esp/esp-idf/components/esp_event/include/esp_event.h:166:43: error: unknown type name 'esp_event_base_t'
+  166 |                                           esp_event_base_t event_base,
+      |                                           ^~~~~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/esp_event/include/esp_event.h:168:43: error: unknown type name 'esp_event_handler_t'; did you mean 'esp_event_loop_handle_t'?
+  168 |                                           esp_event_handler_t event_handler,
+      |                                           ^~~~~~~~~~~~~~~~~~~
+      |                                           esp_event_loop_handle_t
+/Users/sebastienlotten/esp/esp-idf/components/esp_event/include/esp_event.h:213:52: error: unknown type name 'esp_event_base_t'
+  213 |                                                    esp_event_base_t event_base,
+      |                                                    ^~~~~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/esp_event/include/esp_event.h:215:52: error: unknown type name 'esp_event_handler_t'; did you mean 'esp_event_loop_handle_t'?
+  215 |                                                    esp_event_handler_t event_handler,
+      |                                                    ^~~~~~~~~~~~~~~~~~~
+      |                                                    esp_event_loop_handle_t
+/Users/sebastienlotten/esp/esp-idf/components/esp_event/include/esp_event.h:247:47: error: unknown type name 'esp_event_base_t'
+  247 | esp_err_t esp_event_handler_instance_register(esp_event_base_t event_base,
+      |                                               ^~~~~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/esp_event/include/esp_event.h:249:47: error: unknown type name 'esp_event_handler_t'; did you mean 'esp_event_loop_handle_t'?
+  249 |                                               esp_event_handler_t event_handler,
+      |                                               ^~~~~~~~~~~~~~~~~~~
+      |                                               esp_event_loop_handle_t
+/Users/sebastienlotten/esp/esp-idf/components/esp_event/include/esp_event.h:274:40: error: unknown type name 'esp_event_base_t'
+  274 | esp_err_t esp_event_handler_unregister(esp_event_base_t event_base,
+      |                                        ^~~~~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/esp_event/include/esp_event.h:276:40: error: unknown type name 'esp_event_handler_t'; did you mean 'esp_event_loop_handle_t'?
+  276 |                                        esp_event_handler_t event_handler);
+      |                                        ^~~~~~~~~~~~~~~~~~~
+      |                                        esp_event_loop_handle_t
+/Users/sebastienlotten/esp/esp-idf/components/esp_event/include/esp_event.h:295:45: error: unknown type name 'esp_event_base_t'
+  295 |                                             esp_event_base_t event_base,
+      |                                             ^~~~~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/esp_event/include/esp_event.h:297:45: error: unknown type name 'esp_event_handler_t'; did you mean 'esp_event_loop_handle_t'?
+  297 |                                             esp_event_handler_t event_handler);
+      |                                             ^~~~~~~~~~~~~~~~~~~
+      |                                             esp_event_loop_handle_t
+/Users/sebastienlotten/esp/esp-idf/components/esp_event/include/esp_event.h:324:54: error: unknown type name 'esp_event_base_t'
+  324 |                                                      esp_event_base_t event_base,
+      |                                                      ^~~~~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/esp_event/include/esp_event.h:343:49: error: unknown type name 'esp_event_base_t'
+  343 | esp_err_t esp_event_handler_instance_unregister(esp_event_base_t event_base,
+      |                                                 ^~~~~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/esp_event/include/esp_event.h:365:26: error: unknown type name 'esp_event_base_t'
+  365 | esp_err_t esp_event_post(esp_event_base_t event_base,
+      |                          ^~~~~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/esp_event/include/esp_event.h:394:29: error: unknown type name 'esp_event_base_t'
+  394 |                             esp_event_base_t event_base,
+      |                             ^~~~~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/esp_event/include/esp_event.h:423:30: error: unknown type name 'esp_event_base_t'
+  423 | esp_err_t esp_event_isr_post(esp_event_base_t event_base,
+      |                              ^~~~~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/esp_event/include/esp_event.h:453:33: error: unknown type name 'esp_event_base_t'
+  453 |                                 esp_event_base_t event_base,
+      |                                 ^~~~~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/esp_event/include/esp_event_base.h:16:60: error: expected ';' before 'const'
+   16 | #define ESP_EVENT_DECLARE_BASE(id) extern esp_event_base_t const id
+      |                                                            ^~~~~
+/Users/sebastienlotten/esp/esp-idf/components/esp_netif/include/esp_netif_types.h:111:1: note: in expansion of macro 'ESP_EVENT_DECLARE_BASE'
+  111 | ESP_EVENT_DECLARE_BASE(IP_EVENT);
+      | ^~~~~~~~~~~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/esp_netif/include/esp_netif_types.h:111:24: error: type defaults to 'int' in declaration of 'IP_EVENT' [-Wimplicit-int]
+  111 | ESP_EVENT_DECLARE_BASE(IP_EVENT);
+      |                        ^~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/esp_event/include/esp_event_base.h:16:66: note: in definition of macro 'ESP_EVENT_DECLARE_BASE'
+   16 | #define ESP_EVENT_DECLARE_BASE(id) extern esp_event_base_t const id
+      |                                                                  ^~
+In file included from /Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:42:
+/Users/sebastienlotten/esp/esp-idf/components/esp_netif/include/esp_netif.h:195:46: error: unknown type name 'esp_event_base_t'
+  195 | void esp_netif_action_start(void *esp_netif, esp_event_base_t base, int32_t event_id, void *data);
+      |                                              ^~~~~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/esp_netif/include/esp_netif.h:207:45: error: unknown type name 'esp_event_base_t'
+  207 | void esp_netif_action_stop(void *esp_netif, esp_event_base_t base, int32_t event_id, void *data);
+      |                                             ^~~~~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/esp_netif/include/esp_netif.h:219:50: error: unknown type name 'esp_event_base_t'
+  219 | void esp_netif_action_connected(void *esp_netif, esp_event_base_t base, int32_t event_id, void *data);
+      |                                                  ^~~~~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/esp_netif/include/esp_netif.h:231:53: error: unknown type name 'esp_event_base_t'
+  231 | void esp_netif_action_disconnected(void *esp_netif, esp_event_base_t base, int32_t event_id, void *data);
+      |                                                     ^~~~~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/esp_netif/include/esp_netif.h:243:47: error: unknown type name 'esp_event_base_t'
+  243 | void esp_netif_action_got_ip(void *esp_netif, esp_event_base_t base, int32_t event_id, void *data);
+      |                                               ^~~~~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/esp_netif/include/esp_netif.h:255:65: error: unknown type name 'esp_event_base_t'
+  255 | void esp_netif_action_join_ip6_multicast_group(void *esp_netif, esp_event_base_t base, int32_t event_id, void *data);
+      |                                                                 ^~~~~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/esp_netif/include/esp_netif.h:267:66: error: unknown type name 'esp_event_base_t'
+  267 | void esp_netif_action_leave_ip6_multicast_group(void *esp_netif, esp_event_base_t base, int32_t event_id, void *data);
+      |                                                                  ^~~~~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/esp_netif/include/esp_netif.h:279:56: error: unknown type name 'esp_event_base_t'
+  279 | void esp_netif_action_add_ip6_address(void *esp_netif, esp_event_base_t base, int32_t event_id, void *data);
+      |                                                        ^~~~~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/esp_netif/include/esp_netif.h:291:59: error: unknown type name 'esp_event_base_t'
+  291 | void esp_netif_action_remove_ip6_address(void *esp_netif, esp_event_base_t base, int32_t event_id, void *data);
+      |                                                           ^~~~~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/esp_event/include/esp_event_base.h:16:60: error: expected ';' before 'const'
+   16 | #define ESP_EVENT_DECLARE_BASE(id) extern esp_event_base_t const id
+      |                                                            ^~~~~
+/Users/sebastienlotten/esp/esp-idf/components/esp_wifi/include/esp_wifi_types_generic.h:1128:1: note: in expansion of macro 'ESP_EVENT_DECLARE_BASE'
+ 1128 | ESP_EVENT_DECLARE_BASE(WIFI_EVENT);
+      | ^~~~~~~~~~~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/esp_wifi/include/esp_wifi_types_generic.h:1128:24: error: type defaults to 'int' in declaration of 'WIFI_EVENT' [-Wimplicit-int]
+ 1128 | ESP_EVENT_DECLARE_BASE(WIFI_EVENT);
+      |                        ^~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/esp_event/include/esp_event_base.h:16:66: note: in definition of macro 'ESP_EVENT_DECLARE_BASE'
+   16 | #define ESP_EVENT_DECLARE_BASE(id) extern esp_event_base_t const id
+      |                                                                  ^~
+/Users/sebastienlotten/esp/esp-idf/components/esp_event/include/esp_event_base.h:16:60: error: expected ';' before 'const'
+   16 | #define ESP_EVENT_DECLARE_BASE(id) extern esp_event_base_t const id
+      |                                                            ^~~~~
+/Users/sebastienlotten/esp/esp-idf/components/esp_http_server/include/esp_http_server.h:26:1: note: in expansion of macro 'ESP_EVENT_DECLARE_BASE'
+   26 | ESP_EVENT_DECLARE_BASE(ESP_HTTP_SERVER_EVENT);
+      | ^~~~~~~~~~~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/esp_http_server/include/esp_http_server.h:26:24: error: type defaults to 'int' in declaration of 'ESP_HTTP_SERVER_EVENT' [-Wimplicit-int]
+   26 | ESP_EVENT_DECLARE_BASE(ESP_HTTP_SERVER_EVENT);
+      |                        ^~~~~~~~~~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/esp_event/include/esp_event_base.h:16:66: note: in definition of macro 'ESP_EVENT_DECLARE_BASE'
+   16 | #define ESP_EVENT_DECLARE_BASE(id) extern esp_event_base_t const id
+      |                                                                  ^~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:466:43: error: unknown type name 'esp_event_base_t'
+  466 | static void wifi_event_handler(void* arg, esp_event_base_t event_base,
+      |                                           ^~~~~~~~~~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c: In function 'wifi_init_ap':
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:480:5: error: implicit declaration of function 'esp_netif_create_default_wifi_ap'; did you mean 'esp_netif_get_default_netif'? [-Wimplicit-function-declaration]
+  480 |     esp_netif_create_default_wifi_ap();
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |     esp_netif_get_default_netif
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:482:5: error: unknown type name 'wifi_init_config_t'; did you mean 'wifi_ant_config_t'?
+  482 |     wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
+      |     ^~~~~~~~~~~~~~~~~~
+      |     wifi_ant_config_t
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:482:30: error: implicit declaration of function 'WIFI_INIT_CONFIG_DEFAULT' [-Wimplicit-function-declaration]
+  482 |     wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /Users/sebastienlotten/esp/esp-idf/components/esp_hw_support/include/esp_intr_alloc.h:12,
+                 from /Users/sebastienlotten/esp/esp-idf/components/esp_hw_support/include/esp_cpu.h:21,
+                 from /Users/sebastienlotten/esp/esp-idf/components/esp_hw_support/include/spinlock.h:11,
+                 from /Users/sebastienlotten/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:49,
+                 from /Users/sebastienlotten/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/portable.h:57,
+                 from /Users/sebastienlotten/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/FreeRTOS.h:69,
+                 from /Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:9:
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:483:21: error: implicit declaration of function 'esp_wifi_init'; did you mean 'esp_libc_init'? [-Wimplicit-function-declaration]
+  483 |     ESP_ERROR_CHECK(esp_wifi_init(&cfg));
+      |                     ^~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/esp_common/include/esp_err.h:116:30: note: in definition of macro 'ESP_ERROR_CHECK'
+  116 |         esp_err_t err_rc_ = (x);                                        \
+      |                              ^
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:485:21: error: implicit declaration of function 'esp_event_handler_instance_register' [-Wimplicit-function-declaration]
+  485 |     ESP_ERROR_CHECK(esp_event_handler_instance_register(WIFI_EVENT,
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/esp_common/include/esp_err.h:116:30: note: in definition of macro 'ESP_ERROR_CHECK'
+  116 |         esp_err_t err_rc_ = (x);                                        \
+      |                              ^
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:487:58: error: 'wifi_event_handler' undeclared (first use in this function)
+  487 |                                                         &wifi_event_handler,
+      |                                                          ^~~~~~~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/esp_common/include/esp_err.h:116:30: note: in definition of macro 'ESP_ERROR_CHECK'
+  116 |         esp_err_t err_rc_ = (x);                                        \
+      |                              ^
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:487:58: note: each undeclared identifier is reported only once for each function it appears in
+  487 |                                                         &wifi_event_handler,
+      |                                                          ^~~~~~~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/esp_common/include/esp_err.h:116:30: note: in definition of macro 'ESP_ERROR_CHECK'
+  116 |         esp_err_t err_rc_ = (x);                                        \
+      |                              ^
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:505:21: error: implicit declaration of function 'esp_wifi_set_mode' [-Wimplicit-function-declaration]
+  505 |     ESP_ERROR_CHECK(esp_wifi_set_mode(WIFI_MODE_AP));
+      |                     ^~~~~~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/esp_common/include/esp_err.h:116:30: note: in definition of macro 'ESP_ERROR_CHECK'
+  116 |         esp_err_t err_rc_ = (x);                                        \
+      |                              ^
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:506:21: error: implicit declaration of function 'esp_wifi_set_config' [-Wimplicit-function-declaration]
+  506 |     ESP_ERROR_CHECK(esp_wifi_set_config(WIFI_IF_AP, &wifi_config));
+      |                     ^~~~~~~~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/esp_common/include/esp_err.h:116:30: note: in definition of macro 'ESP_ERROR_CHECK'
+  116 |         esp_err_t err_rc_ = (x);                                        \
+      |                              ^
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:507:21: error: implicit declaration of function 'esp_wifi_start'; did you mean 'esp_restart'? [-Wimplicit-function-declaration]
+  507 |     ESP_ERROR_CHECK(esp_wifi_start());
+      |                     ^~~~~~~~~~~~~~
+/Users/sebastienlotten/esp/esp-idf/components/esp_common/include/esp_err.h:116:30: note: in definition of macro 'ESP_ERROR_CHECK'
+  116 |         esp_err_t err_rc_ = (x);                                        \
+      |                              ^
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c: In function 'app_main':
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:557:5: error: implicit declaration of function 'esp_wifi_get_mac'; did you mean 'esp_netif_get_mac'? [-Wimplicit-function-declaration]
+  557 |     esp_wifi_get_mac(WIFI_IF_AP, mac);
+      |     ^~~~~~~~~~~~~~~~
+      |     esp_netif_get_mac
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c: At top level:
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:427:26: error: 'logo_png_assets_route' defined but not used [-Werror=unused-const-variable=]
+  427 | static const httpd_uri_t logo_png_assets_route = {
+      |                          ^~~~~~~~~~~~~~~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:421:26: error: 'favicon_ico_route' defined but not used [-Werror=unused-const-variable=]
+  421 | static const httpd_uri_t favicon_ico_route = {
+      |                          ^~~~~~~~~~~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:415:26: error: 'dembele_png_assets_route' defined but not used [-Werror=unused-const-variable=]
+  415 | static const httpd_uri_t dembele_png_assets_route = {
+      |                          ^~~~~~~~~~~~~~~~~~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:403:26: error: 'login_html_route' defined but not used [-Werror=unused-const-variable=]
+  403 | static const httpd_uri_t login_html_route = {
+      |                          ^~~~~~~~~~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:385:26: error: 'login_css_route' defined but not used [-Werror=unused-const-variable=]
+  385 | static const httpd_uri_t login_css_route = {
+      |                          ^~~~~~~~~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:379:26: error: 'hidden_css_route' defined but not used [-Werror=unused-const-variable=]
+  379 | static const httpd_uri_t hidden_css_route = {
+      |                          ^~~~~~~~~~~~~~~~
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/slave/main/mesh_slave_main.c:367:26: error: 'index_html_route' defined but not used [-Werror=unused-const-variable=]
+  367 | static const httpd_uri_t index_html_route = {
+      |                          ^~~~~~~~~~~~~~~~
+cc1: some warnings being treated as errors
+ninja: build stopped: subcommand failed.

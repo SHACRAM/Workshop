@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/master/build/CMakeFiles/bootloader
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/master/build/CMakeFiles/bootloader.rule
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/master/build/CMakeFiles/bootloader-complete.rule
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/master/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/master/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/master/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/master/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/master/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/master/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/master/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

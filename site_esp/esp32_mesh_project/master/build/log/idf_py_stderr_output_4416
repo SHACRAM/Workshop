@@ -1,0 +1,8 @@
+Command: /Users/sebastienlotten/.espressif/python_env/idf5.5_py3.13_env/bin/python /Users/sebastienlotten/esp/esp-idf/tools/idf_monitor.py -p /dev/cu.usbmodem5A840187611 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 /Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/master/build/espnow_example.elf /Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/master/build/bootloader/bootloader.elf -m '/Users/sebastienlotten/.espressif/python_env/idf5.5_py3.13_env/bin/python' '/Users/sebastienlotten/esp/esp-idf/tools/idf.py' '-p' '/dev/cu.usbmodem5A840187611'
+[0;33m--- esp-idf-monitor 1.8.0 on /dev/cu.usbmodem5A840187611 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- Connection to /dev/cu.usbmodem5A840187611 failed. Available ports:
+--- /dev/cu.debug-console
+--- /dev/cu.MiTrueWirelessEBsBasic2
+--- /dev/cu.usbmodem5A840187611[0m
+[0m

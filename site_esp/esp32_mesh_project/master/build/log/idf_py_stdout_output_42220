@@ -1,0 +1,119 @@
+Command: /Users/sebastienlotten/.espressif/python_env/idf5.5_py3.13_env/bin/python /Users/sebastienlotten/esp/esp-idf/tools/idf_monitor.py -p /dev/cu.usbmodem5A840187611 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 /Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/master/build/espnow_example.elf /Users/sebastienlotten/Documents/Ecoles/EPSI/Workshop/espressifProject/esp32_mesh_project/master/build/bootloader/bootloader.elf -m '/Users/sebastienlotten/.espressif/python_env/idf5.5_py3.13_env/bin/python' '/Users/sebastienlotten/esp/esp-idf/tools/idf.py' '-p' '/dev/cu.usbmodem5A840187611'
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x158c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f34
+entry 0x403c8924
+[0;32mI (24) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (25) boot: compile time Sep 25 2025 10:12:48[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (28) boot: efuse block revision: v1.3[0m
+[0;32mI (31) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (35) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3c0b0020 size=1fcd8h (130264) map[0m
+[0;32mI (109) esp_image: segment 1: paddr=0002fd00 vaddr=3fc9a500 size=00318h (   792) load[0m
+[0;32mI (110) esp_image: segment 2: paddr=00030020 vaddr=42000020 size=a3414h (668692) map[0m
+[0;32mI (231) esp_image: segment 3: paddr=000d343c vaddr=3fc9a818 size=0470ch ( 18188) load[0m
+[0;32mI (235) esp_image: segment 4: paddr=000d7b50 vaddr=40374000 size=16414h ( 91156) load[0m
+[0;32mI (255) esp_image: segment 5: paddr=000edf6c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (264) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (264) boot: Disabling RNG early entropy source...[0m
+[0;32mI (274) cpu_start: Multicore app[0m
+[0;32mI (283) cpu_start: Pro cpu start user code[0m
+[0;32mI (283) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (284) app_init: Application information:[0m
+[0;32mI (284) app_init: Project name:     espnow_example[0m
+[0;32mI (288) app_init: App version:      1[0m
+[0;32mI (291) app_init: Compile time:     Sep 25 2025 10:12:42[0m
+[0;32mI (297) app_init: ELF file SHA256:  5fad0b1c7...[0m
+[0;32mI (301) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (305) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (308) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (312) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (316) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (323) heap_init: At 3FCA6E88 len 00042888 (266 KiB): RAM[0m
+[0;32mI (328) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (333) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (338) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (345) spi_flash: detected chip: generic[0m
+[0;32mI (347) spi_flash: flash io: dio[0m
+[0;33mW (350) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (363) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (369) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (376) main_task: Started on CPU0[0m
+[0;32mI (396) main_task: Calling app_main()[0m
+[0;32mI (396) MASTER_FINAL: 🚀 DÉMARRAGE MASTER ESP-NOW FINAL[0m
+[0;32mI (396) MASTER_FINAL: 📋 SPECIFICATIONS:[0m
+[0;32mI (396) MASTER_FINAL:    • Connexion hotspot: TestCo (testPassword)[0m
+[0;32mI (406) MASTER_FINAL:    • Récupération API: http://10.69.228.2:3000/news[0m
+[0;32mI (406) MASTER_FINAL:    • Fallback: JSON local si serveur indisponible[0m
+[0;32mI (416) MASTER_FINAL:    • Fetch serveur: toutes les 30 secondes[0m
+[0;32mI (426) MASTER_FINAL:     • Envoi esclave: toutes les 5 minutes (TOUS les articles)[0m
+[0;32mI (456) pp: pp rom version: e7ae62f[0m
+[0;32mI (456) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (466) wifi:wifi driver task: 3fcabc78, prio:23, stack:6656, core=0[0m
+[0;32mI (476) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (476) wifi:wifi certification version: v7.0[0m
+[0;32mI (476) wifi:config NVS flash: enabled[0m
+[0;32mI (476) wifi:config nano formatting: disabled[0m
+[0;32mI (486) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (486) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (486) wifi:Init management short buffer num: 32[0m
+[0;32mI (496) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (496) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (506) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (506) wifi:Init static rx buffer num: 10[0m
+[0;32mI (506) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (516) wifi_init: rx ba win: 6[0m
+[0;32mI (516) wifi_init: accept mbox: 6[0m
+[0;32mI (516) wifi_init: tcpip mbox: 32[0m
+[0;32mI (526) wifi_init: udp mbox: 6[0m
+[0;32mI (526) wifi_init: tcp mbox: 6[0m
+[0;32mI (526) wifi_init: tcp tx win: 5760[0m
+[0;32mI (536) wifi_init: tcp rx win: 5760[0m
+[0;32mI (536) wifi_init: tcp mss: 1440[0m
+[0;32mI (536) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (546) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (546) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (556) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10[0m
+[0;32mI (596) wifi:mode : sta (b4:3a:45:a1:1f:38)[0m
+[0;32mI (596) wifi:enable tsf[0m
+[0;32mI (606) MASTER_FINAL: 🔄 WiFi STA démarré, connexion au hotspot TestCo...[0m
+[0;32mI (606) MASTER_FINAL: 📡 WiFi configuré - SSID: TestCo, Canal: 9[0m
+[0;32mI (606) ESPNOW: espnow [version: 2.0] init[0m
+[0;32mI (616) wifi:new:<9,0>, old:<9,0>, ap:<255,255>, sta:<9,0>, prof:9, snd_ch_cfg:0x0[0m
+[0;32mI (616) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (626) MASTER_FINAL: ✅ ESP-NOW initialisé[0m
+[0;32mI (626) MASTER_FINAL: 🧪 Injection données de test...[0m
+[0;32mI (636) MASTER_FINAL: ✨ Données de test prêtes : 1 article[0m
+[0;32mI (636) MASTER_FINAL: ⏳ WiFi non connecté, attente...[0m
+[0;32mI (646) MASTER_FINAL: 🎯 MASTER FINAL PRÊT - Toutes les tâches lancées[0m
+[0;32mI (646) main_task: Returned from app_main()[0m
+[0;32mI (1556) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (1566) wifi:Association refused temporarily time 1464, comeback time 1564 (TUs)[0m
+[0;32mI (3166) wifi:state: assoc -> auth (0xb0)[0m
+[0;32mI (4026) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (4026) wifi:Association refused too many times, max allowed 1[0m
+[0;32mI (4026) wifi:state: assoc -> init (0xd010)[0m
+[0;32mI (4036) wifi:new:<9,0>, old:<9,0>, ap:<255,255>, sta:<9,0>, prof:9, snd_ch_cfg:0x0[0m
+[0;32mI (4036) MASTER_FINAL: ❌ WiFi déconnecté, tentative de reconnexion...[0m
+[0;32mI (8436) MASTER_FINAL: ❌ WiFi déconnecté, tentative de reconnexion...[0m
+[0;32mI (10436) wifi:new:<9,0>, old:<9,0>, ap:<255,255>, sta:<9,0>, prof:9, snd_ch_cfg:0x0[0m
+[0;32mI (10446) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (10646) MASTER_FINAL: ⏰ CYCLE ENVOI ESCLAVE (5min) - Diffusion de TOUS les 1 articles[0m
+[0;32mI (10646) MASTER_FINAL: 📰 Envoi article 1/1: ID=999, Titre='TEST'[0m
+[0;32mI (10646) MASTER_FINAL: 📦 Envoi 66 bytes en 1 fragments via ESP-NOW[0m
+[0;32mI (10656) MASTER_FINAL: 📤 Fragment 1/1 (
